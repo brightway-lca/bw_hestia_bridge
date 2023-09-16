@@ -1,19 +1,21 @@
 import json
 import os
 
-from typing import Union, Optional
+from typing import Any, Union, Optional
 
 from platformdirs import user_config_dir
+
+import bw_hestia_bridge as bhb
 
 
 confdir = user_config_dir("bw_hestia_bridge", appauthor=False)
 os.makedirs(confdir, exist_ok=True)
 
 
-def _init_config(defaults):
+def _init_config():
     conf_file = os.path.join(confdir, "config.json")
 
-    config = defaults.copy()
+    config = bhb._config.copy()
 
     if os.path.isfile(conf_file):
         with open(conf_file, "r") as f:
@@ -33,13 +35,15 @@ def _init_config(defaults):
             if not config[p]:
                 config[p] = os.environ.get(p, os.environ[p.upper()])
 
+    # get API url and token from the environment if present
+    for key in ("hestia_token", "hestia_api"):
+        config[key] = os.environ.get(key, config[key])
+
     set_config(config)
 
 
-def get_config(param: Optional[str] = None):
+def get_config(param: Optional[str] = None) -> Any:
     ''' Return the config settings '''
-    import bw_hestia_bridge as bhb
-
     config = bhb._config.copy()
 
     if param:
@@ -48,7 +52,10 @@ def get_config(param: Optional[str] = None):
     return config
 
 
-def set_config(config : Union[str, dict], value : Optional[str] = None):
+def set_config(
+    config : Union[str, dict],
+    value : Optional[str] = None
+) -> None:
     '''
     Set configuration.
 
@@ -60,8 +67,6 @@ def set_config(config : Union[str, dict], value : Optional[str] = None):
     value : str, optional
         If `config` is a string, `value` associated to this configuration entry.
     '''
-    import bw_hestia_bridge as bhb
-
     if isinstance(config, str):
         if config in bhb._config:
             bhb._config[config] = value

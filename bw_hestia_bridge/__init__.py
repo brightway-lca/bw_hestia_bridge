@@ -6,7 +6,6 @@ __version__ = "0.1.0"
 _config: dict = {
     "http_proxy": "",
     "https_proxy": "",
-    "logging_level": "WARNING",
     "hestia_token": None,
     "hestia_api": "https://api.hestia.earth"
 }

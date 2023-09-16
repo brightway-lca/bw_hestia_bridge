@@ -16,7 +16,7 @@ dynamic = ["dependencies", "version"]
 
 [tool.setuptools]
 license-files = ["LICENSE"]
-package-data = {gistools = ["*.md", "*.txt"]}
+package-data = {bw_hestia_bridge = ["*.md", "*.txt"]}
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}

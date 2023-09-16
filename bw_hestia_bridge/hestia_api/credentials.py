@@ -12,7 +12,7 @@ def login_to_hestia(email: str, pwd: str) -> None:
     '''
     url, _, proxies, _ = base_api_data()
 
-    headers = headers = {"Content-Type": "application/json"}
+    headers = {"Content-Type": "application/json"}
 
     data = {"email": email,"password": pwd}
 

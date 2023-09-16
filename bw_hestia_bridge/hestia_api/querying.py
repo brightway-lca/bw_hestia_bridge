@@ -45,7 +45,7 @@ def search_hestia(
 
 def get_hestia_node(node: dict[str, str]) -> dict:
     '''
-    Download the Hestia node associated to `node_id`.
+    Download the Hestia node associated to `node`.
 
     Parameters
     ----------
