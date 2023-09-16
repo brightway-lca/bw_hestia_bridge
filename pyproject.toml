@@ -58,12 +58,8 @@ dependencies = {file = ["requirements.txt"]}
 version = {attr = "bw_hestia_bridge.__version__"}
 
 
-[tool.pytest]
-addopts = [
-    "--cov bw_hestia_bridge --cov-report term-missing",
-    "--verbose"
-]
-
+[tool.pytest.ini_options]
+addopts = "--cov bw_hestia_bridge --cov-report term-missing --verbose"
 norecursedirs = [
     "dist",
     "build",
@@ -71,13 +67,13 @@ norecursedirs = [
 ]
 testpaths = ["tests/*.py"]
 
-[devpi.upload]
+[tool.devpi.upload]
 # Options for the devpi: PyPI server and packaging tool
 # VCS export must be deactivated since we are using setuptools-scm
 no_vcs = 1
 formats = "bdist_wheel"
 
-[flake8]
+[tool.flake8]
 # Some sane defaults for the code style checker flake8
 max_line_length = 88
 extend_ignore = ["E203", "W503"]
