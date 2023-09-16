@@ -31,6 +31,10 @@ $ pip install bw_hestia_bridge
 
 API key for development: 6t7B6uAwwZYjF5SJKGwLz5XmArsz894N8gio1UKVrj9K
 
+Programmatic overview: https://www.hestia.earth/docs/#overview
+
+Swagger: https://api.hestia.earth/swagger/
+
 ## Contributing
 
 Contributions are very welcome.
