@@ -31,6 +31,18 @@ $ pip install bw_hestia_bridge
 
 API key for development: 6t7B6uAwwZYjF5SJKGwLz5XmArsz894N8gio1UKVrj9K
 
+## Functions
+
+```python
+def login_to_hestia(email: str, password: str) -> None:
+    ''' Register to Hestia and set the token '''
+
+def set_hestia_token(token: str) -> None:
+    ''' Set the token to call the Hestia API '''
+
+def search_hestia(element: str, filter_type)
+```
+
 ## Contributing
 
 Contributions are very welcome.
