@@ -1,0 +1,8450 @@
+{
+  "createdAt": "2023-06-02",
+  "updatedAt": "2023-06-02",
+  "@id": "ribhbymfmmt3",
+  "@type": "Cycle",
+  "description": "Beef, fertilized Guinea grass (Panicum maximum cv. Tanzânia) pasture + 75-day finishing period in confinement (Scenario 5)",
+  "site": {
+    "@type": "Site",
+    "@id": "rn5h3h2rr0ss"
+  },
+  "defaultSource": {
+    "@id": "ykytvogy66tp",
+    "@type": "Source"
+  },
+  "functionalUnit": "relative",
+  "endDate": "2014",
+  "cycleDuration": 75,
+  "defaultMethodClassification": "inconsistent external sources",
+  "defaultMethodClassificationDescription": "Scenarios modelled combining various sources (mostly from Brasil).",
+  "inputs": [
+    {
+      "term": {
+        "@type": "Term",
+        "termType": "liveAnimal",
+        "name": "Beef cattle, cow",
+        "units": "number",
+        "@id": "beefCattleCow",
+        "added": [
+          "termType",
+          "name",
+          "units",
+          "@id"
+        ],
+        "addedVersion": [
+          "0.47.1",
+          "0.47.1",
+          "0.47.1",
+          "0.47.1"
+        ]
+      },
+      "value": [
+        36
+      ],
+      "impactAssessment": {
+        "@id": "vxwxekzuh9wn",
+        "@type": "ImpactAssessment"
+      },
+      "impactAssessmentIsProxy": false,
+      "@type": "Input",
+      "properties": [
+        {
+          "term": {
+            "@type": "Term",
+            "name": "Liveweight per head",
+            "termType": "property",
+            "@id": "liveweightPerHead",
+            "units": "kg liveweight / head"
+          },
+          "value": 430,
+          "@type": "Property",
+          "added": [
+            "term",
+            "value"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "properties"
+      ],
+      "addedVersion": [
+        "0.47.1"
+      ]
+    },
+    {
+      "term": {
+        "@type": "Term",
+        "termType": "liveAnimal",
+        "name": "Beef cattle, heifer",
+        "units": "number",
+        "@id": "beefCattleHeifer",
+        "added": [
+          "termType",
+          "name",
+          "units",
+          "@id"
+        ],
+        "addedVersion": [
+          "0.47.1",
+          "0.47.1",
+          "0.47.1",
+          "0.47.1"
+        ]
+      },
+      "value": [
+        93
+      ],
+      "impactAssessment": {
+        "@id": "ybt0weg0ruy3",
+        "@type": "ImpactAssessment"
+      },
+      "impactAssessmentIsProxy": false,
+      "@type": "Input",
+      "properties": [
+        {
+          "term": {
+            "@type": "Term",
+            "name": "Liveweight per head",
+            "termType": "property",
+            "@id": "liveweightPerHead",
+            "units": "kg liveweight / head"
+          },
+          "value": 360,
+          "@type": "Property",
+          "added": [
+            "term",
+            "value"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "properties"
+      ],
+      "addedVersion": [
+        "0.47.1"
+      ]
+    },
+    {
+      "term": {
+        "@type": "Term",
+        "termType": "liveAnimal",
+        "name": "Beef cattle, steer",
+        "units": "number",
+        "@id": "beefCattleSteer",
+        "added": [
+          "termType",
+          "name",
+          "units",
+          "@id"
+        ],
+        "addedVersion": [
+          "0.47.1",
+          "0.47.1",
+          "0.47.1",
+          "0.47.1"
+        ]
+      },
+      "value": [
+        133
+      ],
+      "impactAssessment": {
+        "@id": "g0zcbh-aorih",
+        "@type": "ImpactAssessment"
+      },
+      "impactAssessmentIsProxy": false,
+      "@type": "Input",
+      "properties": [
+        {
+          "term": {
+            "@type": "Term",
+            "name": "Liveweight per head",
+            "termType": "property",
+            "@id": "liveweightPerHead",
+            "units": "kg liveweight / head"
+          },
+          "value": 380,
+          "@type": "Property",
+          "added": [
+            "term",
+            "value"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "properties"
+      ],
+      "addedVersion": [
+        "0.47.1"
+      ]
+    },
+    {
+      "term": {
+        "@type": "Term",
+        "name": "Concentrate feed blend",
+        "termType": "crop",
+        "@id": "concentrateFeedBlend",
+        "units": "kg",
+        "added": [
+          "name",
+          "termType",
+          "@id",
+          "units"
+        ],
+        "addedVersion": [
+          "0.47.1",
+          "0.47.1",
+          "0.47.1",
+          "0.47.1"
+        ]
+      },
+      "value": [
+        184710
+      ],
+      "isAnimalFeed": true,
+      "impactAssessment": {
+        "@id": "lojui3urhexq",
+        "@type": "ImpactAssessment"
+      },
+      "impactAssessmentIsProxy": false,
+      "@type": "Input",
+      "properties": [
+        {
+          "term": {
+            "@type": "Term",
+            "name": "Dry matter",
+            "termType": "property",
+            "@id": "dryMatter",
+            "units": "%"
+          },
+          "value": 100,
+          "@type": "Property",
+          "added": [
+            "term",
+            "value"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1"
+          ]
+        },
+        {
+          "@type": "Property",
+          "term": {
+            "@type": "Term",
+            "@id": "crudeProteinContent",
+            "name": "Crude protein content",
+            "termType": "property",
+            "units": "%"
+          },
+          "value": 8.212040414507772,
+          "added": [
+            "term",
+            "value"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1"
+          ]
+        },
+        {
+          "@type": "Property",
+          "term": {
+            "@type": "Term",
+            "@id": "digestibleEnergyRabbits",
+            "name": "Digestible energy, rabbits",
+            "termType": "property",
+            "units": "MJ / kg"
+          },
+          "value": 17.5626,
+          "added": [
+            "term",
+            "value"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1"
+          ]
+        },
+        {
+          "@type": "Property",
+          "term": {
+            "@type": "Term",
+            "@id": "digestibleEnergyPoultry",
+            "name": "Digestible energy, poultry",
+            "termType": "property",
+            "units": "MJ / kg"
+          },
+          "value": 10.428273575129532,
+          "added": [
+            "term",
+            "value"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1"
+          ]
+        },
+        {
+          "@type": "Property",
+          "term": {
+            "@type": "Term",
+            "@id": "digestibleEnergyPigs",
+            "name": "Digestible energy, pigs",
+            "termType": "property",
+            "units": "MJ / kg"
+          },
+          "value": 14.633879646017698,
+          "added": [
+            "term",
+            "value"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1"
+          ]
+        },
+        {
+          "@type": "Property",
+          "term": {
+            "@type": "Term",
+            "@id": "digestibleEnergyRuminants",
+            "name": "Digestible energy, ruminants",
+            "termType": "property",
+            "units": "MJ / kg"
+          },
+          "value": 10.428273575129532,
+          "added": [
+            "term",
+            "value"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1"
+          ]
+        },
+        {
+          "@type": "Property",
+          "term": {
+            "@type": "Term",
+            "@id": "dryMatter",
+            "name": "Dry matter",
+            "termType": "property",
+            "units": "%"
+          },
+          "value": 91.8963730569948,
+          "added": [
+            "term",
+            "value"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1"
+          ]
+        },
+        {
+          "@type": "Property",
+          "term": {
+            "@type": "Term",
+            "@id": "energyContentHigherHeatingValue",
+            "name": "Energy content (higher heating value)",
+            "termType": "property",
+            "units": "MJ / kg"
+          },
+          "value": 12.721939896373058,
+          "added": [
+            "term",
+            "value"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1"
+          ]
+        },
+        {
+          "@type": "Property",
+          "term": {
+            "@type": "Term",
+            "@id": "energyDigestibilityRabbits",
+            "name": "Energy digestibility, rabbits",
+            "termType": "property",
+            "units": "%"
+          },
+          "value": 74.4193,
+          "added": [
+            "term",
+            "value"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1"
+          ]
+        },
+        {
+          "@type": "Property",
+          "term": {
+            "@type": "Term",
+            "@id": "energyDigestibilityPoultry",
+            "name": "Energy digestibility, poultry",
+            "termType": "property",
+            "units": "%"
+          },
+          "value": 79.15751295336787,
+          "added": [
+            "term",
+            "value"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1"
+          ]
+        },
+        {
+          "@type": "Property",
+          "term": {
+            "@type": "Term",
+            "@id": "energyDigestibilityPigs",
+            "name": "Energy digestibility, pigs",
+            "termType": "property",
+            "units": "%"
+          },
+          "value": 75.66456991150443,
+          "added": [
+            "term",
+            "value"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1"
+          ]
+        },
+        {
+          "@type": "Property",
+          "term": {
+            "@type": "Term",
+            "@id": "energyDigestibilityRuminants",
+            "name": "Energy digestibility, ruminants",
+            "termType": "property",
+            "units": "%"
+          },
+          "value": 79.15751295336787,
+          "added": [
+            "term",
+            "value"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1"
+          ]
+        },
+        {
+          "@type": "Property",
+          "term": {
+            "@type": "Term",
+            "@id": "neutralDetergentFibreContent",
+            "name": "Neutral detergent fibre content",
+            "termType": "property",
+            "units": "%"
+          },
+          "value": 13.12560103626943,
+          "added": [
+            "term",
+            "value"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1"
+          ]
+        },
+        {
+          "@type": "Property",
+          "term": {
+            "@type": "Term",
+            "@id": "nitrogenContent",
+            "name": "Nitrogen content",
+            "termType": "property",
+            "units": "%"
+          },
+          "value": 1.3139264663212435,
+          "added": [
+            "term",
+            "value"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1"
+          ]
+        },
+        {
+          "@type": "Property",
+          "term": {
+            "@type": "Term",
+            "@id": "phosphorusContentAsP",
+            "name": "Phosphorus content (as P)",
+            "termType": "property",
+            "units": "%"
+          },
+          "value": 0.20615761658031093,
+          "added": [
+            "term",
+            "value"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "properties"
+      ],
+      "addedVersion": [
+        "0.47.1"
+      ]
+    }
+  ],
+  "products": [
+    {
+      "term": {
+        "@type": "Term",
+        "termType": "liveAnimal",
+        "name": "Beef cattle, cow",
+        "units": "number",
+        "@id": "beefCattleCow"
+      },
+      "value": [
+        0.1347809809060277
+      ],
+      "primary": true,
+      "variety": "Nellore or Nellore crosses - Best Nellore crosses",
+      "properties": [
+        {
+          "term": {
+            "@type": "Term",
+            "name": "Liveweight per head",
+            "termType": "property",
+            "@id": "liveweightPerHead",
+            "units": "kg liveweight / head"
+          },
+          "value": 430,
+          "@type": "Property"
+        }
+      ],
+      "@type": "Product"
+    },
+    {
+      "term": {
+        "@type": "Term",
+        "termType": "liveAnimal",
+        "name": "Beef cattle, heifer",
+        "units": "number",
+        "@id": "beefCattleHeifer"
+      },
+      "value": [
+        0.3481842006739049
+      ],
+      "variety": "Nellore or Nellore crosses - Best Nellore crosses",
+      "properties": [
+        {
+          "term": {
+            "@type": "Term",
+            "name": "Liveweight per head",
+            "termType": "property",
+            "@id": "liveweightPerHead",
+            "units": "kg liveweight / head"
+          },
+          "value": 451.9,
+          "@type": "Property"
+        },
+        {
+          "term": {
+            "@type": "Term",
+            "name": "Slaughter age",
+            "termType": "property",
+            "@id": "slaughterAge",
+            "units": "days"
+          },
+          "value": 759,
+          "@type": "Property"
+        }
+      ],
+      "@type": "Product"
+    },
+    {
+      "term": {
+        "@type": "Term",
+        "termType": "liveAnimal",
+        "name": "Beef cattle, steer",
+        "units": "number",
+        "@id": "beefCattleSteer"
+      },
+      "value": [
+        0.49794084612504674
+      ],
+      "variety": "Nellore or Nellore crosses - Best Nellore crosses",
+      "properties": [
+        {
+          "term": {
+            "@type": "Term",
+            "name": "Liveweight per head",
+            "termType": "property",
+            "@id": "liveweightPerHead",
+            "units": "kg liveweight / head"
+          },
+          "value": 490.7,
+          "@type": "Property"
+        },
+        {
+          "term": {
+            "@type": "Term",
+            "name": "Slaughter age",
+            "termType": "property",
+            "@id": "slaughterAge",
+            "units": "days"
+          },
+          "value": 771,
+          "@type": "Property"
+        }
+      ],
+      "@type": "Product"
+    },
+    {
+      "term": {
+        "@type": "Term",
+        "termType": "excreta",
+        "name": "Excreta, beef cattle, feedlot fed (kg N)",
+        "units": "kg N",
+        "@id": "excretaBeefCattleFeedlotFedKgN"
+      },
+      "value": [
+        11.786395035567203
+      ],
+      "primary": false,
+      "@type": "Product",
+      "currency": "USD",
+      "price": 0,
+      "added": [
+        "currency",
+        "price",
+        "revenue"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ],
+      "revenue": 0
+    },
+    {
+      "@type": "Product",
+      "term": {
+        "@type": "Term",
+        "@id": "excretaBeefCattleFeedlotFedKgVs",
+        "name": "Excreta, beef cattle, feedlot fed (kg VS)",
+        "termType": "excreta",
+        "units": "kg VS"
+      },
+      "value": [
+        173.73250127316234
+      ],
+      "model": {
+        "@type": "Term",
+        "@id": "pooreNemecek2018",
+        "name": "Poore & Nemecek (2018)",
+        "termType": "model"
+      },
+      "statsDefinition": "modelled",
+      "added": [
+        "term",
+        "value",
+        "model",
+        "statsDefinition"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Product",
+      "term": {
+        "@type": "Term",
+        "@id": "excretaBeefCattleFeedlotFedKgMass",
+        "name": "Excreta, beef cattle, feedlot fed (kg mass)",
+        "termType": "excreta",
+        "units": "kg"
+      },
+      "value": [
+        2056.128825587935
+      ],
+      "statsDefinition": "modelled",
+      "added": [
+        "term",
+        "value",
+        "statsDefinition"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    }
+  ],
+  "transformations": [
+    {
+      "transformationId": "6",
+      "term": {
+        "@type": "Term",
+        "name": "Excreta management, unspecified",
+        "termType": "excretaManagement",
+        "@id": "excretaManagementUnspecified"
+      },
+      "inputs": [
+        {
+          "term": {
+            "@type": "Term",
+            "termType": "excreta",
+            "name": "Excreta, beef cattle, feedlot fed (kg N)",
+            "units": "kg N",
+            "@id": "excretaBeefCattleFeedlotFedKgN"
+          },
+          "value": [
+            11.786395035567203
+          ],
+          "@type": "Input",
+          "statsDefinition": "modelled",
+          "added": [
+            "statsDefinition",
+            "term",
+            "value"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ],
+          "updated": [],
+          "updatedVersion": []
+        },
+        {
+          "@type": "Input",
+          "term": {
+            "@type": "Term",
+            "@id": "excretaBeefCattleFeedlotFedKgVs",
+            "name": "Excreta, beef cattle, feedlot fed (kg VS)",
+            "termType": "excreta",
+            "units": "kg VS"
+          },
+          "value": [
+            173.73250127316234
+          ],
+          "model": {
+            "@type": "Term",
+            "@id": "pooreNemecek2018",
+            "name": "Poore & Nemecek (2018)",
+            "termType": "model"
+          },
+          "statsDefinition": "modelled",
+          "added": [
+            "term",
+            "value",
+            "model",
+            "statsDefinition"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        },
+        {
+          "@type": "Input",
+          "term": {
+            "@type": "Term",
+            "@id": "excretaBeefCattleFeedlotFedKgMass",
+            "name": "Excreta, beef cattle, feedlot fed (kg mass)",
+            "termType": "excreta",
+            "units": "kg"
+          },
+          "value": [
+            2056.128825587935
+          ],
+          "statsDefinition": "modelled",
+          "added": [
+            "term",
+            "value",
+            "statsDefinition"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "@type": "Transformation",
+      "updated": [
+        "inputs"
+      ],
+      "updatedVersion": [
+        "0.6.1"
+      ],
+      "products": [
+        {
+          "term": {
+            "@type": "Term",
+            "@id": "excretaBeefCattleFeedlotFedKgN",
+            "name": "Excreta, beef cattle, feedlot fed (kg N)",
+            "termType": "excreta",
+            "units": "kg N"
+          },
+          "value": [
+            9.702929193381648
+          ],
+          "@type": "Product",
+          "statsDefinition": "modelled",
+          "added": [
+            "statsDefinition",
+            "term",
+            "value"
+          ],
+          "addedVersion": [
+            "0.6.1",
+            "0.6.1",
+            "0.6.1"
+          ]
+        },
+        {
+          "@type": "Product",
+          "term": {
+            "@type": "Term",
+            "@id": "excretaBeefCattleFeedlotFedKgVs",
+            "name": "Excreta, beef cattle, feedlot fed (kg VS)",
+            "termType": "excreta",
+            "units": "kg VS"
+          },
+          "value": [
+            173.73250127316234
+          ],
+          "model": {
+            "@type": "Term",
+            "@id": "pooreNemecek2018",
+            "name": "Poore & Nemecek (2018)",
+            "termType": "model"
+          },
+          "statsDefinition": "modelled",
+          "added": [
+            "term",
+            "value",
+            "model",
+            "statsDefinition"
+          ],
+          "addedVersion": [
+            "0.6.1",
+            "0.6.1",
+            "0.6.1",
+            "0.6.1"
+          ]
+        },
+        {
+          "@type": "Product",
+          "term": {
+            "@type": "Term",
+            "@id": "excretaBeefCattleFeedlotFedKgMass",
+            "name": "Excreta, beef cattle, feedlot fed (kg mass)",
+            "termType": "excreta",
+            "units": "kg"
+          },
+          "value": [
+            2056.128825587935
+          ],
+          "statsDefinition": "modelled",
+          "added": [
+            "term",
+            "value",
+            "statsDefinition"
+          ],
+          "addedVersion": [
+            "0.6.1",
+            "0.6.1",
+            "0.6.1"
+          ]
+        }
+      ],
+      "emissions": [
+        {
+          "@type": "Emission",
+          "term": {
+            "@type": "Term",
+            "@id": "no3ToGroundwaterExcreta",
+            "name": "NO3, to groundwater, excreta",
+            "termType": "emission",
+            "units": "kg NO3"
+          },
+          "methodModel": {
+            "@type": "Term",
+            "@id": "epa2014",
+            "name": "EPA (2014)",
+            "termType": "model",
+            "updated": [
+              "@id",
+              "name"
+            ],
+            "updatedVersion": [
+              "0.47.1",
+              "0.47.1"
+            ]
+          },
+          "value": [
+            0.1659138693622676
+          ],
+          "sd": [
+            18.78270219195482
+          ],
+          "min": [
+            1.0434834551086012
+          ],
+          "max": [
+            76.17429222292787
+          ],
+          "methodTier": "tier 2",
+          "statsDefinition": "modelled",
+          "added": [
+            "term",
+            "methodModel",
+            "value",
+            "sd",
+            "min",
+            "max",
+            "methodTier",
+            "statsDefinition",
+            "transformation"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ],
+          "updated": [
+            "methodModel",
+            "value",
+            "methodTier"
+          ],
+          "updatedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        },
+        {
+          "@type": "Emission",
+          "term": {
+            "@type": "Term",
+            "@id": "n2OToAirExcretaDirect",
+            "name": "N2O, to air, excreta, direct",
+            "termType": "emission",
+            "units": "kg N2O"
+          },
+          "methodModel": {
+            "@type": "Term",
+            "@id": "ipcc2019",
+            "name": "IPCC (2019)",
+            "termType": "model"
+          },
+          "value": [
+            0.09408181881445914
+          ],
+          "methodTier": "tier 2",
+          "statsDefinition": "modelled",
+          "added": [
+            "term",
+            "methodModel",
+            "value",
+            "methodTier",
+            "statsDefinition",
+            "transformation"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        },
+        {
+          "@type": "Emission",
+          "term": {
+            "@type": "Term",
+            "@id": "noxToAirExcreta",
+            "name": "NOx, to air, excreta",
+            "termType": "emission",
+            "units": "kg NOx"
+          },
+          "methodModel": {
+            "@type": "Term",
+            "@id": "dammgen2009",
+            "name": "Dämmgen (2009)",
+            "termType": "model"
+          },
+          "value": [
+            0.012828114672240756
+          ],
+          "methodTier": "tier 1",
+          "statsDefinition": "modelled",
+          "added": [
+            "term",
+            "methodModel",
+            "value",
+            "methodTier",
+            "statsDefinition",
+            "transformation"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        },
+        {
+          "@type": "Emission",
+          "term": {
+            "@type": "Term",
+            "@id": "nh3ToAirExcreta",
+            "name": "NH3, to air, excreta",
+            "termType": "emission",
+            "units": "kg NH3"
+          },
+          "methodModel": {
+            "@type": "Term",
+            "@id": "emepEea2019",
+            "name": "EMEP-EEA (2019)",
+            "termType": "model"
+          },
+          "value": [
+            2.4076053235471666
+          ],
+          "methodTier": "tier 2",
+          "statsDefinition": "modelled",
+          "added": [
+            "term",
+            "methodModel",
+            "value",
+            "methodTier",
+            "statsDefinition",
+            "transformation"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        },
+        {
+          "@type": "Emission",
+          "term": {
+            "@type": "Term",
+            "@id": "n2OToAirExcretaIndirect",
+            "name": "N2O, to air, excreta, indirect",
+            "termType": "emission",
+            "units": "kg N2O"
+          },
+          "methodModel": {
+            "@type": "Term",
+            "@id": "ipcc2006",
+            "name": "IPCC (2006)",
+            "termType": "model"
+          },
+          "value": [
+            0.0316454501781637
+          ],
+          "methodTier": "tier 1",
+          "statsDefinition": "modelled",
+          "added": [
+            "term",
+            "methodModel",
+            "value",
+            "methodTier",
+            "statsDefinition",
+            "transformation"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "products",
+        "emissions"
+      ],
+      "addedVersion": [
+        "0.6.1",
+        "0.6.1"
+      ]
+    }
+  ],
+  "completeness": {
+    "electricityFuel": true,
+    "material": false,
+    "fertiliser": true,
+    "other": true,
+    "pesticidesAntibiotics": false,
+    "soilAmendments": true,
+    "water": false,
+    "products": true,
+    "cropResidue": true,
+    "excreta": true,
+    "animalFeed": true,
+    "transport": false,
+    "liveAnimals": true,
+    "waste": false,
+    "operations": false,
+    "@type": "Completeness"
+  },
+  "emissions": [
+    {
+      "term": {
+        "@type": "Term",
+        "name": "CH4, to air, enteric fermentation",
+        "termType": "emission",
+        "@id": "ch4ToAirEntericFermentation",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "name": "IPCC (2019)",
+        "termType": "model",
+        "@id": "ipcc2019",
+        "updated": [
+          "name",
+          "@id"
+        ],
+        "updatedVersion": [
+          "0.47.1",
+          "0.47.1"
+        ]
+      },
+      "value": [
+        1689.034694166446
+      ],
+      "methodTier": "tier 2",
+      "@type": "Emission",
+      "sd": [
+        0.8
+      ],
+      "statsDefinition": "modelled",
+      "updated": [
+        "methodModel",
+        "value"
+      ],
+      "updatedVersion": [
+        "0.47.1",
+        "0.47.1"
+      ],
+      "added": [
+        "sd",
+        "statsDefinition"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "term": {
+        "@type": "Term",
+        "name": "CH4, to air, excreta",
+        "termType": "emission",
+        "@id": "ch4ToAirExcreta",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "name": "IPCC (2006)",
+        "termType": "model",
+        "@id": "ipcc2006"
+      },
+      "value": [
+        0.2770497940846125
+      ],
+      "methodTier": "tier 2",
+      "@type": "Emission"
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noxToAirExcreta",
+        "name": "NOx, to air, excreta",
+        "termType": "emission",
+        "units": "kg NOx"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "stehfestBouwman2006GisImplementation",
+        "name": "Stehfest & Bouwman (2006) GIS Implementation",
+        "termType": "model"
+      },
+      "value": [
+        0.1907862114311958
+      ],
+      "methodTier": "tier 1",
+      "statsDefinition": "modelled",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirExcretaDirect",
+        "name": "N2O, to air, excreta, direct",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "ipcc2006",
+        "name": "IPCC (2006)",
+        "termType": "model"
+      },
+      "value": [
+        0.7407076528884405
+      ],
+      "methodTier": "tier 1",
+      "statsDefinition": "modelled",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirFuelCombustion",
+        "name": "CO2, to air, fuel combustion",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emepEea2019",
+        "name": "EMEP-EEA (2019)",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "tier 1",
+      "statsDefinition": "modelled",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirFuelCombustionDirect",
+        "name": "N2O, to air, fuel combustion, direct",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emepEea2019",
+        "name": "EMEP-EEA (2019)",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "tier 1",
+      "statsDefinition": "modelled",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noxToAirFuelCombustion",
+        "name": "NOx, to air, fuel combustion",
+        "termType": "emission",
+        "units": "kg NOx"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emepEea2019",
+        "name": "EMEP-EEA (2019)",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "tier 1",
+      "statsDefinition": "modelled",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "so2ToAirFuelCombustion",
+        "name": "SO2, to air, fuel combustion",
+        "termType": "emission",
+        "units": "kg SO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emepEea2019",
+        "name": "EMEP-EEA (2019)",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "tier 1",
+      "statsDefinition": "modelled",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirExcretaIndirect",
+        "name": "N2O, to air, excreta, indirect",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "ipcc2006",
+        "name": "IPCC (2006)",
+        "termType": "model"
+      },
+      "value": [
+        0.1574003762387936
+      ],
+      "methodTier": "tier 1",
+      "statsDefinition": "modelled",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirInputsProduction",
+        "name": "N2O, to air, inputs production",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        4878.950719819608
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, cow",
+          "units": "number",
+          "@id": "beefCattleCow",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirInputsProductionNonFossil",
+        "name": "CH4, to air, inputs production, non-fossil",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        44886.42755155862
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, cow",
+          "units": "number",
+          "@id": "beefCattleCow",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh3ToAirInputsProduction",
+        "name": "NH3, to air, inputs production",
+        "termType": "emission",
+        "units": "kg NH3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        3620.6435865002004
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, cow",
+          "units": "number",
+          "@id": "beefCattleCow",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirInputsProduction",
+        "name": "CO2, to air, inputs production",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        791959.644232264
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, cow",
+          "units": "number",
+          "@id": "beefCattleCow",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirInputsProductionFossil",
+        "name": "CH4, to air, inputs production, fossil",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        2640.45558685809
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, cow",
+          "units": "number",
+          "@id": "beefCattleCow",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noxToAirInputsProduction",
+        "name": "NOx, to air, inputs production",
+        "termType": "emission",
+        "units": "kg NOx"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        3079.698266445538
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, cow",
+          "units": "number",
+          "@id": "beefCattleCow",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "so2ToAirInputsProduction",
+        "name": "SO2, to air, inputs production",
+        "termType": "emission",
+        "units": "kg SO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        4344.061021954633
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, cow",
+          "units": "number",
+          "@id": "beefCattleCow",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "bromochlorodifluoromethaneToAirInputsProduction",
+        "name": "Bromochlorodifluoromethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg CBrClF2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.0021932406199576264
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, cow",
+          "units": "number",
+          "@id": "beefCattleCow",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "chlorodifluoromethaneToAirInputsProduction",
+        "name": "Chlorodifluoromethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg CHClF2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.03039116059430362
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, cow",
+          "units": "number",
+          "@id": "beefCattleCow",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "dichlorodifluoromethaneToAirInputsProduction",
+        "name": "Dichlorodifluoromethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg CCl2F2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.06368957921604913
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, cow",
+          "units": "number",
+          "@id": "beefCattleCow",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "112TrichlorotrifluoroethaneToAirInputsProduction",
+        "name": "1,1,2-Trichlorotrifluoroethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg C2Cl3F3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.00010797805882237456
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, cow",
+          "units": "number",
+          "@id": "beefCattleCow",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "11DichlorotetrafluoroethaneToAirInputsProduction",
+        "name": "1,1-Dichlorotetrafluoroethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg C2Cl2F4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.006568755326890101
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, cow",
+          "units": "number",
+          "@id": "beefCattleCow",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "no3ToGroundwaterInputsProduction",
+        "name": "NO3, to groundwater, inputs production",
+        "termType": "emission",
+        "units": "kg NO3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        159135.18475886536
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, cow",
+          "units": "number",
+          "@id": "beefCattleCow",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "no3ToSurfaceWaterInputsProduction",
+        "name": "NO3, to surface water, inputs production",
+        "termType": "emission",
+        "units": "kg NO3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, cow",
+          "units": "number",
+          "@id": "beefCattleCow",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh4ToGroundwaterInputsProduction",
+        "name": "NH4, to groundwater, inputs production",
+        "termType": "emission",
+        "units": "kg NH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, cow",
+          "units": "number",
+          "@id": "beefCattleCow",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nToSurfaceWaterInputsProduction",
+        "name": "N, to surface water, inputs production",
+        "termType": "emission",
+        "units": "kg N"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, cow",
+          "units": "number",
+          "@id": "beefCattleCow",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "pToSurfaceWaterInputsProduction",
+        "name": "P, to surface water, inputs production",
+        "termType": "emission",
+        "units": "kg P"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, cow",
+          "units": "number",
+          "@id": "beefCattleCow",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirInputsProduction",
+        "name": "N2O, to air, inputs production",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        4878.950719819607
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, heifer",
+          "units": "number",
+          "@id": "beefCattleHeifer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirInputsProductionNonFossil",
+        "name": "CH4, to air, inputs production, non-fossil",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        44886.427551558605
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, heifer",
+          "units": "number",
+          "@id": "beefCattleHeifer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh3ToAirInputsProduction",
+        "name": "NH3, to air, inputs production",
+        "termType": "emission",
+        "units": "kg NH3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        3620.6435865001995
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, heifer",
+          "units": "number",
+          "@id": "beefCattleHeifer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirInputsProduction",
+        "name": "CO2, to air, inputs production",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        791959.644232264
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, heifer",
+          "units": "number",
+          "@id": "beefCattleHeifer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirInputsProductionFossil",
+        "name": "CH4, to air, inputs production, fossil",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        2640.4555868580906
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, heifer",
+          "units": "number",
+          "@id": "beefCattleHeifer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noxToAirInputsProduction",
+        "name": "NOx, to air, inputs production",
+        "termType": "emission",
+        "units": "kg NOx"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        3079.6982664455372
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, heifer",
+          "units": "number",
+          "@id": "beefCattleHeifer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "so2ToAirInputsProduction",
+        "name": "SO2, to air, inputs production",
+        "termType": "emission",
+        "units": "kg SO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        4344.061021954634
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, heifer",
+          "units": "number",
+          "@id": "beefCattleHeifer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "bromochlorodifluoromethaneToAirInputsProduction",
+        "name": "Bromochlorodifluoromethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg CBrClF2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.002193240619957626
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, heifer",
+          "units": "number",
+          "@id": "beefCattleHeifer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "chlorodifluoromethaneToAirInputsProduction",
+        "name": "Chlorodifluoromethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg CHClF2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.030391160594303617
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, heifer",
+          "units": "number",
+          "@id": "beefCattleHeifer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "dichlorodifluoromethaneToAirInputsProduction",
+        "name": "Dichlorodifluoromethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg CCl2F2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.06368957921604913
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, heifer",
+          "units": "number",
+          "@id": "beefCattleHeifer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "112TrichlorotrifluoroethaneToAirInputsProduction",
+        "name": "1,1,2-Trichlorotrifluoroethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg C2Cl3F3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.00010797805882237456
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, heifer",
+          "units": "number",
+          "@id": "beefCattleHeifer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "11DichlorotetrafluoroethaneToAirInputsProduction",
+        "name": "1,1-Dichlorotetrafluoroethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg C2Cl2F4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.0065687553268901
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, heifer",
+          "units": "number",
+          "@id": "beefCattleHeifer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "no3ToGroundwaterInputsProduction",
+        "name": "NO3, to groundwater, inputs production",
+        "termType": "emission",
+        "units": "kg NO3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        159135.18475886536
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, heifer",
+          "units": "number",
+          "@id": "beefCattleHeifer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "no3ToSurfaceWaterInputsProduction",
+        "name": "NO3, to surface water, inputs production",
+        "termType": "emission",
+        "units": "kg NO3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, heifer",
+          "units": "number",
+          "@id": "beefCattleHeifer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh4ToGroundwaterInputsProduction",
+        "name": "NH4, to groundwater, inputs production",
+        "termType": "emission",
+        "units": "kg NH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, heifer",
+          "units": "number",
+          "@id": "beefCattleHeifer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nToSurfaceWaterInputsProduction",
+        "name": "N, to surface water, inputs production",
+        "termType": "emission",
+        "units": "kg N"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, heifer",
+          "units": "number",
+          "@id": "beefCattleHeifer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "pToSurfaceWaterInputsProduction",
+        "name": "P, to surface water, inputs production",
+        "termType": "emission",
+        "units": "kg P"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, heifer",
+          "units": "number",
+          "@id": "beefCattleHeifer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirInputsProduction",
+        "name": "N2O, to air, inputs production",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        4878.950719819608
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, steer",
+          "units": "number",
+          "@id": "beefCattleSteer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirInputsProductionNonFossil",
+        "name": "CH4, to air, inputs production, non-fossil",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        44886.42755155862
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, steer",
+          "units": "number",
+          "@id": "beefCattleSteer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh3ToAirInputsProduction",
+        "name": "NH3, to air, inputs production",
+        "termType": "emission",
+        "units": "kg NH3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        3620.6435865002
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, steer",
+          "units": "number",
+          "@id": "beefCattleSteer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirInputsProduction",
+        "name": "CO2, to air, inputs production",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        791959.6442322639
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, steer",
+          "units": "number",
+          "@id": "beefCattleSteer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirInputsProductionFossil",
+        "name": "CH4, to air, inputs production, fossil",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        2640.4555868580906
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, steer",
+          "units": "number",
+          "@id": "beefCattleSteer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noxToAirInputsProduction",
+        "name": "NOx, to air, inputs production",
+        "termType": "emission",
+        "units": "kg NOx"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        3079.6982664455372
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, steer",
+          "units": "number",
+          "@id": "beefCattleSteer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "so2ToAirInputsProduction",
+        "name": "SO2, to air, inputs production",
+        "termType": "emission",
+        "units": "kg SO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        4344.061021954633
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, steer",
+          "units": "number",
+          "@id": "beefCattleSteer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "bromochlorodifluoromethaneToAirInputsProduction",
+        "name": "Bromochlorodifluoromethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg CBrClF2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.0021932406199576264
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, steer",
+          "units": "number",
+          "@id": "beefCattleSteer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "chlorodifluoromethaneToAirInputsProduction",
+        "name": "Chlorodifluoromethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg CHClF2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.030391160594303617
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, steer",
+          "units": "number",
+          "@id": "beefCattleSteer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "dichlorodifluoromethaneToAirInputsProduction",
+        "name": "Dichlorodifluoromethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg CCl2F2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.06368957921604913
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, steer",
+          "units": "number",
+          "@id": "beefCattleSteer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "112TrichlorotrifluoroethaneToAirInputsProduction",
+        "name": "1,1,2-Trichlorotrifluoroethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg C2Cl3F3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.00010797805882237457
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, steer",
+          "units": "number",
+          "@id": "beefCattleSteer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "11DichlorotetrafluoroethaneToAirInputsProduction",
+        "name": "1,1-Dichlorotetrafluoroethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg C2Cl2F4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.0065687553268901
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, steer",
+          "units": "number",
+          "@id": "beefCattleSteer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "no3ToGroundwaterInputsProduction",
+        "name": "NO3, to groundwater, inputs production",
+        "termType": "emission",
+        "units": "kg NO3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        159135.18475886536
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, steer",
+          "units": "number",
+          "@id": "beefCattleSteer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "no3ToSurfaceWaterInputsProduction",
+        "name": "NO3, to surface water, inputs production",
+        "termType": "emission",
+        "units": "kg NO3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, steer",
+          "units": "number",
+          "@id": "beefCattleSteer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh4ToGroundwaterInputsProduction",
+        "name": "NH4, to groundwater, inputs production",
+        "termType": "emission",
+        "units": "kg NH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, steer",
+          "units": "number",
+          "@id": "beefCattleSteer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nToSurfaceWaterInputsProduction",
+        "name": "N, to surface water, inputs production",
+        "termType": "emission",
+        "units": "kg N"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, steer",
+          "units": "number",
+          "@id": "beefCattleSteer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "pToSurfaceWaterInputsProduction",
+        "name": "P, to surface water, inputs production",
+        "termType": "emission",
+        "units": "kg P"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Beef cattle, steer",
+          "units": "number",
+          "@id": "beefCattleSteer",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "no3ToGroundwaterInputsProduction",
+        "name": "NO3, to groundwater, inputs production",
+        "termType": "emission",
+        "units": "kg NO3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        2308.814273761988
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirInputsProduction",
+        "name": "N2O, to air, inputs production",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        44.50008754948187
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh3ToAirInputsProduction",
+        "name": "NH3, to air, inputs production",
+        "termType": "emission",
+        "units": "kg NH3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        52.82866076296301
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noxToAirInputsProduction",
+        "name": "NOx, to air, inputs production",
+        "termType": "emission",
+        "units": "kg NOx"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        137.5588206499736
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirInputsProductionNonFossil",
+        "name": "CH4, to air, inputs production, non-fossil",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        179.49015703473802
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirInputsProduction",
+        "name": "CO2, to air, inputs production",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        143206.42157814107
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "so2ToAirInputsProduction",
+        "name": "SO2, to air, inputs production",
+        "termType": "emission",
+        "units": "kg SO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        3.0166597831778312
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirInputsProductionFossil",
+        "name": "CH4, to air, inputs production, fossil",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.34012154259632205
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "bromochlorodifluoromethaneToAirInputsProduction",
+        "name": "Bromochlorodifluoromethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg CBrClF2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        5.520482284481812e-7
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "chlorodifluoromethaneToAirInputsProduction",
+        "name": "Chlorodifluoromethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg CHClF2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.0000035896078304690307
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "dichlorodifluoromethaneToAirInputsProduction",
+        "name": "Dichlorodifluoromethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg CCl2F2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        3.792548765019821e-7
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "112TrichlorotrifluoroethaneToAirInputsProduction",
+        "name": "1,1,2-Trichlorotrifluoroethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg C2Cl3F3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        2.0893981446034668e-8
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "11DichlorotetrafluoroethaneToAirInputsProduction",
+        "name": "1,1-Dichlorotetrafluoroethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg C2Cl2F4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        5.619904980155098e-7
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nErosionInputsProduction",
+        "name": "N, erosion, inputs production",
+        "termType": "emission",
+        "units": "kg N"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        19.561085329307563
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "pErosionInputsProduction",
+        "name": "P, erosion, inputs production",
+        "termType": "emission",
+        "units": "kg P"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        4.695733003878962
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "pToDrainageWaterInputsProduction",
+        "name": "P, to drainage water, inputs production",
+        "termType": "emission",
+        "units": "kg P"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.42068476587342657
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "pToGroundwaterInputsProduction",
+        "name": "P, to groundwater, inputs production",
+        "termType": "emission",
+        "units": "kg P"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.00026638229358610726
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "pToSurfaceWaterInputsProduction",
+        "name": "P, to surface water, inputs production",
+        "termType": "emission",
+        "units": "kg P"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.9983675874256946
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noToAirInputsProduction",
+        "name": "NO, to air, inputs production",
+        "termType": "emission",
+        "units": "kg NO"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "codToWaterInputsProduction",
+        "name": "COD, to water, inputs production",
+        "termType": "emission",
+        "units": "kg COD"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh4ToGroundwaterInputsProduction",
+        "name": "NH4, to groundwater, inputs production",
+        "termType": "emission",
+        "units": "kg NH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "pm25ToAirInputsProduction",
+        "name": "PM2.5, to air, inputs production",
+        "termType": "emission",
+        "units": "kg PM2.5"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nmvocToAirInputsProduction",
+        "name": "NMVOC, to air, inputs production",
+        "termType": "emission",
+        "units": "kg NMVOC"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nToSurfaceWaterInputsProduction",
+        "name": "N, to surface water, inputs production",
+        "termType": "emission",
+        "units": "kg N"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh4ToSurfaceWaterInputsProduction",
+        "name": "NH4, to surface water, inputs production",
+        "termType": "emission",
+        "units": "kg NH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "no3ToSurfaceWaterInputsProduction",
+        "name": "NO3, to surface water, inputs production",
+        "termType": "emission",
+        "units": "kg NO3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "pm10ToAirInputsProduction",
+        "name": "PM10, to air, inputs production",
+        "termType": "emission",
+        "units": "kg PM10"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "po43ToSurfaceWaterInputsProduction",
+        "name": "PO43-, to surface water, inputs production",
+        "termType": "emission",
+        "units": "kg PO43-"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "hexaneToAirInputsProduction",
+        "name": "Hexane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg C6H14"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "bod5ToWaterInputsProduction",
+        "name": "BOD5, to water, inputs production",
+        "termType": "emission",
+        "units": "kg BOD5"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "h2SToAirInputsProduction",
+        "name": "H2S, to air, inputs production",
+        "termType": "emission",
+        "units": "kg H2S"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "po43ToGroundwaterInputsProduction",
+        "name": "PO43-, to groundwater, inputs production",
+        "termType": "emission",
+        "units": "kg PO43-"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Concentrate feed blend",
+          "termType": "crop",
+          "@id": "concentrateFeedBlend",
+          "units": "kg",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.47.1",
+            "0.47.1",
+            "0.47.1",
+            "0.47.1"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirBelowGroundBiomassStockChangeManagementChange",
+        "name": "CO2, to air, below ground biomass stock change, management change",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh3ToAirCropResidueDecomposition",
+        "name": "NH3, to air, crop residue decomposition",
+        "termType": "emission",
+        "units": "kg NH3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "no3ToGroundwaterInorganicFertiliser",
+        "name": "NO3, to groundwater, inorganic fertiliser",
+        "termType": "emission",
+        "units": "kg NO3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirUreaHydrolysis",
+        "name": "CO2, to air, urea hydrolysis",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh3ToAirOrganicSoilCultivation",
+        "name": "NH3, to air, organic soil cultivation",
+        "termType": "emission",
+        "units": "kg NH3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirCropResidueDecompositionIndirect",
+        "name": "N2O, to air, crop residue decomposition, indirect",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh4ToGroundwaterInorganicFertiliser",
+        "name": "NH4, to groundwater, inorganic fertiliser",
+        "termType": "emission",
+        "units": "kg NH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh4ToGroundwaterOrganicFertiliser",
+        "name": "NH4, to groundwater, organic fertiliser",
+        "termType": "emission",
+        "units": "kg NH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noxToAirOrganicSoilCultivation",
+        "name": "NOx, to air, organic soil cultivation",
+        "termType": "emission",
+        "units": "kg NOx"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirCropResidueDecompositionDirect",
+        "name": "N2O, to air, crop residue decomposition, direct",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nToSurfaceWaterAquacultureSystems",
+        "name": "N, to surface water, aquaculture systems",
+        "termType": "emission",
+        "units": "kg N"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirCropResidueBurningIndirect",
+        "name": "N2O, to air, crop residue burning, indirect",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirAboveGroundBiomassStockChangeLandUseChange",
+        "name": "CO2, to air, above ground biomass stock change, land use change",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noxToAirCropResidueDecomposition",
+        "name": "NOx, to air, crop residue decomposition",
+        "termType": "emission",
+        "units": "kg NOx"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noxToAirInorganicFertiliser",
+        "name": "NOx, to air, inorganic fertiliser",
+        "termType": "emission",
+        "units": "kg NOx"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirOrganicSoilCultivation",
+        "name": "CH4, to air, organic soil cultivation",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirSoilFlux",
+        "name": "CH4, to air, soil flux",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "no3ToGroundwaterCropResidueDecomposition",
+        "name": "NO3, to groundwater, crop residue decomposition",
+        "termType": "emission",
+        "units": "kg NO3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh3ToAirNaturalVegetationBurning",
+        "name": "NH3, to air, natural vegetation burning",
+        "termType": "emission",
+        "units": "kg NH3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh3ToAirOrganicSoilBurning",
+        "name": "NH3, to air, organic soil burning",
+        "termType": "emission",
+        "units": "kg NH3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noxToAirAquacultureSystems",
+        "name": "NOx, to air, aquaculture systems",
+        "termType": "emission",
+        "units": "kg NOx"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2ToAirAquacultureSystems",
+        "name": "N2, to air, aquaculture systems",
+        "termType": "emission",
+        "units": "kg N2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirOrganicSoilBurningIndirect",
+        "name": "N2O, to air, organic soil burning, indirect",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noxToAirNaturalVegetationBurning",
+        "name": "NOx, to air, natural vegetation burning",
+        "termType": "emission",
+        "units": "kg NOx"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirOrganicSoilCultivationDirect",
+        "name": "N2O, to air, organic soil cultivation, direct",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirAquacultureSystemsDirect",
+        "name": "N2O, to air, aquaculture systems, direct",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirOrganicSoilCultivationIndirect",
+        "name": "N2O, to air, organic soil cultivation, indirect",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noxToAirOrganicFertiliser",
+        "name": "NOx, to air, organic fertiliser",
+        "termType": "emission",
+        "units": "kg NOx"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noxToAirCropResidueBurning",
+        "name": "NOx, to air, crop residue burning",
+        "termType": "emission",
+        "units": "kg NOx"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirSoilCarbonStockChangeLandUseChange",
+        "name": "CO2, to air, soil carbon stock change, land use change",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirNaturalVegetationBurningIndirect",
+        "name": "N2O, to air, natural vegetation burning, indirect",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirBelowGroundBiomassStockChangeLandUseChange",
+        "name": "CO2, to air, below ground biomass stock change, land use change",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirAboveGroundBiomassStockChangeManagementChange",
+        "name": "CO2, to air, above ground biomass stock change, management change",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh3ToAirOrganicFertiliser",
+        "name": "NH3, to air, organic fertiliser",
+        "termType": "emission",
+        "units": "kg NH3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirInorganicFertiliserDirect",
+        "name": "N2O, to air, inorganic fertiliser, direct",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirOrganicFertiliserDirect",
+        "name": "N2O, to air, organic fertiliser, direct",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirSoilCarbonStockChangeManagementChange",
+        "name": "CO2, to air, soil carbon stock change, management change",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "no3ToGroundwaterOrganicFertiliser",
+        "name": "NO3, to groundwater, organic fertiliser",
+        "termType": "emission",
+        "units": "kg NO3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirNaturalVegetationBurningDirect",
+        "name": "N2O, to air, natural vegetation burning, direct",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noxToAirOrganicSoilBurning",
+        "name": "NOx, to air, organic soil burning",
+        "termType": "emission",
+        "units": "kg NOx"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "pToSurfaceWaterAquacultureSystems",
+        "name": "P, to surface water, aquaculture systems",
+        "termType": "emission",
+        "units": "kg P"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirOrganicSoilCultivation",
+        "name": "CO2, to air, organic soil cultivation",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirFloodedRice",
+        "name": "CH4, to air, flooded rice",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirOrganicFertiliserIndirect",
+        "name": "N2O, to air, organic fertiliser, indirect",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirOrganicSoilBurning",
+        "name": "CH4, to air, organic soil burning",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirAquacultureSystems",
+        "name": "CH4, to air, aquaculture systems",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirNaturalVegetationBurning",
+        "name": "CH4, to air, natural vegetation burning",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirCropResidueBurning",
+        "name": "CH4, to air, crop residue burning",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh3ToAirInorganicFertiliser",
+        "name": "NH3, to air, inorganic fertiliser",
+        "termType": "emission",
+        "units": "kg NH3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirCropResidueBurningDirect",
+        "name": "N2O, to air, crop residue burning, direct",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirInorganicFertiliserIndirect",
+        "name": "N2O, to air, inorganic fertiliser, indirect",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirLimeHydrolysis",
+        "name": "CO2, to air, lime hydrolysis",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "no3ToSurfaceWaterAquacultureSystems",
+        "name": "NO3, to surface water, aquaculture systems",
+        "termType": "emission",
+        "units": "kg NO3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirAquacultureSystemsIndirect",
+        "name": "N2O, to air, aquaculture systems, indirect",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh3ToAirCropResidueBurning",
+        "name": "NH3, to air, crop residue burning",
+        "termType": "emission",
+        "units": "kg NH3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirOrganicSoilBurningDirect",
+        "name": "N2O, to air, organic soil burning, direct",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh3ToAirAquacultureSystems",
+        "name": "NH3, to air, aquaculture systems",
+        "termType": "emission",
+        "units": "kg NH3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirNaturalVegetationBurning",
+        "name": "CO2, to air, natural vegetation burning",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirOrganicSoilBurning",
+        "name": "CO2, to air, organic soil burning",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh4ToGroundwaterCropResidueDecomposition",
+        "name": "NH4, to groundwater, crop residue decomposition",
+        "termType": "emission",
+        "units": "kg NH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "no3ToGroundwaterExcreta",
+        "name": "NO3, to groundwater, excreta",
+        "termType": "emission",
+        "units": "kg NO3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "epa2014",
+        "name": "EPA (2014)",
+        "termType": "model",
+        "updated": [
+          "@id",
+          "name"
+        ],
+        "updatedVersion": [
+          "0.47.1",
+          "0.47.1"
+        ]
+      },
+      "value": [
+        0.1659138693622676
+      ],
+      "sd": [
+        18.78270219195482
+      ],
+      "min": [
+        1.0434834551086012
+      ],
+      "max": [
+        76.17429222292787
+      ],
+      "methodTier": "tier 2",
+      "statsDefinition": "modelled",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "sd",
+        "min",
+        "max",
+        "methodTier",
+        "statsDefinition",
+        "transformation"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ],
+      "updated": [
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "updatedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ],
+      "transformation": {
+        "@type": "Term",
+        "name": "Excreta management, unspecified",
+        "termType": "excretaManagement",
+        "@id": "excretaManagementUnspecified"
+      }
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirExcretaDirect",
+        "name": "N2O, to air, excreta, direct",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "ipcc2019",
+        "name": "IPCC (2019)",
+        "termType": "model"
+      },
+      "value": [
+        0.09408181881445914
+      ],
+      "methodTier": "tier 2",
+      "statsDefinition": "modelled",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "transformation"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ],
+      "transformation": {
+        "@type": "Term",
+        "name": "Excreta management, unspecified",
+        "termType": "excretaManagement",
+        "@id": "excretaManagementUnspecified"
+      }
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noxToAirExcreta",
+        "name": "NOx, to air, excreta",
+        "termType": "emission",
+        "units": "kg NOx"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "dammgen2009",
+        "name": "Dämmgen (2009)",
+        "termType": "model"
+      },
+      "value": [
+        0.012828114672240756
+      ],
+      "methodTier": "tier 1",
+      "statsDefinition": "modelled",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "transformation"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ],
+      "transformation": {
+        "@type": "Term",
+        "name": "Excreta management, unspecified",
+        "termType": "excretaManagement",
+        "@id": "excretaManagementUnspecified"
+      }
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh3ToAirExcreta",
+        "name": "NH3, to air, excreta",
+        "termType": "emission",
+        "units": "kg NH3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emepEea2019",
+        "name": "EMEP-EEA (2019)",
+        "termType": "model"
+      },
+      "value": [
+        2.4076053235471666
+      ],
+      "methodTier": "tier 2",
+      "statsDefinition": "modelled",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "transformation"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ],
+      "transformation": {
+        "@type": "Term",
+        "name": "Excreta management, unspecified",
+        "termType": "excretaManagement",
+        "@id": "excretaManagementUnspecified"
+      }
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirExcretaIndirect",
+        "name": "N2O, to air, excreta, indirect",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "ipcc2006",
+        "name": "IPCC (2006)",
+        "termType": "model"
+      },
+      "value": [
+        0.0316454501781637
+      ],
+      "methodTier": "tier 1",
+      "statsDefinition": "modelled",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "transformation"
+      ],
+      "addedVersion": [
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1",
+        "0.47.1"
+      ],
+      "transformation": {
+        "@type": "Term",
+        "name": "Excreta management, unspecified",
+        "termType": "excretaManagement",
+        "@id": "excretaManagementUnspecified"
+      }
+    }
+  ],
+  "name": "Beef cattle, cow - Brazil - 2014 - Beef, fertilized Guinea grass ...",
+  "schemaVersion": "21.2.0",
+  "originalId": "5.75",
+  "siteDuration": 75,
+  "added": [
+    "siteDuration"
+  ],
+  "addedVersion": [
+    "0.47.1"
+  ],
+  "updated": [
+    "emissions"
+  ],
+  "updatedVersion": [
+    "0.47.1"
+  ],
+  "@context": "https://www-staging.hestia.earth/schema/Cycle.jsonld"
+}
