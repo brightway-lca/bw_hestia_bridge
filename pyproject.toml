@@ -1,3 +1,23 @@
 [build-system]
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "bw_hestia_bridge"
+authors = [
+  { name="Tanguy Fardet" },
+  { name="Timo Diepers" },
+  { name="Clemens Wingenbach" },
+  { name=" Chris Mutel" },
+]
+description = "Python module for demography and agriculture-related GIS."
+readme = "README.md"
+dynamic = ["dependencies", "version"]
+
+[tool.setuptools]
+license-files = ["LICENSE"]
+package-data = {gistools = ["*.md", "*.txt"]}
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+version = {attr = "bw_hestia_bridge.__version__"}
