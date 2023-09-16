@@ -45,8 +45,6 @@ def set_hestia_token(token: str) -> None:
 
 ## Using the Hestia API
 
-API key for development: 6t7B6uAwwZYjF5SJKGwLz5XmArsz894N8gio1UKVrj9K
-
 Programmatic overview: https://www.hestia.earth/docs/#overview
 
 Swagger: https://api.hestia.earth/swagger/
@@ -57,7 +55,7 @@ Get a basic JSON LD:
 
 ```python
 import requests
-cycle_id = "help me!"
+cycle_id = "cx_dtpwud1iu"
 URL = "https://api-staging.hestia.earth/cycles/{cycle_id}/cycles"
 requests.get(URL).json()
 ```
