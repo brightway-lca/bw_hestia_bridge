@@ -1,11 +1,15 @@
 import json
 import os
-
-from typing import Any, Union, Optional
+from typing import Any, Optional, Union
 
 from platformdirs import user_config_dir
 
-import bw_hestia_bridge as bhb
+_config: dict = {
+    "http_proxy": "",
+    "https_proxy": "",
+    "hestia_token": None,
+    "hestia_api": "https://api.hestia.earth",
+}
 
 
 confdir = user_config_dir("bw_hestia_bridge", appauthor=False)
@@ -15,8 +19,8 @@ conf_file = os.path.join(confdir, "config.json")
 
 
 def _init_config():
-    ''' Create or set the config from the file and the environment '''
-    config = bhb._config.copy()
+    """Create or set the config from the file and the environment"""
+    config = _config.copy()
 
     if os.path.isfile(conf_file):
         with open(conf_file, "r") as f:
@@ -25,8 +29,7 @@ def _init_config():
             for k, v in new_config.items():
                 config[k] = v
     else:
-        with open(conf_file, "w") as f:
-            json.dump(config, f)
+        save_config(config)
 
     # auto-set proxies if environment variables are set
     proxies = ["http_proxy", "https_proxy"]
@@ -44,8 +47,8 @@ def _init_config():
 
 
 def get_config(param: Optional[str] = None) -> Any:
-    ''' Return the config settings '''
-    config = bhb._config.copy()
+    """Return the config settings"""
+    config = _config.copy()
 
     if param:
         return config[param]
@@ -53,11 +56,8 @@ def get_config(param: Optional[str] = None) -> Any:
     return config
 
 
-def set_config(
-    config : Union[str, dict],
-    value : Optional[str] = None
-) -> None:
-    '''
+def set_config(config: Union[str, dict], value: Optional[str] = None) -> None:
+    """
     Set configuration.
 
     Parameters
@@ -67,12 +67,27 @@ def set_config(
         to set.
     value : str, optional
         If `config` is a string, `value` associated to this configuration entry.
-    '''
+    """
     if isinstance(config, str):
-        if config in bhb._config:
-            bhb._config[config] = value
+        if config in _config:
+            _config[config] = value
         else:
             raise KeyError(f"No '{config}' entry in configuration.")
     else:
         for k, v in config.items():
             set_config(k, v)
+
+
+def save_config(config: Optional[dict] = None) -> None:
+    """
+    Save the the configuration.
+
+    Parameters
+    ----------
+    config : dict, optional (default: current configuration)
+        Configuration to save.
+    """
+    config = config or _config
+
+    with open(conf_file, "w") as f:
+        json.dump(config, f)

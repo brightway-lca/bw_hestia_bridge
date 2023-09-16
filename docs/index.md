@@ -15,8 +15,7 @@ hidden:
 maxdepth: 1
 ---
 
-Usage
-Reference <api/modules>
+Mapping the data format <format>
 contributing
 Code of Conduct <codeofconduct>
 License <license>
