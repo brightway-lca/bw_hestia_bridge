@@ -11,10 +11,11 @@ import bw_hestia_bridge as bhb
 confdir = user_config_dir("bw_hestia_bridge", appauthor=False)
 os.makedirs(confdir, exist_ok=True)
 
+conf_file = os.path.join(confdir, "config.json")
+
 
 def _init_config():
-    conf_file = os.path.join(confdir, "config.json")
-
+    ''' Create or set the config from the file and the environment '''
     config = bhb._config.copy()
 
     if os.path.isfile(conf_file):
