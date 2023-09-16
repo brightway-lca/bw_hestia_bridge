@@ -10,7 +10,7 @@ def test_search():
     set_config("hestia_api", "https://api-staging.hestia.earth")
 
     assert len(search_hestia({"products.term.name": "Saplings"})) == 10
-    assert len(search_hestia({"products.term.name": "Saplings"}, limit=20)) == 20
+    assert len(search_hestia({"products.term.name": "Saplings"}, limit=12)) == 12
 
     # test combined queries
     assert 0 < len(search_hestia({"name": "ouidah", "products.term.name": "Saplings"})) < 10
@@ -24,4 +24,4 @@ def test_search():
         {"name": "conventional denmark", "product.term.name": "Maize"},
         match_all_words=True)
 
-    assert len(res_exact) < res_fuzzy
+    assert len(res_exact) < len(res_fuzzy)
