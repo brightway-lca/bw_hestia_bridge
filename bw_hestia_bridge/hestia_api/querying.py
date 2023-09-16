@@ -127,3 +127,43 @@ def get_hestia_node(node: dict[str, str], data_state: Optional[str] = None) -> d
     req_url = f"{url}/{ntype}s/{nid}?dataState={data_state}"
 
     return requests.get(req_url, headers=headers, proxies=proxies).json()
+
+
+def simple_hestia(
+    node_type: str,
+    node_id: str,
+    staging: Optional[bool] = False,
+    recalculated: Optional[bool] = False,
+):
+    """
+    Download the Hestia node type `node_type` with id `node_id`
+
+    Parameters
+    ----------
+    node_type: str. One of `valid_types`.
+    node_id: str.
+    staging: bool. Use staging API URL.
+    recalculated: bool. Use recalculated data, only `node_type` `cycle`.
+
+    Returns
+    -------
+    JSON-LD dictionary
+    """
+    if node_type not in valid_types:
+        raise ValueError(f"Invalid type {node_type}")
+
+    url_base = (
+        "https://api-staging.hestia.earth" if staging else "https://api.hestia.earth"
+    )
+    headers = {"Content-Type": "application/json"}
+    url = f"{url_base}/{node_type}s/{node_id}"
+
+    if node_type == "cycle":
+        if recalculated:
+            params = {"dataState": "recalculated"}
+        else:
+            params = {"dataState": "original"}
+    else:
+        params = {}
+
+    return requests.get(url, params=params, headers=headers).json()
