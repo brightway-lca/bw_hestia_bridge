@@ -45,6 +45,12 @@ dev = [
     "pylint",
 ]
 
+docs = [
+    "sphinx",
+    "myst_parser",
+    "furo",
+]
+
 [tool.setuptools]
 license-files = ["LICENSE"]
 package-data = {bw_hestia_bridge = ["*.md", "*.txt"]}
