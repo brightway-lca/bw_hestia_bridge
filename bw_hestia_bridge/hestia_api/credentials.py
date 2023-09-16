@@ -20,10 +20,10 @@ def login_to_hestia(email: str, pwd: str) -> None:
         f"{url}/users/signin", json=data, headers=headers
     ).json().get('token')
 
-    set_token(token)
+    set_hestia_token(token)
 
 
-def set_token(token: str) -> None:
+def set_hestia_token(token: str) -> None:
     '''
     Store the token in the config.
     '''

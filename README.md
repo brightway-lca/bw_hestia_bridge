@@ -27,20 +27,39 @@ You can install _bw_hestia_bridge_ via [pip] from [PyPI]:
 $ pip install bw_hestia_bridge
 ```
 
-## Using the API
-
-API key for development: 6t7B6uAwwZYjF5SJKGwLz5XmArsz894N8gio1UKVrj9K
-
 ## Functions
 
 ```python
+def search_hestia(element: str, filter_type) -> list[dict[str, str]]:
+    ''' Search the Hestia database. '''
+
+def get_hestia_node(node: dict[str, str]) -> dict:
+    ''' Download the Hestia node associated to `node`. '''
+
 def login_to_hestia(email: str, password: str) -> None:
     ''' Register to Hestia and set the token '''
 
 def set_hestia_token(token: str) -> None:
     ''' Set the token to call the Hestia API '''
+```
 
-def search_hestia(element: str, filter_type)
+## Using the Hestia API
+
+API key for development: 6t7B6uAwwZYjF5SJKGwLz5XmArsz894N8gio1UKVrj9K
+
+Programmatic overview: https://www.hestia.earth/docs/#overview
+
+Swagger: https://api.hestia.earth/swagger/
+
+API Base URL: https://api-staging.hestia.earth/
+
+Get a basic JSON LD:
+
+```python
+import requests
+cycle_id = "help me!"
+URL = "https://api-staging.hestia.earth/cycles/{cycle_id}/cycles"
+requests.get(URL).json()
 ```
 
 ## Contributing

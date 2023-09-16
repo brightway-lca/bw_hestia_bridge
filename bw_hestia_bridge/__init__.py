@@ -13,7 +13,7 @@ _config: dict = {
 
 
 from .hestia_api import (
-    get_hestia_node, login_to_hestia, search_hestia, set_token)
+    get_hestia_node, login_to_hestia, search_hestia, set_hestia_token)
 from .utils import get_config, set_config
 
 
