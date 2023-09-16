@@ -7,7 +7,8 @@ from .base_data import base_api_data
 
 def search_hestia(
     name: str,
-    fields: Optional[list[str]] = None
+    fields: Optional[list[str]] = None,
+    limit: Optional[int] = 10
 ) -> list[dict[str, str]]:
     '''
     Search the Hestia database.
@@ -18,6 +19,7 @@ def search_hestia(
         A string to match to the names of the Hestia database.
     fields : list[str], optional (default: ["@type", "name", "@id"])
         Fields that will be returned in the search results.
+    limit : int, optional (default: 10)
 
     Returns
     -------
@@ -36,6 +38,7 @@ def search_hestia(
             }
         },
         "fields": fields,
+        "limit": limit
     }
 
     return requests.post(
@@ -43,7 +46,10 @@ def search_hestia(
     ).json()["results"]
 
 
-def get_hestia_node(node: dict[str, str]) -> dict:
+def get_hestia_node(
+    node: dict[str, str],
+    data_state: Optional[str] = None
+) -> dict:
     '''
     Download the Hestia node associated to `node`.
 
@@ -52,6 +58,9 @@ def get_hestia_node(node: dict[str, str]) -> dict:
     node : dict[str, str]
          Dictionary describing the node. It must contain at least an "@type"
         and an "@id" entry.
+    data_state : str, optional (default: "recalculated")
+        Version of the data, by default, use "recalculated" to download the
+        more detailed version of the data. Use "original" to get the raw data.
 
     Returns
     -------
@@ -66,6 +75,9 @@ def get_hestia_node(node: dict[str, str]) -> dict:
     ntype = node["@type"].lower()
     nid = node["@id"]
 
-    return requests.get(
-        f"{url}/{ntype}s/{nid}", headers=headers, proxies=proxies).json()
+    data_state = data_state or "recalculated"
+
+    req_url = f"{url}/{ntype}s/{nid}?dataState={data_state}"
+
+    return requests.get(req_url, headers=headers, proxies=proxies).json()
 

@@ -25,8 +25,7 @@ def _init_config():
             for k, v in new_config.items():
                 config[k] = v
     else:
-        with open(conf_file, "w") as f:
-            json.dump(config, f)
+        save_config(config)
 
     # auto-set proxies if environment variables are set
     proxies = ["http_proxy", "https_proxy"]
@@ -76,3 +75,19 @@ def set_config(
     else:
         for k, v in config.items():
             set_config(k, v)
+
+
+def save_config(config: Optional[dict] = None) -> None:
+    '''
+    Save the the configuration.
+
+    Parameters
+    ----------
+    config : dict, optional (default: current configuration)
+        Configuration to save.
+    '''
+    config = config or bhb._config
+
+    with open(conf_file, "w") as f:
+        json.dump(config, f)
+
