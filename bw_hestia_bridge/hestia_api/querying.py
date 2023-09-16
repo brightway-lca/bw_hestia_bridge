@@ -46,8 +46,8 @@ def search_hestia(
         A string to match to the names of the Hestia database, or a
         dict of the form ``{"field_name": value}`` to search `field_name`
         instead of "name". One can also refine this by searching for
-        nodes that have a product with a name matching "sapling" by
-        using ``{"products.term.name": "sapling"}``.
+        nodes that have a product with a name matching "Saplings" by
+        using ``{"products.term.name": "Saplings"}``.
     node_type : str, optional (default: any type)
         A valid type among "actor", "animal", "bibliography", "completeness",
         "cycle", "emission", "impactassessment", "indicator",
