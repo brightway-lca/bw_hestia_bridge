@@ -1,12 +1,39 @@
-import requests
+import re
+from typing import Optional, Union
 
-from typing import Optional
+import requests
 
 from .base_data import base_api_data
 
 
+valid_types = {
+    "actor",
+    "animal",
+    "bibliography",
+    "completeness",
+    "cycle",
+    "emission",
+    "impactassessment",
+    "indicator",
+    "infrastructure",
+    "input",
+    "management",
+    "measurement",
+    "organisation",
+    "practice",
+    "product",
+    "property",
+    "site",
+    "source",
+    "term",
+    "transformation",
+    "transport",
+}
+
+
 def search_hestia(
-    name: str,
+    name: Union[str, dict[str, str]],
+    node_type: Optional[str] = None,
     fields: Optional[list[str]] = None,
     limit: Optional[int] = 10
 ) -> list[dict[str, str]]:
@@ -15,8 +42,18 @@ def search_hestia(
 
     Parameters
     ----------
-    name : str
-        A string to match to the names of the Hestia database.
+    name : str or dict
+        A string to match to the names of the Hestia database, or a
+        dict of the form ``{"field_name": value}`` to search `field_name`
+        instead of "name". One can also refine this by searching for
+        nodes that have a product with a name matching "sapling" by
+        using ``{"products.term.name": "sapling"}``.
+    node_type : str, optional (default: any type)
+        A valid type among "actor", "animal", "bibliography", "completeness",
+        "cycle", "emission", "impactassessment", "indicator",
+        "infrastructure", "input", "management", "measurement",
+        "organisation", "practice", "product", "property", "site", "source",
+        "term", "transformation", or "transport".
     fields : list[str], optional (default: ["@type", "name", "@id"])
         Fields that will be returned in the search results.
     limit : int, optional (default: 10)
@@ -29,14 +66,37 @@ def search_hestia(
 
     fields = fields or ["@type", "name", "@id"]
 
+    matches = []
+
+    if not isinstance(name, dict):
+        matches.append({"match": {"name": name}})
+    else:
+        r = r"(?P<path>\w+)\..+"
+        key = next(iter(name))
+
+        re_match = re.search(r, key)
+
+        if re_match:
+            path = re_match.groupdict()["path"]
+
+            matches.append({
+                'nested':{
+                    'path': path,
+                    'query': {'match': name}
+                }
+            })
+        else:
+            matches.append({'match': name})
+
+    if node_type:
+        assert node_type.lower() in valid_types, \
+            f"Valid `node_type` entries are {valid_types}"
+
+        matches.append(
+            {"match": {"@type": node_type[0].upper() + node_type[1:]}})
+
     query = {
-        "query": {
-            "bool": {
-                "must": [
-                    {"match": {"name": name}}
-                ]
-            }
-        },
+        "query": {"bool": {"must": matches}},
         "fields": fields,
         "limit": limit
     }
