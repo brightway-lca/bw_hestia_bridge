@@ -4,6 +4,7 @@ from .hestia_api import (
     login_to_hestia,
     search_hestia,
     set_hestia_token,
+    simple_hestia,
 )
 from .utils import get_config, set_config
 
@@ -17,6 +18,7 @@ __all__ = (
     "search_hestia",
     "set_config",
     "set_hestia_token",
+    "simple_hestia",
 )
 
 __version__ = "0.1.0"
