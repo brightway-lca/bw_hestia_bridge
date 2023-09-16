@@ -17,7 +17,7 @@ def search_hestia(
     name : str
         A string to match to the names of the Hestia database.
     fields : list[str], optional (default: ["@type", "name", "@id"])
-        Fields returned by the search.
+        Fields that will be returned in the search results.
 
     Returns
     -------

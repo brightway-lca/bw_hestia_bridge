@@ -5,19 +5,85 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "bw_hestia_bridge"
 authors = [
-  { name="Tanguy Fardet" },
   { name="Timo Diepers" },
+  { name="Tanguy Fardet" },
+  { name=" Chris Mutel", email="cmutel@gmail.com" },
   { name="Clemens Wingenbach" },
-  { name=" Chris Mutel" },
 ]
-description = "Python module for demography and agriculture-related GIS."
+maintainers = [
+  { name=" Chris Mutel", email="cmutel@gmail.com" }
+]
+description = "Import HESTIA data directly into Brightway"
+keywords= ["brightway", "hestia", "agriculture", "development"]
 readme = "README.md"
 dynamic = ["dependencies", "version"]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering",
+]
+requires-python = ">=3.9"
+
+[project.urls]
+source = "https://github.com/brightway-lca/bw_hestia_bridge"
+homepage = "https://github.com/brightway-lca/bw_hestia_bridge"
+tracker = "https://github.com/brightway-lca/bw_hestia_bridge/issues"
+
+[project.optional-dependencies]
+testing = [
+    "setuptools",
+    "pytest",
+    "pytest-cov",
+]
+
+dev = [
+    "pre-commit",
+    "pylint",
+]
 
 [tool.setuptools]
 license-files = ["LICENSE"]
 package-data = {bw_hestia_bridge = ["*.md", "*.txt"]}
+package-dir = {bw_hestia_bridge = "bw_hestia_bridge"}
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
 version = {attr = "bw_hestia_bridge.__version__"}
+
+
+[tool.pytest]
+addopts = [
+    "--cov bw_hestia_bridge --cov-report term-missing",
+    "--verbose"
+]
+
+norecursedirs = [
+    "dist",
+    "build",
+    ".tox"
+]
+testpaths = ["tests/*.py"]
+
+[devpi.upload]
+# Options for the devpi: PyPI server and packaging tool
+# VCS export must be deactivated since we are using setuptools-scm
+no_vcs = 1
+formats = "bdist_wheel"
+
+[flake8]
+# Some sane defaults for the code style checker flake8
+max_line_length = 88
+extend_ignore = ["E203", "W503"]
+# ^  Black-compatible
+#    E203 and W503 have edge cases handled by black
+exclude = [
+    ".tox",
+    "build",
+    "dist",
+    ".eggs",
+    "docs/conf.py",
+]
