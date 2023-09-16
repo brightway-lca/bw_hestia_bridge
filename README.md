@@ -35,6 +35,17 @@ Programmatic overview: https://www.hestia.earth/docs/#overview
 
 Swagger: https://api.hestia.earth/swagger/
 
+API Base URL: https://api-staging.hestia.earth/
+
+Get a basic JSON LD:
+
+```python
+import requests
+cycle_id = "help me!"
+URL = "https://api-staging.hestia.earth/cycles/{cycle_id}/cycles"
+requests.get(URL).json()
+```
+
 ## Contributing
 
 Contributions are very welcome.
