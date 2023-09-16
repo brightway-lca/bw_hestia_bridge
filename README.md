@@ -27,6 +27,10 @@ You can install _bw_hestia_bridge_ via [pip] from [PyPI]:
 $ pip install bw_hestia_bridge
 ```
 
+## Using the API
+
+API key for development: 6t7B6uAwwZYjF5SJKGwLz5XmArsz894N8gio1UKVrj9K
+
 ## Contributing
 
 Contributions are very welcome.
