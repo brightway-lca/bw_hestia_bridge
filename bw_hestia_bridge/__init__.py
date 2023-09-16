@@ -1,9 +1,12 @@
 """bw_hestia_bridge."""
-from bw_hestia_bridge.utils import get_version_tuple
 
 __all__ = (
     "__version__",
-    # Add functions and variables you want exposed in `bw_hestia_bridge.` namespace here
+    "clean_background_emissions",
 )
 
+from .utils import get_version_tuple
+
 __version__ = get_version_tuple()
+
+from .data_preparation import clean_background_emissions
