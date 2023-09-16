@@ -32,7 +32,7 @@ valid_types = {
 
 
 def search_hestia(
-    name: Union[str, dict[str, str]],
+    query: Union[str, dict[str, str]],
     node_type: Optional[str] = None,
     fields: Optional[list[str]] = None,
     limit: Optional[int] = 10
@@ -42,12 +42,12 @@ def search_hestia(
 
     Parameters
     ----------
-    name : str or dict
-        A string to match to the names of the Hestia database, or a
-        dict of the form ``{"field_name": value}`` to search `field_name`
-        instead of "name". One can also refine this by searching for
-        nodes that have a product with a name matching "Saplings" by
-        using ``{"products.term.name": "Saplings"}``.
+    query : str or dict
+        A string to match to names in the Hestia database, or a dict of the
+        form ``{"field_name": value}`` to match `field_name` instead of
+        "name". One can also refine this by searching for nodes that have a
+        product with a name matching "Saplings" by using
+        ``{"products.term.name": "Saplings"}``.
     node_type : str, optional (default: any type)
         A valid type among "actor", "animal", "bibliography", "completeness",
         "cycle", "emission", "impactassessment", "indicator",
@@ -68,11 +68,11 @@ def search_hestia(
 
     matches = []
 
-    if not isinstance(name, dict):
-        matches.append({"match": {"name": name}})
+    if not isinstance(query, dict):
+        matches.append({"match": {"name": query}})
     else:
         r = r"(?P<path>\w+)\..+"
-        key = next(iter(name))
+        key = next(iter(query))
 
         re_match = re.search(r, key)
 
@@ -82,11 +82,11 @@ def search_hestia(
             matches.append({
                 'nested':{
                     'path': path,
-                    'query': {'match': name}
+                    'query': {'match': query}
                 }
             })
         else:
-            matches.append({'match': name})
+            matches.append({'match': query})
 
     if node_type:
         assert node_type.lower() in valid_types, \
@@ -95,14 +95,14 @@ def search_hestia(
         matches.append(
             {"match": {"@type": node_type[0].upper() + node_type[1:]}})
 
-    query = {
+    q = {
         "query": {"bool": {"must": matches}},
         "fields": fields,
         "limit": limit
     }
 
     return requests.post(
-        f"{url}/search", json=query, headers=headers, proxies=proxies
+        f"{url}/search", json=q, headers=headers, proxies=proxies
     ).json()["results"]
 
 
