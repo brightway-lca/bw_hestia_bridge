@@ -4,6 +4,8 @@ end-before: <!-- github-only -->
 ---
 ```
 
+# Brightway Hestia Bridge
+
 [license]: license
 [contributor guide]: contributing
 [command-line reference]: usage
