@@ -21,16 +21,28 @@ def test_search():
     # test combined queries
     assert 0 < len(search_hestia({"name": "ouidah", "products.term.name": "Saplings"})) < 10
 
-    # test precise match
-    res_fuzzy = search_hestia(
-        {"name": "conventional denmark", "product.term.name": "Maize"},
-        match_all_words=False)
+    # test more or less precise match
+    res_or = search_hestia(
+        {"name": "conventional denmark", "product.term.name": "Maize"}, how="or")
+
+    res_and = search_hestia(
+        {"name": "conventional denmark", "product.term.name": "Maize"}, how="and")
+
+    assert len(res_and) < len(res_or)
+
+    # test exact match
+    res_or = search_hestia(
+        "Maize, grain, Denmark, 2009, Conventional-Non Irrigated")
 
     res_exact = search_hestia(
-        {"name": "conventional denmark", "product.term.name": "Maize"},
-        match_all_words=True)
+        "Maize, grain, Denmark, 2009, Conventional-Non Irrigated", how="exact")
 
-    assert len(res_exact) < len(res_fuzzy)
+    assert len(res_or) > 1 and len(res_exact) == 1
+
+    # check exact with complex match
+    assert len(search_hestia(
+        {"inputs.term.name": 'Inorganic Nitrogen fertiliser, unspecified (kg N)'},
+        how="exact")) > 0
 
 
 def test_download():
