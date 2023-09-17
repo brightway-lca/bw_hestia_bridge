@@ -1,11 +1,5 @@
 from .data_preparation import clean_background_emissions, clean_irrelevant_emissions
-from .hestia_api import (
-    get_hestia_node,
-    login_to_hestia,
-    search_hestia,
-    set_hestia_token,
-    simple_hestia,
-)
+from .hestia_api import get_hestia_node, search_hestia
 from .strategies import Converter
 from .utils import get_config, set_config
 
@@ -15,11 +9,8 @@ __all__ = (
     "clean_irrelevant_emissions",
     "get_config",
     "get_hestia_node",
-    "login_to_hestia",
     "search_hestia",
     "set_config",
-    "set_hestia_token",
-    "simple_hestia",
     "Converter",
 )
 
