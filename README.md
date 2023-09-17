@@ -49,9 +49,9 @@ _bw_hestia_bridge_ is free and open source software.
 If you encounter any problems,
 please [file an issue] along with a detailed description.
 
+[license]: https://github.com/brightway-lca/bw_hestia_bridge/blob/main/LICENSE
 
 <!-- github-only -->
 
 [command-line reference]: https://bw_hestia_bridge.readthedocs.io/en/latest/usage.html
-[license]: https://github.com/brightway-lca/bw_hestia_bridge/blob/main/LICENSE
 [contributor guide]: https://github.com/brightway-lca/bw_hestia_bridge/blob/main/CONTRIBUTING.md
