@@ -1,8 +1,8 @@
 from collections import defaultdict
 from functools import lru_cache
-from typing import Optional, Tuple
+from typing import Tuple
 
-from ..hestia_api import simple_hestia
+from ..hestia_api import get_hestia_node
 
 MAPPED_OPTIONAL_FIELDS = {
     "description": "comment",
@@ -32,9 +32,6 @@ BACKGROUND_DATABASES = {
 
 
 class Converter:
-    def __init__(self, staging: Optional[bool] = False) -> None:
-        self.staging = staging
-
     def convert(self, source: dict) -> list:
         return_data = []
 
@@ -76,9 +73,7 @@ class Converter:
 
     @lru_cache
     def get_location(self, node_id: str) -> str:
-        return simple_hestia(node_type="site", node_id=node_id, staging=self.staging)[
-            "name"
-        ]
+        return get_hestia_node(node_type="site", node_id=node_id)["name"]
 
     def _add_suffixed(
         self, source: dict, target: dict, label: str, fields: set, currency: bool
