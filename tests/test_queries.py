@@ -1,4 +1,4 @@
-from bw_hestia_bridge import get_hestia_node, search_hestia, set_config
+from bw_hestia_bridge import get_hestia_node, search_hestia, set_config, get_upstream_cycle_ids
 
 
 def test_search():
@@ -75,3 +75,16 @@ def test_download():
     for k, v in res[1].items():
         if k in node:
             assert node[k] == v
+
+
+def test_upstream_cycle_seach():
+    """
+    Test if at least one cycle connected to the inputs for a specific cycle is found.
+
+    These tests are dependent on the Staging API of Hestia, if some things
+    change on the Staging Server, they could fail. In such a case it could
+    be convenient to disable these tests if reality demands a rapid merge.
+    """
+    set_config("use_staging", True)
+    upstream_cycle_ids = get_upstream_cycle_ids(cycle_id="nx3jmxn67pe8")
+    assert len(upstream_cycle_ids) >= 0

@@ -163,3 +163,33 @@ def get_hestia_node(
     req_url = f"{url}/{node_type}s/{node_id}?dataState={data_state}"
 
     return requests.get(req_url, headers=headers, proxies=proxies).json()
+
+
+def get_upstream_cycle_ids(cycle_id: str) -> list[str]:
+    """
+    Looks for existing cycles connected to the inputs of `cycle_id`.
+
+    Parameters
+    ----------
+    cycle_id : list[str]
+
+    Returns
+    -------
+    A list of cycle_ids which could be found connected to the inputs of `cycle_id`.
+    Returns an empty list if no cycles are being found.
+    """
+    cycle = get_hestia_node(cycle_id)
+    related_impact_assessment_ids = []
+    for input in cycle["inputs"]:
+        try:
+            related_impact_assessment_ids.append(input["impactAssessment"])
+        except:
+            pass
+    upstream_cycle_ids = []
+    for impact_assessment_id in related_impact_assessment_ids:
+        impact_assessment = get_hestia_node(impact_assessment_id)
+        try:
+            upstream_cycle_ids.append(impact_assessment["cycle"]["@id"])
+        except:
+            pass
+    return upstream_cycle_ids
