@@ -20,7 +20,10 @@
 [black]: https://github.com/psf/black
 
 
+``bw_hestia_bridge`` is a library to interact with [Hestia] and create [brightway] databases from its data.
 
+[Hestia]: https://hestia.earth
+[brightway]: https://brightway.dev
 
 
 ## Installation
