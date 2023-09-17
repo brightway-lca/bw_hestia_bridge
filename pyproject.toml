@@ -46,11 +46,14 @@ dev = [
 ]
 
 docs = [
-    "myst_parser",
-    "pydata_sphinx_theme",
-    "sphinx-design",
-    "sphinx-favicon",
-    "sphinx-notfound-page"
+  "pydata-sphinx-theme",
+  "myst-parser",
+  "sphinx-click",
+  "sphinx-design",
+  "sphinx-notfound-page",
+  "sphinx-favicon",
+  "sphinx-copybutton",
+  "sphinx-autobuild",
 ]
 
 [tool.setuptools]
