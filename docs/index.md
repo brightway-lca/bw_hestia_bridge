@@ -4,19 +4,14 @@ end-before: <!-- github-only -->
 ---
 ```
 
-# Brightway Hestia Bridge
-
-[license]: license
-[contributor guide]: contributing
-[command-line reference]: usage
-[changelog]: changelog
-
 ```{toctree}
 ---
 hidden:
 maxdepth: 1
 ---
 
+tutorial
+api
 Mapping the data format <format>
 contributing
 Code of Conduct <codeofconduct>
