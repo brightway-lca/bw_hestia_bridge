@@ -47,7 +47,7 @@ dev = [
 
 [tool.setuptools]
 license-files = ["LICENSE"]
-package-data = {bw_hestia_bridge = ["*.md", "*.txt"]}
+package-data = {bw_hestia_bridge = ["*.md", "*.txt", "*.csv"]}
 package-dir = { "" = "."}
 packages = [
     "bw_hestia_bridge", "bw_hestia_bridge.hestia_api", "bw_hestia_bridge.utils",
