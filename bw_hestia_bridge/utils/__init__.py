@@ -1,3 +1,3 @@
-from .config import get_config, set_config, _init_config
+from .config import _init_config, get_config, save_config, set_config  # NOQA: F401
 
 _init_config()

@@ -4,6 +4,8 @@ end-before: <!-- github-only -->
 ---
 ```
 
+# Brightway Hestia Bridge
+
 [license]: license
 [contributor guide]: contributing
 [command-line reference]: usage
@@ -15,8 +17,7 @@ hidden:
 maxdepth: 1
 ---
 
-Usage
-Reference <api/modules>
+Mapping the data format <format>
 contributing
 Code of Conduct <codeofconduct>
 License <license>
