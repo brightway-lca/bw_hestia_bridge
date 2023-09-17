@@ -1,0 +1,676 @@
+[
+  {
+    "name": "Oil palm, fruit",
+    "term_type": "crop",
+    "term_id": "oilPalmFruit",
+    "unit": "kg",
+    "transformation_id": null,
+    "type": "product",
+    "price": {
+      "price": 0.1171,
+      "currency": "USD"
+    },
+    "revenue": 2459.1,
+    "economicValueShare": 100
+  },
+  {
+    "name": "Oil palm, frond",
+    "term_type": "crop",
+    "term_id": "oilPalmFrond",
+    "unit": "kg",
+    "transformation_id": null,
+    "type": "product",
+    "price": {
+      "price": 0,
+      "currency": "USD"
+    },
+    "revenue": 0,
+    "economicValueShare": 0
+  },
+  {
+    "name": "Nitrogen uptake (above ground crop residue)",
+    "term_type": "crop",
+    "term_id": "nitrogenUptakeAboveGroundCropResidue",
+    "unit": "kg N",
+    "transformation_id": null,
+    "type": "product",
+    "price": {
+      "price": 0,
+      "currency": "USD"
+    },
+    "revenue": 0,
+    "economicValueShare": 0
+  },
+  {
+    "name": "Phosphorus uptake (above ground crop residue)",
+    "term_type": "crop",
+    "term_id": "phosphorusUptakeAboveGroundCropResidue",
+    "unit": "kg P",
+    "transformation_id": null,
+    "type": "product",
+    "price": {
+      "price": 0,
+      "currency": "USD"
+    },
+    "revenue": 0,
+    "economicValueShare": 0
+  },
+  {
+    "name": "Above ground crop residue, left on field",
+    "term_type": "cropResidue",
+    "term_id": "aboveGroundCropResidueLeftOnField",
+    "unit": "kg dry matter",
+    "transformation_id": null,
+    "type": "product",
+    "comment": "Combination of pruned fronds, fronds, biomass from replanting, and dying back of the legume cover crop, assumed the mass of the last one is made up of pure nitrogen"
+  },
+  {
+    "name": "Above ground crop residue, removed",
+    "term_type": "cropResidue",
+    "term_id": "aboveGroundCropResidueRemoved",
+    "unit": "kg dry matter",
+    "transformation_id": null,
+    "type": "product",
+    "model": {
+      "@type": "Term",
+      "@id": "ipcc2006",
+      "name": "IPCC (2006)",
+      "termType": "model"
+    }
+  },
+  {
+    "@id": "__shpuarrure",
+    "comment": "Production of oil palm, fruits, year 21",
+    "location": "Cropland - Malaysia",
+    "type": "process",
+    "extra_metadata": {
+      "defaultMethodClassificationDescription": "Data from surveys and other studies, averaged over the whole of Malaysia",
+      "endDate": "2006",
+      "createdAt": "2023-07-12",
+      "cycleDuration": 365,
+      "defaultMethodClassification": "inconsistent external sources",
+      "updatedAt": "2023-08-31",
+      "functionalUnit": "1 ha"
+    },
+    "properties": [
+      {
+        "name": "Plantation density",
+        "term_type": "landUseManagement",
+        "term_id": "plantationDensity",
+        "unit": "number",
+        "amount": 142
+      },
+      {
+        "name": "Plantation lifespan",
+        "term_type": "landUseManagement",
+        "term_id": "plantationLifespan",
+        "unit": "days",
+        "amount": 9125
+      },
+      {
+        "name": "Plantation productive lifespan",
+        "term_type": "landUseManagement",
+        "term_id": "plantationProductiveLifespan",
+        "unit": "days",
+        "amount": 8395
+      },
+      {
+        "name": "Number of harvests",
+        "term_type": "landUseManagement",
+        "term_id": "numberOfHarvests",
+        "unit": "number",
+        "amount": 26
+      },
+      {
+        "name": "Current plantation age",
+        "term_type": "landUseManagement",
+        "term_id": "currentPlantationAge",
+        "unit": "days",
+        "amount": 7665
+      },
+      {
+        "name": "Residue removed",
+        "term_type": "cropResidueManagement",
+        "term_id": "residueRemoved",
+        "unit": "%",
+        "amount": 0,
+        "model": {
+          "@type": "Term",
+          "@id": "koble2014",
+          "name": "Koble (2014)",
+          "termType": "model"
+        }
+      },
+      {
+        "name": "Residue burnt",
+        "term_type": "cropResidueManagement",
+        "term_id": "residueBurnt",
+        "unit": "%",
+        "amount": 0,
+        "model": {
+          "@type": "Term",
+          "@id": "koble2014",
+          "name": "Koble (2014)",
+          "termType": "model"
+        }
+      },
+      {
+        "name": "Residue left on field",
+        "term_type": "cropResidueManagement",
+        "term_id": "residueLeftOnField",
+        "unit": "%",
+        "amount": 100,
+        "model": {
+          "@type": "Term",
+          "@id": "koble2014",
+          "name": "Koble (2014)",
+          "termType": "model"
+        }
+      },
+      {
+        "name": "Irrigated",
+        "term_type": "waterRegime",
+        "term_id": "irrigated",
+        "unit": "% area",
+        "amount": 0
+      },
+      {
+        "name": "Nursery density",
+        "term_type": "landUseManagement",
+        "term_id": "nurseryDensity",
+        "unit": "number",
+        "amount": 12500,
+        "model": {
+          "@type": "Term",
+          "@id": "pooreNemecek2018",
+          "name": "Poore & Nemecek (2018)",
+          "termType": "model"
+        }
+      },
+      {
+        "name": "Nursery duration",
+        "term_type": "landUseManagement",
+        "term_id": "nurseryDuration",
+        "unit": "days",
+        "amount": 395.6875,
+        "model": {
+          "@type": "Term",
+          "@id": "pooreNemecek2018",
+          "name": "Poore & Nemecek (2018)",
+          "termType": "model"
+        }
+      },
+      {
+        "name": "Long fallow period",
+        "term_type": "landUseManagement",
+        "term_id": "longFallowPeriod",
+        "unit": "days",
+        "amount": 730,
+        "model": {
+          "@type": "Term",
+          "@id": "pooreNemecek2018",
+          "name": "Poore & Nemecek (2018)",
+          "termType": "model"
+        }
+      },
+      {
+        "name": "Rotation duration",
+        "term_type": "landUseManagement",
+        "term_id": "rotationDuration",
+        "unit": "days",
+        "amount": 9855,
+        "model": {
+          "@type": "Term",
+          "@id": "pooreNemecek2018",
+          "name": "Poore & Nemecek (2018)",
+          "termType": "model"
+        }
+      }
+    ],
+    "exchanges": [
+      {
+        "name": "Ammonium Sulphate (kg N)",
+        "term_type": "inorganicFertiliser",
+        "term_id": "ammoniumSulphateKgN",
+        "unit": "kg N",
+        "amount": 74.19999999999999,
+        "group": "Ammonium Sulphate (kg N)-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Urea (kg N)",
+        "term_type": "inorganicFertiliser",
+        "term_id": "ureaKgN",
+        "unit": "kg N",
+        "amount": 27.560000000000002,
+        "group": "Urea (kg N)-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Inorganic Nitrogen fertiliser, unspecified (kg N)",
+        "term_type": "inorganicFertiliser",
+        "term_id": "inorganicNitrogenFertiliserUnspecifiedKgN",
+        "unit": "kg N",
+        "amount": 4.24,
+        "group": "Inorganic Nitrogen fertiliser, unspecified (kg N)-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Fixed nitrogen, from current crop (kg N)",
+        "term_type": "organicFertiliser",
+        "term_id": "fixedNitrogenFromCurrentCropKgN",
+        "unit": "kg N",
+        "amount": 0,
+        "group": "Fixed nitrogen, from current crop (kg N)-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Palm empty fruit bunches (kg mass)",
+        "term_type": "organicFertiliser",
+        "term_id": "palmEmptyFruitBunchesKgMass",
+        "unit": "kg",
+        "amount": 4250,
+        "group": "Palm empty fruit bunches (kg mass)-0",
+        "type": "technosphere",
+        "methodClassificationDescription": "Best practice, assumed to what happens",
+        "methodClassification": "estimated with assumptions"
+      },
+      {
+        "name": "Palm oil mill effluent (kg mass)",
+        "term_type": "organicFertiliser",
+        "term_id": "palmOilMillEffluentKgMass",
+        "unit": "kg",
+        "amount": 2540,
+        "group": "Palm oil mill effluent (kg mass)-0",
+        "type": "technosphere",
+        "methodClassificationDescription": "Best practice, assumed to what happens",
+        "methodClassification": "estimated with assumptions"
+      },
+      {
+        "name": "Nitrogen in precipitation (kg N)",
+        "term_type": "organicFertiliser",
+        "term_id": "nitrogenInPrecipitationKgN",
+        "unit": "kg N",
+        "amount": 17.5,
+        "group": "Nitrogen in precipitation (kg N)-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Phosphate Rock (kg P2O5)",
+        "term_type": "inorganicFertiliser",
+        "term_id": "phosphateRockKgP2O5",
+        "unit": "kg P2O5",
+        "amount": 46.90580645161291,
+        "group": "Phosphate Rock (kg P2O5)-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Diammonium Phosphate (kg P2O5)",
+        "term_type": "inorganicFertiliser",
+        "term_id": "diammoniumPhosphateKgP2O5",
+        "unit": "kg P2O5",
+        "amount": 4.2,
+        "group": "Diammonium Phosphate (kg P2O5)-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Inorganic Phosphorus fertiliser, unspecified (kg P2O5)",
+        "term_type": "inorganicFertiliser",
+        "term_id": "inorganicPhosphorusFertiliserUnspecifiedKgP2O5",
+        "unit": "kg P2O5",
+        "amount": 21,
+        "group": "Inorganic Phosphorus fertiliser, unspecified (kg P2O5)-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Potassium Chloride (kg K2O)",
+        "term_type": "inorganicFertiliser",
+        "term_id": "potassiumChlorideKgK2O",
+        "unit": "kg K2O",
+        "amount": 169.32,
+        "group": "Potassium Chloride (kg K2O)-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Potassium Sulphate (kg K2O)",
+        "term_type": "inorganicFertiliser",
+        "term_id": "potassiumSulphateKgK2O",
+        "unit": "kg K2O",
+        "amount": 8.16,
+        "group": "Potassium Sulphate (kg K2O)-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Inorganic Potassium fertiliser, unspecified (kg K2O)",
+        "term_type": "inorganicFertiliser",
+        "term_id": "inorganicPotassiumFertiliserUnspecifiedKgK2O",
+        "unit": "kg K2O",
+        "amount": 26.52,
+        "group": "Inorganic Potassium fertiliser, unspecified (kg K2O)-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Inorganic Magnesium fertiliser, unspecified (kg Mg)",
+        "term_type": "inorganicFertiliser",
+        "term_id": "inorganicMagnesiumFertiliserUnspecifiedKgMg",
+        "unit": "kg Mg",
+        "amount": 21,
+        "group": "Inorganic Magnesium fertiliser, unspecified (kg Mg)-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Inorganic Sulphur fertiliser, unspecified (kg S)",
+        "term_type": "inorganicFertiliser",
+        "term_id": "inorganicSulphurFertiliserUnspecifiedKgS",
+        "unit": "kg S",
+        "amount": 16,
+        "group": "Inorganic Sulphur fertiliser, unspecified (kg S)-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Glyphosate",
+        "term_type": "pesticideAI",
+        "term_id": "CAS-1071-83-6",
+        "unit": "kg active ingredient",
+        "amount": 2.3,
+        "group": "Glyphosate-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Cypermethrin",
+        "term_type": "pesticideAI",
+        "term_id": "CAS-52315-07-8",
+        "unit": "kg active ingredient",
+        "amount": 0.3,
+        "group": "Cypermethrin-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Fungicide unspecified (AI)",
+        "term_type": "pesticideAI",
+        "term_id": "fungicideUnspecifiedAi",
+        "unit": "kg active ingredient",
+        "amount": 0.00018,
+        "group": "Fungicide unspecified (AI)-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Warfarin",
+        "term_type": "pesticideAI",
+        "term_id": "CAS-81-81-2",
+        "unit": "kg active ingredient",
+        "amount": 0.00022,
+        "group": "Warfarin-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Electricity, grid, market mix",
+        "term_type": "electricity",
+        "term_id": "electricityGridMarketMix",
+        "unit": "kWh",
+        "amount": 0.0147222222234,
+        "group": "Electricity, grid, market mix-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Diesel",
+        "term_type": "fuel",
+        "term_id": "diesel",
+        "unit": "kg",
+        "amount": 50.21521978021978,
+        "group": "Diesel-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Diammonium Phosphate (kg N)",
+        "term_type": "inorganicFertiliser",
+        "term_id": "diammoniumPhosphateKgN",
+        "unit": "kg N",
+        "amount": 3.793548387096774,
+        "group": "Diammonium Phosphate (kg N)-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Saplings",
+        "term_type": "other",
+        "term_id": "saplings",
+        "unit": "number",
+        "amount": 165,
+        "group": "Saplings-0",
+        "type": "technosphere",
+        "model": {
+          "@type": "Term",
+          "@id": "pooreNemecek2018",
+          "name": "Poore & Nemecek (2018)",
+          "termType": "model"
+        }
+      },
+      {
+        "type": "production",
+        "name": "Oil palm, fruit",
+        "unit": "kg",
+        "amount": 21000,
+        "transformation_id": null
+      },
+      {
+        "type": "production",
+        "name": "Oil palm, frond",
+        "unit": "kg",
+        "amount": 10700,
+        "transformation_id": null
+      },
+      {
+        "type": "production",
+        "name": "Nitrogen uptake (above ground crop residue)",
+        "unit": "kg N",
+        "amount": 153.54,
+        "transformation_id": null
+      },
+      {
+        "type": "production",
+        "name": "Phosphorus uptake (above ground crop residue)",
+        "unit": "kg P",
+        "amount": 11.5,
+        "transformation_id": null
+      },
+      {
+        "type": "production",
+        "name": "Above ground crop residue, left on field",
+        "unit": "kg dry matter",
+        "amount": 10700,
+        "transformation_id": null
+      },
+      {
+        "type": "production",
+        "name": "Above ground crop residue, removed",
+        "unit": "kg dry matter",
+        "amount": 5018.3,
+        "transformation_id": null
+      },
+      {
+        "type": "biosphere",
+        "name": "NH3, to air, soil flux",
+        "term_type": "emission",
+        "term_id": "nh3ToAirSoilFlux",
+        "unit": "kg NH3",
+        "amount": 18.427999999999997
+      },
+      {
+        "type": "biosphere",
+        "name": "N2O, to air, soil flux",
+        "term_type": "emission",
+        "term_id": "n2OToAirSoilFlux",
+        "unit": "kg N2O",
+        "amount": 7.568248571428572
+      },
+      {
+        "type": "biosphere",
+        "name": "NO, to air, soil flux",
+        "term_type": "emission",
+        "term_id": "noToAirSoilFlux",
+        "unit": "kg NO",
+        "amount": 3.2142857142857144
+      },
+      {
+        "type": "biosphere",
+        "name": "NO3, to groundwater, soil flux",
+        "term_type": "emission",
+        "term_id": "no3ToGroundwaterSoilFlux",
+        "unit": "kg NO3",
+        "amount": 133.74285714285716
+      },
+      {
+        "type": "biosphere",
+        "name": "P, to surface water, soil flux",
+        "term_type": "emission",
+        "term_id": "pToSurfaceWaterSoilFlux",
+        "unit": "kg P",
+        "amount": 0.66
+      },
+      {
+        "type": "biosphere",
+        "name": "P, erosion, soil flux",
+        "term_type": "emission",
+        "term_id": "pErosionSoilFlux",
+        "unit": "kg P",
+        "amount": 0.9
+      },
+      {
+        "type": "biosphere",
+        "name": "CO2, to air, soil flux",
+        "term_type": "emission",
+        "term_id": "co2ToAirSoilFlux",
+        "unit": "kg CO2",
+        "amount": 1500
+      },
+      {
+        "type": "biosphere",
+        "name": "NOx, to air, inorganic fertiliser",
+        "term_type": "emission",
+        "term_id": "noxToAirInorganicFertiliser",
+        "unit": "kg NOx",
+        "amount": 0.5627586899612903
+      },
+      {
+        "type": "biosphere",
+        "name": "NOx, to air, organic fertiliser",
+        "term_type": "emission",
+        "term_id": "noxToAirOrganicFertiliser",
+        "unit": "kg NOx",
+        "amount": 0.171774500904
+      },
+      {
+        "type": "biosphere",
+        "name": "N2O, to air, inorganic fertiliser, direct",
+        "term_type": "emission",
+        "term_id": "n2OToAirInorganicFertiliserDirect",
+        "unit": "kg N2O",
+        "amount": 1.7249744574717247
+      },
+      {
+        "type": "biosphere",
+        "name": "N2O, to air, organic fertiliser, direct",
+        "term_type": "emission",
+        "term_id": "n2OToAirOrganicFertiliserDirect",
+        "unit": "kg N2O",
+        "amount": 0.5265251906189762
+      },
+      {
+        "type": "biosphere",
+        "name": "CO2, to air, fuel combustion",
+        "term_type": "emission",
+        "term_id": "co2ToAirFuelCombustion",
+        "unit": "kg CO2",
+        "amount": 159.1822467032967
+      },
+      {
+        "type": "biosphere",
+        "name": "N2O, to air, fuel combustion, direct",
+        "term_type": "emission",
+        "term_id": "n2OToAirFuelCombustionDirect",
+        "unit": "kg N2O",
+        "amount": 0.00682926989010989
+      },
+      {
+        "type": "biosphere",
+        "name": "NOx, to air, fuel combustion",
+        "term_type": "emission",
+        "term_id": "noxToAirFuelCombustion",
+        "unit": "kg NOx",
+        "amount": 1.6384724062087912
+      },
+      {
+        "type": "biosphere",
+        "name": "SO2, to air, fuel combustion",
+        "term_type": "emission",
+        "term_id": "so2ToAirFuelCombustion",
+        "unit": "kg SO2",
+        "amount": 0.05021521978021978
+      },
+      {
+        "type": "biosphere",
+        "name": "N2O, to air, inorganic fertiliser, indirect",
+        "term_type": "emission",
+        "term_id": "n2OToAirInorganicFertiliserIndirect",
+        "unit": "kg N2O",
+        "amount": 0.5606166986783105
+      },
+      {
+        "type": "biosphere",
+        "name": "N2O, to air, organic fertiliser, indirect",
+        "term_type": "emission",
+        "term_id": "n2OToAirOrganicFertiliserIndirect",
+        "unit": "kg N2O",
+        "amount": 0.22377320601306486
+      },
+      {
+        "type": "biosphere",
+        "name": "N2O, to air, organic soil cultivation, direct",
+        "term_type": "emission",
+        "term_id": "n2OToAirOrganicSoilCultivationDirect",
+        "unit": "kg N2O",
+        "amount": 0.00012104852377956857
+      },
+      {
+        "type": "biosphere",
+        "name": "CO2, to air, organic soil cultivation",
+        "term_type": "emission",
+        "term_id": "co2ToAirOrganicSoilCultivation",
+        "unit": "kg CO2",
+        "amount": 0.35313038947554487
+      },
+      {
+        "type": "biosphere",
+        "name": "CO2, to air, above ground biomass stock change, land use change",
+        "term_type": "emission",
+        "term_id": "co2ToAirAboveGroundBiomassStockChangeLandUseChange",
+        "unit": "kg CO2",
+        "amount": 465.6446332649325
+      },
+      {
+        "type": "biosphere",
+        "name": "CH4, to air, natural vegetation burning",
+        "term_type": "emission",
+        "term_id": "ch4ToAirNaturalVegetationBurning",
+        "unit": "kg CH4",
+        "amount": 0.8221439222823107
+      },
+      {
+        "type": "biosphere",
+        "name": "N2O, to air, natural vegetation burning, direct",
+        "term_type": "emission",
+        "term_id": "n2OToAirNaturalVegetationBurningDirect",
+        "unit": "kg N2O",
+        "amount": 0.023489826350923164
+      },
+      {
+        "type": "biosphere",
+        "name": "CO2, to air, urea hydrolysis",
+        "term_type": "emission",
+        "term_id": "co2ToAirUreaHydrolysis",
+        "unit": "kg CO2",
+        "amount": 48.625592
+      }
+    ]
+  }
+]

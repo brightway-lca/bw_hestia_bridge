@@ -1,0 +1,502 @@
+[
+  {
+    "name": "Banana, fruit",
+    "term_type": "crop",
+    "term_id": "bananaFruit",
+    "unit": "kg",
+    "transformation_id": null,
+    "type": "product",
+    "price": {
+      "price": 0.4424,
+      "currency": "USD"
+    },
+    "revenue": 24332,
+    "economicValueShare": 100
+  },
+  {
+    "name": "Plastic waste",
+    "term_type": "waste",
+    "term_id": "plasticWaste",
+    "unit": "kg",
+    "transformation_id": null,
+    "type": "product",
+    "price": {
+      "price": 0,
+      "currency": "USD"
+    },
+    "revenue": 0,
+    "economicValueShare": 0,
+    "comment": "Includes the LDPE used for plastic mulching and the fertilisers packaging"
+  },
+  {
+    "name": "Wood waste",
+    "term_type": "waste",
+    "term_id": "woodWaste",
+    "unit": "kg",
+    "transformation_id": null,
+    "type": "product",
+    "price": {
+      "price": 0,
+      "currency": "USD"
+    },
+    "methodClassificationDescription": "Described as \"waste wood, untreated\" in the by-product section. Not sure exactly what it is given banana is not woody",
+    "revenue": 0,
+    "economicValueShare": 0,
+    "methodClassification": "estimated with assumptions"
+  },
+  {
+    "name": "Above ground crop residue, total",
+    "term_type": "cropResidue",
+    "term_id": "aboveGroundCropResidueTotal",
+    "unit": "kg dry matter",
+    "transformation_id": null,
+    "type": "product",
+    "model": {
+      "@type": "Term",
+      "@id": "pooreNemecek2018",
+      "name": "Poore & Nemecek (2018)",
+      "termType": "model"
+    }
+  },
+  {
+    "name": "Below ground crop residue",
+    "term_type": "cropResidue",
+    "term_id": "belowGroundCropResidue",
+    "unit": "kg dry matter",
+    "transformation_id": null,
+    "type": "product",
+    "model": {
+      "@type": "Term",
+      "@id": "pooreNemecek2018",
+      "name": "Poore & Nemecek (2018)",
+      "termType": "model"
+    }
+  },
+  {
+    "name": "Above ground crop residue, left on field",
+    "term_type": "cropResidue",
+    "term_id": "aboveGroundCropResidueLeftOnField",
+    "unit": "kg dry matter",
+    "transformation_id": null,
+    "type": "product",
+    "model": {
+      "@type": "Term",
+      "@id": "koble2014",
+      "name": "Koble (2014)",
+      "termType": "model"
+    }
+  },
+  {
+    "name": "Banana, fruit",
+    "term_type": "crop",
+    "term_id": "bananaFruit",
+    "unit": "kg",
+    "transformation_id": "1",
+    "type": "product",
+    "price": {
+      "price": 0.4424,
+      "currency": "USD"
+    },
+    "revenue": 24332,
+    "economicValueShare": 100
+  },
+  {
+    "name": "Cooling food, with refrigerator",
+    "term_type": "operation",
+    "term_id": "coolingFoodWithRefrigerator",
+    "unit": "hour",
+    "type": "process",
+    "transformationId": "1",
+    "parent_cycle_id": "cx_dtpwud1iu",
+    "exchanges": [
+      {
+        "name": "Banana, fruit",
+        "term_type": "crop",
+        "term_id": "bananaFruit",
+        "unit": "kg",
+        "amount": 55000,
+        "group": "Banana, fruit-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Electricity, grid, market mix",
+        "term_type": "electricity",
+        "term_id": "electricityGridMarketMix",
+        "unit": "kWh",
+        "amount": 812.79,
+        "group": "Electricity, grid, market mix-0",
+        "type": "technosphere"
+      },
+      {
+        "type": "production",
+        "name": "Banana, fruit",
+        "unit": "kg",
+        "amount": 55000,
+        "transformation_id": "1"
+      }
+    ]
+  },
+  {
+    "name": "Landfill (waste management)",
+    "term_type": "wasteManagement",
+    "term_id": "landfillWasteManagement",
+    "unit": null,
+    "type": "process",
+    "transformationId": "waste",
+    "parent_cycle_id": "cx_dtpwud1iu",
+    "exchanges": [
+      {
+        "name": "Plastic waste",
+        "term_type": "waste",
+        "term_id": "plasticWaste",
+        "unit": "kg",
+        "amount": 2203.85,
+        "group": "Plastic waste-0",
+        "type": "technosphere"
+      }
+    ]
+  },
+  {
+    "@id": "cx_dtpwud1iu",
+    "comment": "Bananas, Colombia",
+    "location": "Cropland - Colombia",
+    "type": "process",
+    "extra_metadata": {
+      "defaultMethodClassificationDescription": "Data from a range of external sources supplemented with modelling.",
+      "endDate": "2012",
+      "createdAt": "2023-09-14",
+      "cycleDuration": 365,
+      "defaultMethodClassification": "inconsistent external sources",
+      "updatedAt": "2023-09-15",
+      "functionalUnit": "1 ha"
+    },
+    "properties": [
+      {
+        "name": "Plastic mulching",
+        "term_type": "landUseManagement",
+        "term_id": "plasticMulching",
+        "unit": "% area",
+        "amount": 100
+      },
+      {
+        "name": "Residue removed",
+        "term_type": "cropResidueManagement",
+        "term_id": "residueRemoved",
+        "unit": "%",
+        "amount": 0,
+        "model": {
+          "@type": "Term",
+          "@id": "koble2014",
+          "name": "Koble (2014)",
+          "termType": "model"
+        }
+      },
+      {
+        "name": "Residue burnt",
+        "term_type": "cropResidueManagement",
+        "term_id": "residueBurnt",
+        "unit": "%",
+        "amount": 0,
+        "model": {
+          "@type": "Term",
+          "@id": "koble2014",
+          "name": "Koble (2014)",
+          "termType": "model"
+        }
+      },
+      {
+        "name": "Residue left on field",
+        "term_type": "cropResidueManagement",
+        "term_id": "residueLeftOnField",
+        "unit": "%",
+        "amount": 100,
+        "model": {
+          "@type": "Term",
+          "@id": "koble2014",
+          "name": "Koble (2014)",
+          "termType": "model"
+        }
+      },
+      {
+        "name": "Irrigated",
+        "term_type": "waterRegime",
+        "term_id": "irrigated",
+        "unit": "% area",
+        "amount": 100
+      },
+      {
+        "name": "Nursery density",
+        "term_type": "landUseManagement",
+        "term_id": "nurseryDensity",
+        "unit": "number",
+        "amount": 250000,
+        "model": {
+          "@type": "Term",
+          "@id": "pooreNemecek2018",
+          "name": "Poore & Nemecek (2018)",
+          "termType": "model"
+        }
+      },
+      {
+        "name": "Nursery duration",
+        "term_type": "landUseManagement",
+        "term_id": "nurseryDuration",
+        "unit": "days",
+        "amount": 69,
+        "model": {
+          "@type": "Term",
+          "@id": "pooreNemecek2018",
+          "name": "Poore & Nemecek (2018)",
+          "termType": "model"
+        }
+      },
+      {
+        "name": "Plantation density",
+        "term_type": "landUseManagement",
+        "term_id": "plantationDensity",
+        "unit": "number",
+        "amount": 1587,
+        "model": {
+          "@type": "Term",
+          "@id": "pooreNemecek2018",
+          "name": "Poore & Nemecek (2018)",
+          "termType": "model"
+        }
+      },
+      {
+        "name": "Plantation lifespan",
+        "term_type": "landUseManagement",
+        "term_id": "plantationLifespan",
+        "unit": "days",
+        "amount": 2920,
+        "model": {
+          "@type": "Term",
+          "@id": "pooreNemecek2018",
+          "name": "Poore & Nemecek (2018)",
+          "termType": "model"
+        }
+      },
+      {
+        "name": "Plantation productive lifespan",
+        "term_type": "landUseManagement",
+        "term_id": "plantationProductiveLifespan",
+        "unit": "days",
+        "amount": 2602.5,
+        "model": {
+          "@type": "Term",
+          "@id": "pooreNemecek2018",
+          "name": "Poore & Nemecek (2018)",
+          "termType": "model"
+        }
+      },
+      {
+        "name": "Long fallow period",
+        "term_type": "landUseManagement",
+        "term_id": "longFallowPeriod",
+        "unit": "days",
+        "amount": 180,
+        "model": {
+          "@type": "Term",
+          "@id": "pooreNemecek2018",
+          "name": "Poore & Nemecek (2018)",
+          "termType": "model"
+        }
+      },
+      {
+        "name": "Rotation duration",
+        "term_type": "landUseManagement",
+        "term_id": "rotationDuration",
+        "unit": "days",
+        "amount": 3100,
+        "model": {
+          "@type": "Term",
+          "@id": "pooreNemecek2018",
+          "name": "Poore & Nemecek (2018)",
+          "termType": "model"
+        }
+      }
+    ],
+    "exchanges": [
+      {
+        "name": "Single Super Phosphate (kg P2O5)",
+        "term_type": "inorganicFertiliser",
+        "term_id": "singleSuperPhosphateKgP2O5",
+        "unit": "kg P2O5",
+        "amount": 90.00200000000001,
+        "group": "Single Super Phosphate (kg P2O5)-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Potassium Sulphate (kg K2O)",
+        "term_type": "inorganicFertiliser",
+        "term_id": "potassiumSulphateKgK2O",
+        "unit": "kg K2O",
+        "amount": 599.995,
+        "group": "Potassium Sulphate (kg K2O)-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Ammonium Nitrate (kg N)",
+        "term_type": "inorganicFertiliser",
+        "term_id": "ammoniumNitrateKgN",
+        "unit": "kg N",
+        "amount": 375.001,
+        "group": "Ammonium Nitrate (kg N)-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Water, source unspecified",
+        "term_type": "water",
+        "term_id": "waterSourceUnspecified",
+        "unit": "m3",
+        "amount": 8635,
+        "group": "Water, source unspecified-0",
+        "type": "technosphere",
+        "comment": "Water quantity from the ecoinvent 3.9.1 dataset documentation (original value was 0.079 m3/kg vs 0.157)."
+      },
+      {
+        "name": "Saplings",
+        "term_type": "other",
+        "term_id": "saplings",
+        "unit": "number",
+        "amount": 132,
+        "group": "Saplings-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Low-density polyethylene",
+        "term_type": "material",
+        "term_id": "lowDensityPolyethylene",
+        "unit": "kg",
+        "amount": 69.85000000000001,
+        "group": "Low-density polyethylene-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Naphthalene",
+        "term_type": "pesticideAI",
+        "term_id": "CAS-91-20-3",
+        "unit": "kg active ingredient",
+        "amount": 9.68,
+        "group": "Naphthalene-0",
+        "type": "technosphere",
+        "methodClassificationDescription": "Naphta assumed to be naphtalene",
+        "methodClassification": "estimated with assumptions"
+      },
+      {
+        "type": "production",
+        "name": "Banana, fruit",
+        "unit": "kg",
+        "amount": 55000,
+        "transformation_id": null
+      },
+      {
+        "type": "production",
+        "name": "Plastic waste",
+        "unit": "kg",
+        "amount": 2203.85,
+        "transformation_id": null
+      },
+      {
+        "type": "production",
+        "name": "Wood waste",
+        "unit": "kg",
+        "amount": 1336.5,
+        "transformation_id": null
+      },
+      {
+        "type": "production",
+        "name": "Above ground crop residue, total",
+        "unit": "kg dry matter",
+        "amount": 9380,
+        "transformation_id": null
+      },
+      {
+        "type": "production",
+        "name": "Below ground crop residue",
+        "unit": "kg dry matter",
+        "amount": 180,
+        "transformation_id": null
+      },
+      {
+        "type": "production",
+        "name": "Above ground crop residue, left on field",
+        "unit": "kg dry matter",
+        "amount": 9380,
+        "transformation_id": null
+      },
+      {
+        "type": "biosphere",
+        "name": "NO3, to groundwater, crop residue decomposition",
+        "term_type": "emission",
+        "term_id": "no3ToGroundwaterCropResidueDecomposition",
+        "unit": "kg NO3",
+        "amount": 5.079095707003641
+      },
+      {
+        "type": "biosphere",
+        "name": "NO3, to groundwater, inorganic fertiliser",
+        "term_type": "emission",
+        "term_id": "no3ToGroundwaterInorganicFertiliser",
+        "unit": "kg NO3",
+        "amount": 398.39900627971724
+      },
+      {
+        "type": "biosphere",
+        "name": "N2O, to air, crop residue decomposition, direct",
+        "term_type": "emission",
+        "term_id": "n2OToAirCropResidueDecompositionDirect",
+        "unit": "kg N2O",
+        "amount": 0.04506689877918184
+      },
+      {
+        "type": "biosphere",
+        "name": "NH3, to air, crop residue decomposition",
+        "term_type": "emission",
+        "term_id": "nh3ToAirCropResidueDecomposition",
+        "unit": "kg NH3",
+        "amount": 14.094196244111544
+      },
+      {
+        "type": "biosphere",
+        "name": "NOx, to air, crop residue decomposition",
+        "term_type": "emission",
+        "term_id": "noxToAirCropResidueDecomposition",
+        "unit": "kg NOx",
+        "amount": 2.3102892584192003
+      },
+      {
+        "type": "biosphere",
+        "name": "NOx, to air, inorganic fertiliser",
+        "term_type": "emission",
+        "term_id": "noxToAirInorganicFertiliser",
+        "unit": "kg NOx",
+        "amount": 3.4120298487219998
+      },
+      {
+        "type": "biosphere",
+        "name": "N2O, to air, inorganic fertiliser, direct",
+        "term_type": "emission",
+        "term_id": "n2OToAirInorganicFertiliserDirect",
+        "unit": "kg N2O",
+        "amount": 5.891668099164703
+      },
+      {
+        "type": "biosphere",
+        "name": "N2O, to air, crop residue decomposition, indirect",
+        "term_type": "emission",
+        "term_id": "n2OToAirCropResidueDecompositionIndirect",
+        "unit": "kg N2O",
+        "amount": 0.21258108191544403
+      },
+      {
+        "type": "biosphere",
+        "name": "N2O, to air, inorganic fertiliser, indirect",
+        "term_type": "emission",
+        "term_id": "n2OToAirInorganicFertiliserIndirect",
+        "unit": "kg N2O",
+        "amount": 1.6496670677661167
+      }
+    ]
+  }
+]

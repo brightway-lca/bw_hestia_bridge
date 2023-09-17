@@ -1,6 +1,6 @@
 from collections import defaultdict
 from functools import lru_cache
-from typing import Tuple
+from typing import Optional, Tuple
 
 from ..hestia_api import get_hestia_node
 
@@ -47,6 +47,9 @@ class Converter:
 
         new_exchanges = self.get_emissions(source)
         target["exchanges"].extend(new_exchanges)
+
+        new_datasets = self.get_transformations(source)
+        return_data.extend(new_datasets)
 
         return_data.append(target)
 
@@ -172,7 +175,9 @@ class Converter:
             data["model"] = obj["model"]
         return data
 
-    def get_products(self, obj: dict) -> Tuple[list, list]:
+    def get_products(
+        self, obj: dict, transformation_id: Optional[str] = None
+    ) -> Tuple[list, list]:
         new_exchanges, new_datasets = [], []
 
         for node in obj.get("products", []):
@@ -185,12 +190,14 @@ class Converter:
                 "name": node["term"]["name"],
                 "unit": node["term"].get("units"),
                 "amount": node["value"][0],
+                "transformation_id": transformation_id,
             }
             product = {
                 "name": node["term"]["name"],
                 "term_type": node["term"]["termType"],
                 "term_id": node["term"]["@id"],
                 "unit": node["term"].get("units"),
+                "transformation_id": transformation_id,
                 "type": "product",
             }
             self.add_price(node, product)
@@ -230,3 +237,35 @@ class Converter:
             new_exchanges.append(exchange)
 
         return new_exchanges
+
+    def get_transformations(self, obj: dict) -> list:
+        new_datasets = []
+
+        for source in obj.get("transformations", []):
+            target = {
+                "name": source["term"]["name"],
+                "term_type": source["term"]["termType"],
+                "term_id": source["term"]["@id"],
+                "unit": source["term"].get("units"),
+                "type": "process",
+                "transformationId": source["transformationId"],
+                "parent_cycle_id": obj["@id"],
+            }
+            if "previousTransformationId" in source:
+                target["previousTransformationId"] = source["previousTransformationId"]
+
+            target["exchanges"] = self.get_inputs(source)
+            ne, nd = self.get_products(source, source["transformationId"])
+            target["exchanges"].extend(ne)
+            new_datasets.extend(nd)
+
+            new_exchanges = self.get_emissions(source)
+            target["exchanges"].extend(new_exchanges)
+
+            new_datasets.append(target)
+
+        return new_datasets
+
+
+def convert(data):
+    return Converter().convert(data)
