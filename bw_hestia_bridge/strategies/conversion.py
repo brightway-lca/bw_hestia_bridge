@@ -6,7 +6,7 @@ from ..hestia_api import get_hestia_node
 
 
 def convert(data: dict) -> list:
-    ''' '''
+    ''' Convert Hestia data into a BW-compatible form '''
     return Converter().convert(data)
 
 
