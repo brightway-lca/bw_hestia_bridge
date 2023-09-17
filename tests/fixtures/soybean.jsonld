@@ -1,0 +1,5762 @@
+{
+  "createdAt": "2023-06-15",
+  "updatedAt": "2023-09-11",
+  "@id": "9p1j76yjzhbm",
+  "@type": "Cycle",
+  "endDate": "2006",
+  "functionalUnit": "relative",
+  "functionalUnitDetails": "1kg soybean after sorting and packing",
+  "site": {
+    "@type": "Site",
+    "@id": "edovctcbrbsj"
+  },
+  "defaultSource": {
+    "@id": "qrkbfhgmdjex",
+    "@type": "Source"
+  },
+  "defaultMethodClassification": "non-verified survey data",
+  "defaultMethodClassificationDescription": "Data for the processing stage have been obtained by questionnaires and interviews with the manager and staff at the company processing and exporting the soybeans.",
+  "inputs": [
+    {
+      "term": {
+        "@type": "Term",
+        "termType": "crop",
+        "name": "Soybean, seed (whole)",
+        "units": "kg",
+        "@id": "soybeanSeedWhole",
+        "added": [
+          "termType",
+          "name",
+          "units",
+          "@id"
+        ],
+        "addedVersion": [
+          "0.50.0",
+          "0.50.0",
+          "0.50.0",
+          "0.50.0"
+        ]
+      },
+      "description": "1kg soybean from field + 5% to account for losses during processing",
+      "impactAssessment": {
+        "@id": "25w-tvlkcgxh",
+        "@type": "ImpactAssessment"
+      },
+      "impactAssessmentIsProxy": false,
+      "value": [
+        1.05
+      ],
+      "transport": [
+        {
+          "term": {
+            "@type": "Term",
+            "termType": "transport",
+            "name": "Freight, lorry, light commercial vehicle",
+            "units": "tkm",
+            "@id": "freightLorryLightCommercialVehicle"
+          },
+          "value": 0.0525,
+          "returnLegIncluded": false,
+          "@type": "Transport"
+        },
+        {
+          "term": {
+            "@type": "Term",
+            "termType": "transport",
+            "name": "Freight, train unspecified",
+            "units": "tkm",
+            "@id": "freightTrainUnspecified"
+          },
+          "value": 1.05,
+          "returnLegIncluded": false,
+          "@type": "Transport"
+        }
+      ],
+      "@type": "Input",
+      "properties": [
+        {
+          "@type": "Property",
+          "term": {
+            "@type": "Term",
+            "@id": "rootingDepth",
+            "name": "Rooting depth",
+            "termType": "property",
+            "units": "meters"
+          },
+          "methodModel": {
+            "@type": "Term",
+            "@id": "globalCropWaterModel2008",
+            "name": "Global Crop Water Model (2008)",
+            "termType": "model"
+          },
+          "value": 0.95,
+          "statsDefinition": "modelled",
+          "added": [
+            "term",
+            "methodModel",
+            "value",
+            "statsDefinition"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "properties"
+      ],
+      "addedVersion": [
+        "0.50.0"
+      ]
+    },
+    {
+      "term": {
+        "@type": "Term",
+        "name": "Electricity, grid, market mix",
+        "termType": "electricity",
+        "@id": "electricityGridMarketMix",
+        "units": "kWh",
+        "added": [
+          "name",
+          "termType",
+          "@id",
+          "units"
+        ],
+        "addedVersion": [
+          "0.50.0",
+          "0.50.0",
+          "0.50.0",
+          "0.50.0"
+        ]
+      },
+      "value": [
+        0.029
+      ],
+      "@type": "Input"
+    },
+    {
+      "term": {
+        "@type": "Term",
+        "termType": "fuel",
+        "name": "Diesel",
+        "units": "kg",
+        "@id": "diesel",
+        "added": [
+          "termType",
+          "name",
+          "units",
+          "@id"
+        ],
+        "addedVersion": [
+          "0.50.0",
+          "0.50.0",
+          "0.50.0",
+          "0.50.0"
+        ]
+      },
+      "value": [
+        0.0017250000000000002
+      ],
+      "@type": "Input"
+    }
+  ],
+  "products": [
+    {
+      "term": {
+        "@type": "Term",
+        "termType": "crop",
+        "name": "Soybean, seed (whole)",
+        "units": "kg",
+        "@id": "soybeanSeedWhole"
+      },
+      "value": [
+        1
+      ],
+      "primary": true,
+      "transport": [
+        {
+          "term": {
+            "@type": "Term",
+            "termType": "transport",
+            "name": "Freight, lorry, >32 metric ton",
+            "units": "tkm",
+            "@id": "freightLorry32MetricTon"
+          },
+          "value": 0.03,
+          "returnLegIncluded": false,
+          "@type": "Transport"
+        },
+        {
+          "term": {
+            "@type": "Term",
+            "termType": "transport",
+            "name": "Freight, transoceanic ship",
+            "units": "tkm",
+            "@id": "freightTransoceanicShip"
+          },
+          "value": 20.82,
+          "returnLegIncluded": false,
+          "@type": "Transport"
+        }
+      ],
+      "@type": "Product",
+      "currency": "USD",
+      "price": 0.4127,
+      "added": [
+        "currency",
+        "price",
+        "revenue",
+        "economicValueShare"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ],
+      "revenue": 0.4127,
+      "economicValueShare": 100
+    }
+  ],
+  "completeness": {
+    "electricityFuel": true,
+    "transport": true,
+    "material": false,
+    "fertiliser": true,
+    "other": true,
+    "pesticidesAntibiotics": true,
+    "soilAmendments": true,
+    "water": false,
+    "products": true,
+    "cropResidue": true,
+    "excreta": true,
+    "animalFeed": true,
+    "liveAnimals": true,
+    "waste": true,
+    "operations": false,
+    "@type": "Completeness"
+  },
+  "cycleDuration": 365,
+  "name": "Soybean, seed (whole) - Songyuan, China - 2006",
+  "schemaVersion": "22.4.0",
+  "originalId": "Processing-Conventional",
+  "siteDuration": 365,
+  "added": [
+    "siteDuration",
+    "emissions"
+  ],
+  "addedVersion": [
+    "0.50.0",
+    "0.50.0"
+  ],
+  "emissions": [
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh3ToAirInputsProduction",
+        "name": "NH3, to air, inputs production",
+        "termType": "emission",
+        "units": "kg NH3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "ecoinventV3",
+        "name": "ecoinvent v3",
+        "termType": "model"
+      },
+      "value": [
+        6.370115857433892e-7
+      ],
+      "methodTier": "background",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Electricity, grid, market mix",
+          "termType": "electricity",
+          "@id": "electricityGridMarketMix",
+          "units": "kWh",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirInputsProduction",
+        "name": "CO2, to air, inputs production",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "ecoinventV3",
+        "name": "ecoinvent v3",
+        "termType": "model"
+      },
+      "value": [
+        0.0158656902851793
+      ],
+      "methodTier": "background",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Electricity, grid, market mix",
+          "termType": "electricity",
+          "@id": "electricityGridMarketMix",
+          "units": "kWh",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirInputsProduction",
+        "name": "N2O, to air, inputs production",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "ecoinventV3",
+        "name": "ecoinvent v3",
+        "termType": "model"
+      },
+      "value": [
+        3.2262663645630745e-7
+      ],
+      "methodTier": "background",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Electricity, grid, market mix",
+          "termType": "electricity",
+          "@id": "electricityGridMarketMix",
+          "units": "kWh",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirInputsProductionFossil",
+        "name": "CH4, to air, inputs production, fossil",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "ecoinventV3",
+        "name": "ecoinvent v3",
+        "termType": "model"
+      },
+      "value": [
+        0.000026284741002019684
+      ],
+      "methodTier": "background",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Electricity, grid, market mix",
+          "termType": "electricity",
+          "@id": "electricityGridMarketMix",
+          "units": "kWh",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirInputsProductionNonFossil",
+        "name": "CH4, to air, inputs production, non-fossil",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "ecoinventV3",
+        "name": "ecoinvent v3",
+        "termType": "model"
+      },
+      "value": [
+        5.483037105963821e-8
+      ],
+      "methodTier": "background",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Electricity, grid, market mix",
+          "termType": "electricity",
+          "@id": "electricityGridMarketMix",
+          "units": "kWh",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noxToAirInputsProduction",
+        "name": "NOx, to air, inputs production",
+        "termType": "emission",
+        "units": "kg NOx"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "ecoinventV3",
+        "name": "ecoinvent v3",
+        "termType": "model"
+      },
+      "value": [
+        0.00004368885233759867
+      ],
+      "methodTier": "background",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Electricity, grid, market mix",
+          "termType": "electricity",
+          "@id": "electricityGridMarketMix",
+          "units": "kWh",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "so2ToAirInputsProduction",
+        "name": "SO2, to air, inputs production",
+        "termType": "emission",
+        "units": "kg SO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "ecoinventV3",
+        "name": "ecoinvent v3",
+        "termType": "model"
+      },
+      "value": [
+        0.00007399899231949997
+      ],
+      "methodTier": "background",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Electricity, grid, market mix",
+          "termType": "electricity",
+          "@id": "electricityGridMarketMix",
+          "units": "kWh",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "bromochlorodifluoromethaneToAirInputsProduction",
+        "name": "Bromochlorodifluoromethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg CBrClF2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "ecoinventV3",
+        "name": "ecoinvent v3",
+        "termType": "model"
+      },
+      "value": [
+        2.1306998075704165e-11
+      ],
+      "methodTier": "background",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Electricity, grid, market mix",
+          "termType": "electricity",
+          "@id": "electricityGridMarketMix",
+          "units": "kWh",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "chlorodifluoromethaneToAirInputsProduction",
+        "name": "Chlorodifluoromethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg CHClF2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "ecoinventV3",
+        "name": "ecoinvent v3",
+        "termType": "model"
+      },
+      "value": [
+        1.0355780827458102e-10
+      ],
+      "methodTier": "background",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Electricity, grid, market mix",
+          "termType": "electricity",
+          "@id": "electricityGridMarketMix",
+          "units": "kWh",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "dichlorodifluoromethaneToAirInputsProduction",
+        "name": "Dichlorodifluoromethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg CCl2F2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "ecoinventV3",
+        "name": "ecoinvent v3",
+        "termType": "model"
+      },
+      "value": [
+        8.721516875951626e-13
+      ],
+      "methodTier": "background",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Electricity, grid, market mix",
+          "termType": "electricity",
+          "@id": "electricityGridMarketMix",
+          "units": "kWh",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "112TrichlorotrifluoroethaneToAirInputsProduction",
+        "name": "1,1,2-Trichlorotrifluoroethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg C2Cl3F3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "ecoinventV3",
+        "name": "ecoinvent v3",
+        "termType": "model"
+      },
+      "value": [
+        1.9901765118940302e-13
+      ],
+      "methodTier": "background",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Electricity, grid, market mix",
+          "termType": "electricity",
+          "@id": "electricityGridMarketMix",
+          "units": "kWh",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "11DichlorotetrafluoroethaneToAirInputsProduction",
+        "name": "1,1-Dichlorotetrafluoroethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg C2Cl2F4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "ecoinventV3",
+        "name": "ecoinvent v3",
+        "termType": "model"
+      },
+      "value": [
+        3.3064080412813196e-10
+      ],
+      "methodTier": "background",
+      "inputs": [
+        {
+          "@type": "Term",
+          "name": "Electricity, grid, market mix",
+          "termType": "electricity",
+          "@id": "electricityGridMarketMix",
+          "units": "kWh",
+          "added": [
+            "name",
+            "termType",
+            "@id",
+            "units"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh3ToAirInputsProduction",
+        "name": "NH3, to air, inputs production",
+        "termType": "emission",
+        "units": "kg NH3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "ecoinventV3",
+        "name": "ecoinvent v3",
+        "termType": "model"
+      },
+      "value": [
+        3.253361421754099e-8
+      ],
+      "methodTier": "background",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "fuel",
+          "name": "Diesel",
+          "units": "kg",
+          "@id": "diesel",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirInputsProduction",
+        "name": "CO2, to air, inputs production",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "ecoinventV3",
+        "name": "ecoinvent v3",
+        "termType": "model"
+      },
+      "value": [
+        0.0009620579134737658
+      ],
+      "methodTier": "background",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "fuel",
+          "name": "Diesel",
+          "units": "kg",
+          "@id": "diesel",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirInputsProduction",
+        "name": "N2O, to air, inputs production",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "ecoinventV3",
+        "name": "ecoinvent v3",
+        "termType": "model"
+      },
+      "value": [
+        1.7935385984552804e-8
+      ],
+      "methodTier": "background",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "fuel",
+          "name": "Diesel",
+          "units": "kg",
+          "@id": "diesel",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirInputsProductionFossil",
+        "name": "CH4, to air, inputs production, fossil",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "ecoinventV3",
+        "name": "ecoinvent v3",
+        "termType": "model"
+      },
+      "value": [
+        0.000003205622079494172
+      ],
+      "methodTier": "background",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "fuel",
+          "name": "Diesel",
+          "units": "kg",
+          "@id": "diesel",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirInputsProductionNonFossil",
+        "name": "CH4, to air, inputs production, non-fossil",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "ecoinventV3",
+        "name": "ecoinvent v3",
+        "termType": "model"
+      },
+      "value": [
+        1.714387679593057e-8
+      ],
+      "methodTier": "background",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "fuel",
+          "name": "Diesel",
+          "units": "kg",
+          "@id": "diesel",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noxToAirInputsProduction",
+        "name": "NOx, to air, inputs production",
+        "termType": "emission",
+        "units": "kg NOx"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "ecoinventV3",
+        "name": "ecoinvent v3",
+        "termType": "model"
+      },
+      "value": [
+        0.000003360805240676236
+      ],
+      "methodTier": "background",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "fuel",
+          "name": "Diesel",
+          "units": "kg",
+          "@id": "diesel",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "so2ToAirInputsProduction",
+        "name": "SO2, to air, inputs production",
+        "termType": "emission",
+        "units": "kg SO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "ecoinventV3",
+        "name": "ecoinvent v3",
+        "termType": "model"
+      },
+      "value": [
+        0.000007328917189231682
+      ],
+      "methodTier": "background",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "fuel",
+          "name": "Diesel",
+          "units": "kg",
+          "@id": "diesel",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "bromochlorodifluoromethaneToAirInputsProduction",
+        "name": "Bromochlorodifluoromethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg CBrClF2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "ecoinventV3",
+        "name": "ecoinvent v3",
+        "termType": "model"
+      },
+      "value": [
+        5.549309677276157e-13
+      ],
+      "methodTier": "background",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "fuel",
+          "name": "Diesel",
+          "units": "kg",
+          "@id": "diesel",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "chlorodifluoromethaneToAirInputsProduction",
+        "name": "Chlorodifluoromethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg CHClF2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "ecoinventV3",
+        "name": "ecoinvent v3",
+        "termType": "model"
+      },
+      "value": [
+        1.468917025086614e-11
+      ],
+      "methodTier": "background",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "fuel",
+          "name": "Diesel",
+          "units": "kg",
+          "@id": "diesel",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "dichlorodifluoromethaneToAirInputsProduction",
+        "name": "Dichlorodifluoromethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg CCl2F2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "ecoinventV3",
+        "name": "ecoinvent v3",
+        "termType": "model"
+      },
+      "value": [
+        1.5147441953264394e-14
+      ],
+      "methodTier": "background",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "fuel",
+          "name": "Diesel",
+          "units": "kg",
+          "@id": "diesel",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "112TrichlorotrifluoroethaneToAirInputsProduction",
+        "name": "1,1,2-Trichlorotrifluoroethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg C2Cl3F3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "ecoinventV3",
+        "name": "ecoinvent v3",
+        "termType": "model"
+      },
+      "value": [
+        2.419191426711476e-14
+      ],
+      "methodTier": "background",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "fuel",
+          "name": "Diesel",
+          "units": "kg",
+          "@id": "diesel",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "11DichlorotetrafluoroethaneToAirInputsProduction",
+        "name": "1,1-Dichlorotetrafluoroethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg C2Cl2F4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "ecoinventV3",
+        "name": "ecoinvent v3",
+        "termType": "model"
+      },
+      "value": [
+        3.5388946374732086e-12
+      ],
+      "methodTier": "background",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "fuel",
+          "name": "Diesel",
+          "units": "kg",
+          "@id": "diesel",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirFuelCombustion",
+        "name": "CO2, to air, fuel combustion",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emepEea2019",
+        "name": "EMEP-EEA (2019)",
+        "termType": "model"
+      },
+      "value": [
+        0.005468250000000001
+      ],
+      "methodTier": "tier 1",
+      "statsDefinition": "modelled",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirFuelCombustionDirect",
+        "name": "N2O, to air, fuel combustion, direct",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emepEea2019",
+        "name": "EMEP-EEA (2019)",
+        "termType": "model"
+      },
+      "value": [
+        2.3460000000000002e-7
+      ],
+      "methodTier": "tier 1",
+      "statsDefinition": "modelled",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noxToAirFuelCombustion",
+        "name": "NOx, to air, fuel combustion",
+        "termType": "emission",
+        "units": "kg NOx"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emepEea2019",
+        "name": "EMEP-EEA (2019)",
+        "termType": "model"
+      },
+      "value": [
+        0.000056285025
+      ],
+      "methodTier": "tier 1",
+      "statsDefinition": "modelled",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "so2ToAirFuelCombustion",
+        "name": "SO2, to air, fuel combustion",
+        "termType": "emission",
+        "units": "kg SO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emepEea2019",
+        "name": "EMEP-EEA (2019)",
+        "termType": "model"
+      },
+      "value": [
+        0.0000017250000000000002
+      ],
+      "methodTier": "tier 1",
+      "statsDefinition": "modelled",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirInputsProduction",
+        "name": "CO2, to air, inputs production",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.11912412999530761
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirInputsProductionNonFossil",
+        "name": "CH4, to air, inputs production, non-fossil",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.0012960092978860534
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh3ToAirInputsProduction",
+        "name": "NH3, to air, inputs production",
+        "termType": "emission",
+        "units": "kg NH3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.0006514594131542673
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirInputsProduction",
+        "name": "N2O, to air, inputs production",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.0004108975174542291
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirInputsProductionFossil",
+        "name": "CH4, to air, inputs production, fossil",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.00020638299956852205
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noxToAirInputsProduction",
+        "name": "NOx, to air, inputs production",
+        "termType": "emission",
+        "units": "kg NOx"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.0005277568507640866
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "so2ToAirInputsProduction",
+        "name": "SO2, to air, inputs production",
+        "termType": "emission",
+        "units": "kg SO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.00039965283402559253
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "bromochlorodifluoromethaneToAirInputsProduction",
+        "name": "Bromochlorodifluoromethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg CBrClF2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        3.2374176901312083e-10
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "chlorodifluoromethaneToAirInputsProduction",
+        "name": "Chlorodifluoromethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg CHClF2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        2.0492172429544755e-9
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "dichlorodifluoromethaneToAirInputsProduction",
+        "name": "Dichlorodifluoromethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg CCl2F2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        5.673687958529985e-12
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "112TrichlorotrifluoroethaneToAirInputsProduction",
+        "name": "1,1,2-Trichlorotrifluoroethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg C2Cl3F3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        1.064160081288034e-11
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "11DichlorotetrafluoroethaneToAirInputsProduction",
+        "name": "1,1-Dichlorotetrafluoroethane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg C2Cl2F4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        3.0888401930023125e-10
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "no3ToGroundwaterInputsProduction",
+        "name": "NO3, to groundwater, inputs production",
+        "termType": "emission",
+        "units": "kg NO3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.0008934004415015473
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nErosionInputsProduction",
+        "name": "N, erosion, inputs production",
+        "termType": "emission",
+        "units": "kg N"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.00015334204597658929
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "pErosionInputsProduction",
+        "name": "P, erosion, inputs production",
+        "termType": "emission",
+        "units": "kg P"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0.000017676766057251015
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "pToDrainageWaterInputsProduction",
+        "name": "P, to drainage water, inputs production",
+        "termType": "emission",
+        "units": "kg P"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        2.637012869867386e-8
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "pToGroundwaterInputsProduction",
+        "name": "P, to groundwater, inputs production",
+        "termType": "emission",
+        "units": "kg P"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        6.619602045093988e-7
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "pToSurfaceWaterInputsProduction",
+        "name": "P, to surface water, inputs production",
+        "termType": "emission",
+        "units": "kg P"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        6.095127831559649e-8
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noToAirInputsProduction",
+        "name": "NO, to air, inputs production",
+        "termType": "emission",
+        "units": "kg NO"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "codToWaterInputsProduction",
+        "name": "COD, to water, inputs production",
+        "termType": "emission",
+        "units": "kg COD"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh4ToGroundwaterInputsProduction",
+        "name": "NH4, to groundwater, inputs production",
+        "termType": "emission",
+        "units": "kg NH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "pm25ToAirInputsProduction",
+        "name": "PM2.5, to air, inputs production",
+        "termType": "emission",
+        "units": "kg PM2.5"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nmvocToAirInputsProduction",
+        "name": "NMVOC, to air, inputs production",
+        "termType": "emission",
+        "units": "kg NMVOC"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nToSurfaceWaterInputsProduction",
+        "name": "N, to surface water, inputs production",
+        "termType": "emission",
+        "units": "kg N"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh4ToSurfaceWaterInputsProduction",
+        "name": "NH4, to surface water, inputs production",
+        "termType": "emission",
+        "units": "kg NH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "no3ToSurfaceWaterInputsProduction",
+        "name": "NO3, to surface water, inputs production",
+        "termType": "emission",
+        "units": "kg NO3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "pm10ToAirInputsProduction",
+        "name": "PM10, to air, inputs production",
+        "termType": "emission",
+        "units": "kg PM10"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "po43ToSurfaceWaterInputsProduction",
+        "name": "PO43-, to surface water, inputs production",
+        "termType": "emission",
+        "units": "kg PO43-"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "hexaneToAirInputsProduction",
+        "name": "Hexane, to air, inputs production",
+        "termType": "emission",
+        "units": "kg C6H14"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "bod5ToWaterInputsProduction",
+        "name": "BOD5, to water, inputs production",
+        "termType": "emission",
+        "units": "kg BOD5"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "h2SToAirInputsProduction",
+        "name": "H2S, to air, inputs production",
+        "termType": "emission",
+        "units": "kg H2S"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "linkedImpactAssessment",
+        "name": "Linked Impact Assessment",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "background",
+      "statsDefinition": "modelled",
+      "inputs": [
+        {
+          "@type": "Term",
+          "termType": "crop",
+          "name": "Soybean, seed (whole)",
+          "units": "kg",
+          "@id": "soybeanSeedWhole",
+          "added": [
+            "termType",
+            "name",
+            "units",
+            "@id"
+          ],
+          "addedVersion": [
+            "0.50.0",
+            "0.50.0",
+            "0.50.0",
+            "0.50.0"
+          ]
+        }
+      ],
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier",
+        "statsDefinition",
+        "inputs"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirCropResidueBurningIndirect",
+        "name": "N2O, to air, crop residue burning, indirect",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirCropResidueDecompositionDirect",
+        "name": "N2O, to air, crop residue decomposition, direct",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirExcretaDirect",
+        "name": "N2O, to air, excreta, direct",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh4ToGroundwaterOrganicFertiliser",
+        "name": "NH4, to groundwater, organic fertiliser",
+        "termType": "emission",
+        "units": "kg NH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noxToAirCropResidueDecomposition",
+        "name": "NOx, to air, crop residue decomposition",
+        "termType": "emission",
+        "units": "kg NOx"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noxToAirInorganicFertiliser",
+        "name": "NOx, to air, inorganic fertiliser",
+        "termType": "emission",
+        "units": "kg NOx"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh4ToGroundwaterInorganicFertiliser",
+        "name": "NH4, to groundwater, inorganic fertiliser",
+        "termType": "emission",
+        "units": "kg NH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2ToAirExcreta",
+        "name": "N2, to air, excreta",
+        "termType": "emission",
+        "units": "kg N2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noxToAirOrganicSoilCultivation",
+        "name": "NOx, to air, organic soil cultivation",
+        "termType": "emission",
+        "units": "kg NOx"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirAboveGroundBiomassStockChangeLandUseChange",
+        "name": "CO2, to air, above ground biomass stock change, land use change",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nToSurfaceWaterAquacultureSystems",
+        "name": "N, to surface water, aquaculture systems",
+        "termType": "emission",
+        "units": "kg N"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirOrganicSoilCultivation",
+        "name": "CH4, to air, organic soil cultivation",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirBelowGroundBiomassStockChangeManagementChange",
+        "name": "CO2, to air, below ground biomass stock change, management change",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh3ToAirOrganicSoilCultivation",
+        "name": "NH3, to air, organic soil cultivation",
+        "termType": "emission",
+        "units": "kg NH3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh3ToAirCropResidueDecomposition",
+        "name": "NH3, to air, crop residue decomposition",
+        "termType": "emission",
+        "units": "kg NH3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirCropResidueDecompositionIndirect",
+        "name": "N2O, to air, crop residue decomposition, indirect",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "no3ToGroundwaterInorganicFertiliser",
+        "name": "NO3, to groundwater, inorganic fertiliser",
+        "termType": "emission",
+        "units": "kg NO3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh4ToGroundwaterExcreta",
+        "name": "NH4, to groundwater, excreta",
+        "termType": "emission",
+        "units": "kg NH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirUreaHydrolysis",
+        "name": "CO2, to air, urea hydrolysis",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirCropResidueBurning",
+        "name": "CH4, to air, crop residue burning",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirOrganicFertiliserIndirect",
+        "name": "N2O, to air, organic fertiliser, indirect",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirInorganicFertiliserIndirect",
+        "name": "N2O, to air, inorganic fertiliser, indirect",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirNaturalVegetationBurning",
+        "name": "CH4, to air, natural vegetation burning",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh3ToAirInorganicFertiliser",
+        "name": "NH3, to air, inorganic fertiliser",
+        "termType": "emission",
+        "units": "kg NH3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirOrganicSoilBurning",
+        "name": "CH4, to air, organic soil burning",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirOrganicSoilBurningDirect",
+        "name": "N2O, to air, organic soil burning, direct",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirAquacultureSystemsIndirect",
+        "name": "N2O, to air, aquaculture systems, indirect",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirNaturalVegetationBurning",
+        "name": "CO2, to air, natural vegetation burning",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirCropResidueBurningDirect",
+        "name": "N2O, to air, crop residue burning, direct",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh3ToAirCropResidueBurning",
+        "name": "NH3, to air, crop residue burning",
+        "termType": "emission",
+        "units": "kg NH3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "no3ToSurfaceWaterAquacultureSystems",
+        "name": "NO3, to surface water, aquaculture systems",
+        "termType": "emission",
+        "units": "kg NO3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh3ToAirExcreta",
+        "name": "NH3, to air, excreta",
+        "termType": "emission",
+        "units": "kg NH3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirAquacultureSystems",
+        "name": "CH4, to air, aquaculture systems",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirOrganicSoilBurning",
+        "name": "CO2, to air, organic soil burning",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh3ToAirAquacultureSystems",
+        "name": "NH3, to air, aquaculture systems",
+        "termType": "emission",
+        "units": "kg NH3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh4ToGroundwaterCropResidueDecomposition",
+        "name": "NH4, to groundwater, crop residue decomposition",
+        "termType": "emission",
+        "units": "kg NH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirLimeHydrolysis",
+        "name": "CO2, to air, lime hydrolysis",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh3ToAirNaturalVegetationBurning",
+        "name": "NH3, to air, natural vegetation burning",
+        "termType": "emission",
+        "units": "kg NH3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirOrganicSoilBurningIndirect",
+        "name": "N2O, to air, organic soil burning, indirect",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirOrganicSoilCultivationDirect",
+        "name": "N2O, to air, organic soil cultivation, direct",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh3ToAirOrganicSoilBurning",
+        "name": "NH3, to air, organic soil burning",
+        "termType": "emission",
+        "units": "kg NH3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2ToAirAquacultureSystems",
+        "name": "N2, to air, aquaculture systems",
+        "termType": "emission",
+        "units": "kg N2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirSoilFlux",
+        "name": "CH4, to air, soil flux",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noxToAirOrganicFertiliser",
+        "name": "NOx, to air, organic fertiliser",
+        "termType": "emission",
+        "units": "kg NOx"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noxToAirAquacultureSystems",
+        "name": "NOx, to air, aquaculture systems",
+        "termType": "emission",
+        "units": "kg NOx"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noxToAirNaturalVegetationBurning",
+        "name": "NOx, to air, natural vegetation burning",
+        "termType": "emission",
+        "units": "kg NOx"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "pToSurfaceWaterExcreta",
+        "name": "P, to surface water, excreta",
+        "termType": "emission",
+        "units": "kg P"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirOrganicSoilCultivationIndirect",
+        "name": "N2O, to air, organic soil cultivation, indirect",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirExcreta",
+        "name": "CH4, to air, excreta",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "no3ToGroundwaterExcreta",
+        "name": "NO3, to groundwater, excreta",
+        "termType": "emission",
+        "units": "kg NO3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noxToAirCropResidueBurning",
+        "name": "NOx, to air, crop residue burning",
+        "termType": "emission",
+        "units": "kg NOx"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirAquacultureSystemsDirect",
+        "name": "N2O, to air, aquaculture systems, direct",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "no3ToGroundwaterCropResidueDecomposition",
+        "name": "NO3, to groundwater, crop residue decomposition",
+        "termType": "emission",
+        "units": "kg NO3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirBelowGroundBiomassStockChangeLandUseChange",
+        "name": "CO2, to air, below ground biomass stock change, land use change",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirNaturalVegetationBurningDirect",
+        "name": "N2O, to air, natural vegetation burning, direct",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirEntericFermentation",
+        "name": "CH4, to air, enteric fermentation",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirSoilCarbonStockChangeLandUseChange",
+        "name": "CO2, to air, soil carbon stock change, land use change",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirExcretaIndirect",
+        "name": "N2O, to air, excreta, indirect",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "nh3ToAirOrganicFertiliser",
+        "name": "NH3, to air, organic fertiliser",
+        "termType": "emission",
+        "units": "kg NH3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirOrganicSoilCultivation",
+        "name": "CO2, to air, organic soil cultivation",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "ch4ToAirFloodedRice",
+        "name": "CH4, to air, flooded rice",
+        "termType": "emission",
+        "units": "kg CH4"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noxToAirOrganicSoilBurning",
+        "name": "NOx, to air, organic soil burning",
+        "termType": "emission",
+        "units": "kg NOx"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "pToSurfaceWaterAquacultureSystems",
+        "name": "P, to surface water, aquaculture systems",
+        "termType": "emission",
+        "units": "kg P"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "no3ToGroundwaterOrganicFertiliser",
+        "name": "NO3, to groundwater, organic fertiliser",
+        "termType": "emission",
+        "units": "kg NO3"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirNaturalVegetationBurningIndirect",
+        "name": "N2O, to air, natural vegetation burning, indirect",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirOrganicFertiliserDirect",
+        "name": "N2O, to air, organic fertiliser, direct",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "n2OToAirInorganicFertiliserDirect",
+        "name": "N2O, to air, inorganic fertiliser, direct",
+        "termType": "emission",
+        "units": "kg N2O"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirSoilCarbonStockChangeManagementChange",
+        "name": "CO2, to air, soil carbon stock change, management change",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "noxToAirExcreta",
+        "name": "NOx, to air, excreta",
+        "termType": "emission",
+        "units": "kg NOx"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    },
+    {
+      "@type": "Emission",
+      "term": {
+        "@type": "Term",
+        "@id": "co2ToAirAboveGroundBiomassStockChangeManagementChange",
+        "name": "CO2, to air, above ground biomass stock change, management change",
+        "termType": "emission",
+        "units": "kg CO2"
+      },
+      "methodModel": {
+        "@type": "Term",
+        "@id": "emissionNotRelevant",
+        "name": "Emission not relevant",
+        "termType": "model"
+      },
+      "value": [
+        0
+      ],
+      "methodTier": "not relevant",
+      "added": [
+        "term",
+        "methodModel",
+        "value",
+        "methodTier"
+      ],
+      "addedVersion": [
+        "0.50.0",
+        "0.50.0",
+        "0.50.0",
+        "0.50.0"
+      ]
+    }
+  ],
+  "updated": [
+    "emissions"
+  ],
+  "updatedVersion": [
+    "0.50.0"
+  ],
+  "@context": "https://www-staging.hestia.earth/schema/Cycle.jsonld"
+}

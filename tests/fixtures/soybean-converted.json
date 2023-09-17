@@ -1,0 +1,264 @@
+[
+  {
+    "name": "Soybean, seed (whole)",
+    "term_type": "crop",
+    "term_id": "soybeanSeedWhole",
+    "unit": "kg",
+    "transformation_id": null,
+    "type": "product",
+    "price": {
+      "price": 0.4127,
+      "currency": "USD"
+    },
+    "revenue": 0.4127,
+    "economicValueShare": 100
+  },
+  {
+    "@id": "9p1j76yjzhbm",
+    "comment": null,
+    "location": "Agri-food processor - Songyuan, China",
+    "type": "process",
+    "extra_metadata": {
+      "defaultMethodClassificationDescription": "Data for the processing stage have been obtained by questionnaires and interviews with the manager and staff at the company processing and exporting the soybeans.",
+      "endDate": "2006",
+      "createdAt": "2023-06-15",
+      "cycleDuration": 365,
+      "defaultMethodClassification": "non-verified survey data",
+      "updatedAt": "2023-09-11",
+      "functionalUnit": "relative"
+    },
+    "exchanges": [
+      {
+        "name": "Soybean, seed (whole)",
+        "term_type": "crop",
+        "term_id": "soybeanSeedWhole",
+        "unit": "kg",
+        "amount": 1.05,
+        "group": "Soybean, seed (whole)-0",
+        "type": "technosphere",
+        "comment": "1kg soybean from field + 5% to account for losses during processing"
+      },
+      {
+        "name": "Freight, lorry, light commercial vehicle",
+        "term_type": "transport",
+        "term_id": "freightLorryLightCommercialVehicle",
+        "unit": "tkm",
+        "amount": 0.0525,
+        "returnLegIncluded": false,
+        "group": "Soybean, seed (whole)-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Freight, train unspecified",
+        "term_type": "transport",
+        "term_id": "freightTrainUnspecified",
+        "unit": "tkm",
+        "amount": 1.05,
+        "returnLegIncluded": false,
+        "group": "Soybean, seed (whole)-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Electricity, grid, market mix",
+        "term_type": "electricity",
+        "term_id": "electricityGridMarketMix",
+        "unit": "kWh",
+        "amount": 0.029,
+        "group": "Electricity, grid, market mix-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Diesel",
+        "term_type": "fuel",
+        "term_id": "diesel",
+        "unit": "kg",
+        "amount": 0.0017250000000000002,
+        "group": "Diesel-0",
+        "type": "technosphere"
+      },
+      {
+        "type": "production",
+        "name": "Soybean, seed (whole)",
+        "unit": "kg",
+        "amount": 1,
+        "transformation_id": null
+      },
+      {
+        "type": "biosphere",
+        "name": "CO2, to air, fuel combustion",
+        "term_type": "emission",
+        "term_id": "co2ToAirFuelCombustion",
+        "unit": "kg CO2",
+        "amount": 0.005468250000000001
+      },
+      {
+        "type": "biosphere",
+        "name": "N2O, to air, fuel combustion, direct",
+        "term_type": "emission",
+        "term_id": "n2OToAirFuelCombustionDirect",
+        "unit": "kg N2O",
+        "amount": 2.3460000000000002e-07
+      },
+      {
+        "type": "biosphere",
+        "name": "NOx, to air, fuel combustion",
+        "term_type": "emission",
+        "term_id": "noxToAirFuelCombustion",
+        "unit": "kg NOx",
+        "amount": 5.6285025e-05
+      },
+      {
+        "type": "biosphere",
+        "name": "SO2, to air, fuel combustion",
+        "term_type": "emission",
+        "term_id": "so2ToAirFuelCombustion",
+        "unit": "kg SO2",
+        "amount": 1.7250000000000002e-06
+      },
+      {
+        "type": "biosphere",
+        "name": "CO2, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "co2ToAirInputsProduction",
+        "unit": "kg CO2",
+        "amount": 0.11912412999530761
+      },
+      {
+        "type": "biosphere",
+        "name": "CH4, to air, inputs production, non-fossil",
+        "term_type": "emission",
+        "term_id": "ch4ToAirInputsProductionNonFossil",
+        "unit": "kg CH4",
+        "amount": 0.0012960092978860534
+      },
+      {
+        "type": "biosphere",
+        "name": "NH3, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "nh3ToAirInputsProduction",
+        "unit": "kg NH3",
+        "amount": 0.0006514594131542673
+      },
+      {
+        "type": "biosphere",
+        "name": "N2O, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "n2OToAirInputsProduction",
+        "unit": "kg N2O",
+        "amount": 0.0004108975174542291
+      },
+      {
+        "type": "biosphere",
+        "name": "CH4, to air, inputs production, fossil",
+        "term_type": "emission",
+        "term_id": "ch4ToAirInputsProductionFossil",
+        "unit": "kg CH4",
+        "amount": 0.00020638299956852205
+      },
+      {
+        "type": "biosphere",
+        "name": "NOx, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "noxToAirInputsProduction",
+        "unit": "kg NOx",
+        "amount": 0.0005277568507640866
+      },
+      {
+        "type": "biosphere",
+        "name": "SO2, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "so2ToAirInputsProduction",
+        "unit": "kg SO2",
+        "amount": 0.00039965283402559253
+      },
+      {
+        "type": "biosphere",
+        "name": "Bromochlorodifluoromethane, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "bromochlorodifluoromethaneToAirInputsProduction",
+        "unit": "kg CBrClF2",
+        "amount": 3.2374176901312083e-10
+      },
+      {
+        "type": "biosphere",
+        "name": "Chlorodifluoromethane, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "chlorodifluoromethaneToAirInputsProduction",
+        "unit": "kg CHClF2",
+        "amount": 2.0492172429544755e-09
+      },
+      {
+        "type": "biosphere",
+        "name": "Dichlorodifluoromethane, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "dichlorodifluoromethaneToAirInputsProduction",
+        "unit": "kg CCl2F2",
+        "amount": 5.673687958529985e-12
+      },
+      {
+        "type": "biosphere",
+        "name": "1,1,2-Trichlorotrifluoroethane, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "112TrichlorotrifluoroethaneToAirInputsProduction",
+        "unit": "kg C2Cl3F3",
+        "amount": 1.064160081288034e-11
+      },
+      {
+        "type": "biosphere",
+        "name": "1,1-Dichlorotetrafluoroethane, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "11DichlorotetrafluoroethaneToAirInputsProduction",
+        "unit": "kg C2Cl2F4",
+        "amount": 3.0888401930023125e-10
+      },
+      {
+        "type": "biosphere",
+        "name": "NO3, to groundwater, inputs production",
+        "term_type": "emission",
+        "term_id": "no3ToGroundwaterInputsProduction",
+        "unit": "kg NO3",
+        "amount": 0.0008934004415015473
+      },
+      {
+        "type": "biosphere",
+        "name": "N, erosion, inputs production",
+        "term_type": "emission",
+        "term_id": "nErosionInputsProduction",
+        "unit": "kg N",
+        "amount": 0.00015334204597658929
+      },
+      {
+        "type": "biosphere",
+        "name": "P, erosion, inputs production",
+        "term_type": "emission",
+        "term_id": "pErosionInputsProduction",
+        "unit": "kg P",
+        "amount": 1.7676766057251015e-05
+      },
+      {
+        "type": "biosphere",
+        "name": "P, to drainage water, inputs production",
+        "term_type": "emission",
+        "term_id": "pToDrainageWaterInputsProduction",
+        "unit": "kg P",
+        "amount": 2.637012869867386e-08
+      },
+      {
+        "type": "biosphere",
+        "name": "P, to groundwater, inputs production",
+        "term_type": "emission",
+        "term_id": "pToGroundwaterInputsProduction",
+        "unit": "kg P",
+        "amount": 6.619602045093988e-07
+      },
+      {
+        "type": "biosphere",
+        "name": "P, to surface water, inputs production",
+        "term_type": "emission",
+        "term_id": "pToSurfaceWaterInputsProduction",
+        "unit": "kg P",
+        "amount": 6.095127831559649e-08
+      }
+    ]
+  }
+]

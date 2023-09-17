@@ -45,9 +45,21 @@ dev = [
     "pylint",
 ]
 
+docs = [
+  "ipython",
+  "pydata-sphinx-theme",
+  "myst-parser",
+  "sphinx-click",
+  "sphinx-design",
+  "sphinx-notfound-page",
+  "sphinx-favicon",
+  "sphinx-copybutton",
+  "sphinx-autobuild",
+]
+
 [tool.setuptools]
 license-files = ["LICENSE"]
-package-data = {bw_hestia_bridge = ["*.md", "*.txt"]}
+package-data = {bw_hestia_bridge = ["*.md", "*.txt", "*.csv"]}
 package-dir = { "" = "."}
 packages = [
     "bw_hestia_bridge", "bw_hestia_bridge.hestia_api", "bw_hestia_bridge.utils",
