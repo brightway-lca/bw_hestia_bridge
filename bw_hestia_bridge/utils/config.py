@@ -1,6 +1,5 @@
 import json
 import os
-from numbers import Number
 from typing import Any, Optional, Union
 
 from platformdirs import user_config_dir
@@ -65,7 +64,7 @@ def get_config(param: Optional[str] = None) -> Any:
 
 
 def set_config(
-    config: Union[str, dict], value: Union[str, Number, bool, None] = None
+    config: Union[str, dict], value: Union[str, bool, None] = None
 ) -> None:
     """
     Set configuration.
