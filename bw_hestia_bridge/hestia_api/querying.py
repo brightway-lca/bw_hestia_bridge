@@ -129,7 +129,7 @@ def get_hestia_node(
         Hestia ID for the node or dictionary describing the node (e.g. returned from
         :func:`search_hestia`). If it's a dict, it must contain at least an "@type"
         and an "@id" entry.
-    node_type : str, optional (default: taken from `node_id` or "cycle")
+    node_type : str, optional (default: try to autodetect)
         A valid type among "actor", "animal", "bibliography", "completeness",
         "cycle", "emission", "impactassessment", "indicator",
         "infrastructure", "input", "management", "measurement",
@@ -152,7 +152,7 @@ def get_hestia_node(
         node_type = node_id["@type"]
         node_id = node_id["@id"]
     else:
-        node_type = node_type or "cycle"
+        node_type = node_type or get_node_type(node_id)
 
     node_type = node_type.lower()
 
@@ -163,3 +163,8 @@ def get_hestia_node(
     req_url = f"{url}/{node_type}s/{node_id}?dataState={data_state}"
 
     return requests.get(req_url, headers=headers, proxies=proxies).json()
+
+
+def get_node_type(node_id: str) -> str:
+    ''' Get the node type from its Hestia ID '''
+    return search_hestia({"@id": node_id}, how="exact")[0]["@type"].lower()
