@@ -87,6 +87,8 @@ for practice in cycle['practices']:
         prperty['model'] = practice['model']
 ```
 
+We then add a list of `prperty` instances as `"properties"`.
+
 ## `animals`
 
 If the `animals` attribute is present in a cycle, we take it without modification, but do not use any of its data during the import.
@@ -147,12 +149,12 @@ for inpt in cycle['inputs']:
     for orig, new in MAPPED_OPTIONAL_FIELDS.items():
         if orig in inpt:
             exchange[new] = inpt[orig]
-    if 'price' in input:
-        exchange['price'] = {key: input[key] for key in PRICE if key in inpt}
+    if 'price' in inpt:
+        exchange['price'] = {key: inpt[key] for key in PRICE if key in inpt}
         if 'currency' in inpt:
             exchange['price']['currency'] = inpt['currency']
-    if 'cost' in input:
-        exchange['cost'] = {key: input[key] for key in COST if key in inpt}
+    if 'cost' in inpt:
+        exchange['cost'] = {key: inpt[key] for key in COST if key in inpt}
         exchange['cost']['currency'] = inpt['currency']
 ```
 
@@ -186,13 +188,20 @@ for inpt in cycle['inputs']:
                 'group': group,
             }
             for field in OPTIONAL_FIELDS:
-                if field in transprt:
+                if field in transport:
                     exchange[field] = transport[field]
             for orig, new in MAPPED_OPTIONAL_FIELDS.items():
                 if orig in transport:
                     exchange[new] = transport[orig]
             if 'distance' in transport:
-                exchange['distance'] = {key: input[key] for key in DISTANCE if key in transport}
+                exchange['distance'] = {key: transport[key] for key in DISTANCE if key in transport}
 ```
 
 We also take the `practices` as properties, as above.
+
+## `products`
+
+We will construct a supply chain of `process` nodes, which will produce `products`, and consume `products` (if coming from other Hestia cycles) or `processes` (if coming from a background database). For each `product`, we therefore need to create a new inventory dataset with the type `product`. But we also need to add a production exchange to the cycle unit process.
+
+```python
+```

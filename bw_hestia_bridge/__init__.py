@@ -6,6 +6,7 @@ from .hestia_api import (
     set_hestia_token,
     simple_hestia,
 )
+from .strategies import Converter
 from .utils import get_config, set_config
 
 __all__ = (
@@ -19,6 +20,7 @@ __all__ = (
     "set_config",
     "set_hestia_token",
     "simple_hestia",
+    "Converter",
 )
 
 __version__ = "0.1.0"
