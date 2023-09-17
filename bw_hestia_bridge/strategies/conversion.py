@@ -4,6 +4,7 @@ from typing import Optional, Tuple
 
 from ..hestia_api import get_hestia_node
 
+
 MAPPED_OPTIONAL_FIELDS = {
     "description": "comment",
     "sd": "standard deviation",
@@ -11,6 +12,7 @@ MAPPED_OPTIONAL_FIELDS = {
     "max": "maximum",
     "statsDescription": "statistics",
 }
+
 OPTIONAL_FIELDS = {
     "startDate",
     "endDate",
@@ -22,13 +24,12 @@ OPTIONAL_FIELDS = {
     "revenue",
     "economicValueShare",
 }
+
 SUFFIXES = {"", "Sd", "Min", "Max", "StatsDefinition"}
 PRICE = {"price" + suffix for suffix in SUFFIXES}
 COST = {"cost" + suffix for suffix in SUFFIXES}
 DISTANCE = {"distance" + suffix for suffix in SUFFIXES}
-BACKGROUND_DATABASES = {
-    "ecoinvent",
-}
+BACKGROUND_DATABASES = {"ecoinvent",}
 
 
 class Converter:
