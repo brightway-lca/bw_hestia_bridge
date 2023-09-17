@@ -1,0 +1,934 @@
+[
+  {
+    "name": "Pig",
+    "term_type": "liveAnimal",
+    "term_id": "pig",
+    "unit": "number",
+    "transformation_id": null,
+    "type": "product",
+    "price": {
+      "price": 138.7525,
+      "currency": "USD"
+    },
+    "revenue": 138.7525,
+    "economicValueShare": 100
+  },
+  {
+    "name": "Excreta, pigs (kg VS)",
+    "term_type": "excreta",
+    "term_id": "excretaPigsKgVs",
+    "unit": "kg VS",
+    "transformation_id": null,
+    "type": "product",
+    "price": {
+      "price": 0,
+      "currency": "USD"
+    },
+    "revenue": 0
+  },
+  {
+    "name": "Excreta, pigs (kg N)",
+    "term_type": "excreta",
+    "term_id": "excretaPigsKgN",
+    "unit": "kg N",
+    "transformation_id": null,
+    "type": "product",
+    "price": {
+      "price": 0,
+      "currency": "USD"
+    },
+    "revenue": 0,
+    "comment": "Excreted N calculated as N inputs in feed less N retained in pigs."
+  },
+  {
+    "name": "Excreta, pigs (kg mass)",
+    "term_type": "excreta",
+    "term_id": "excretaPigsKgMass",
+    "unit": "kg",
+    "transformation_id": null,
+    "type": "product"
+  },
+  {
+    "name": "Excreta mixtures (kg VS)",
+    "term_type": "excreta",
+    "term_id": "excretaMixturesKgVs",
+    "unit": "kg VS",
+    "transformation_id": "1",
+    "type": "product",
+    "price": {
+      "price": 0,
+      "currency": "USD"
+    },
+    "revenue": 0
+  },
+  {
+    "name": "Excreta mixtures (kg N)",
+    "term_type": "excreta",
+    "term_id": "excretaMixturesKgN",
+    "unit": "kg N",
+    "transformation_id": "1",
+    "type": "product",
+    "price": {
+      "price": 0,
+      "currency": "USD"
+    },
+    "revenue": 0,
+    "minimum": [
+      0.19
+    ],
+    "maximum": [
+      1.07
+    ]
+  },
+  {
+    "name": "Excreta mixtures (kg mass)",
+    "term_type": "excreta",
+    "term_id": "excretaMixturesKgMass",
+    "unit": "kg",
+    "transformation_id": "1",
+    "type": "product"
+  },
+  {
+    "name": "Deep bedding",
+    "term_type": "excretaManagement",
+    "term_id": "deepBedding",
+    "unit": null,
+    "type": "process",
+    "transformationId": "1",
+    "parent_cycle_id": "5-qkgrlriqqm",
+    "exchanges": [
+      {
+        "name": "Excreta, pigs (kg VS)",
+        "term_type": "excreta",
+        "term_id": "excretaPigsKgVs",
+        "unit": "kg VS",
+        "amount": 4.2,
+        "group": "Excreta, pigs (kg VS)-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Excreta, pigs (kg N)",
+        "term_type": "excreta",
+        "term_id": "excretaPigsKgN",
+        "unit": "kg N",
+        "amount": 0.4000000000000001,
+        "group": "Excreta, pigs (kg N)-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Generic crop, straw",
+        "term_type": "crop",
+        "term_id": "genericCropStraw",
+        "unit": "kg",
+        "amount": 0.96,
+        "group": "Generic crop, straw-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Excreta, pigs (kg mass)",
+        "term_type": "excreta",
+        "term_id": "excretaPigsKgMass",
+        "unit": "kg",
+        "amount": 52.92926680031639,
+        "group": "Excreta, pigs (kg mass)-0",
+        "type": "technosphere"
+      },
+      {
+        "type": "production",
+        "name": "Excreta mixtures (kg VS)",
+        "unit": "kg VS",
+        "amount": 4.2,
+        "transformation_id": "1"
+      },
+      {
+        "type": "production",
+        "name": "Excreta mixtures (kg N)",
+        "unit": "kg N",
+        "amount": 0.3124924784217017,
+        "transformation_id": "1"
+      },
+      {
+        "type": "production",
+        "name": "Excreta mixtures (kg mass)",
+        "unit": "kg",
+        "amount": 52.92926680031639,
+        "transformation_id": "1"
+      },
+      {
+        "type": "biosphere",
+        "name": "NH3, to air, excreta",
+        "term_type": "emission",
+        "term_id": "nh3ToAirExcreta",
+        "unit": "kg NH3",
+        "amount": 0.085
+      },
+      {
+        "type": "biosphere",
+        "name": "N2O, to air, excreta, direct",
+        "term_type": "emission",
+        "term_id": "n2OToAirExcretaDirect",
+        "unit": "kg N2O",
+        "amount": 0.025137716855857792
+      },
+      {
+        "type": "biosphere",
+        "name": "CH4, to air, excreta",
+        "term_type": "emission",
+        "term_id": "ch4ToAirExcreta",
+        "unit": "kg CH4",
+        "amount": 0.9370620000000001
+      },
+      {
+        "type": "biosphere",
+        "name": "NOx, to air, excreta",
+        "term_type": "emission",
+        "term_id": "noxToAirExcreta",
+        "unit": "kg NOx",
+        "amount": 0.003427543371171558
+      },
+      {
+        "type": "biosphere",
+        "name": "N2O, to air, excreta, indirect",
+        "term_type": "emission",
+        "term_id": "n2OToAirExcretaIndirect",
+        "unit": "kg N2O",
+        "amount": 0.0051180002131882806
+      }
+    ]
+  },
+  {
+    "name": "Processed excreta (kg VS)",
+    "term_type": "excreta",
+    "term_id": "processedExcretaKgVs",
+    "unit": "kg VS",
+    "transformation_id": "2",
+    "type": "product",
+    "price": {
+      "price": 0,
+      "currency": "USD"
+    },
+    "revenue": 0
+  },
+  {
+    "name": "Processed excreta (kg N)",
+    "term_type": "excreta",
+    "term_id": "processedExcretaKgN",
+    "unit": "kg N",
+    "transformation_id": "2",
+    "type": "product",
+    "price": {
+      "price": 0,
+      "currency": "USD"
+    },
+    "revenue": 0,
+    "minimum": [
+      0.12
+    ],
+    "maximum": [
+      0.21
+    ]
+  },
+  {
+    "name": "Processed excreta (kg mass)",
+    "term_type": "excreta",
+    "term_id": "processedExcretaKgMass",
+    "unit": "kg",
+    "transformation_id": "2",
+    "type": "product"
+  },
+  {
+    "name": "Composting, static pile, without runoff/leaching containment",
+    "term_type": "excretaManagement",
+    "term_id": "compostingStaticPileWithoutRunoffLeachingContainment",
+    "unit": null,
+    "type": "process",
+    "transformationId": "2",
+    "parent_cycle_id": "5-qkgrlriqqm",
+    "previousTransformationId": "1",
+    "exchanges": [
+      {
+        "name": "Excreta mixtures (kg VS)",
+        "term_type": "excreta",
+        "term_id": "excretaMixturesKgVs",
+        "unit": "kg VS",
+        "amount": 4.2,
+        "group": "Excreta mixtures (kg VS)-0",
+        "type": "technosphere",
+        "comment": "Mass balance (calculated using PIGBAL)"
+      },
+      {
+        "name": "Excreta mixtures (kg N)",
+        "term_type": "excreta",
+        "term_id": "excretaMixturesKgN",
+        "unit": "kg N",
+        "amount": 0.33,
+        "group": "Excreta mixtures (kg N)-0",
+        "type": "technosphere",
+        "minimum": [
+          0.19
+        ],
+        "maximum": [
+          1.07
+        ]
+      },
+      {
+        "name": "Excreta mixtures (kg mass)",
+        "term_type": "excreta",
+        "term_id": "excretaMixturesKgMass",
+        "unit": "kg",
+        "amount": 52.92926680031639,
+        "group": "Excreta mixtures (kg mass)-0",
+        "type": "technosphere"
+      },
+      {
+        "type": "production",
+        "name": "Processed excreta (kg VS)",
+        "unit": "kg VS",
+        "amount": 4.2,
+        "transformation_id": "2"
+      },
+      {
+        "type": "production",
+        "name": "Processed excreta (kg N)",
+        "unit": "kg N",
+        "amount": 0.2564624784217016,
+        "transformation_id": "2"
+      },
+      {
+        "type": "production",
+        "name": "Processed excreta (kg mass)",
+        "unit": "kg",
+        "amount": 52.92926680031639,
+        "transformation_id": "2"
+      },
+      {
+        "type": "biosphere",
+        "name": "NH3, to air, excreta",
+        "term_type": "emission",
+        "term_id": "nh3ToAirExcreta",
+        "unit": "kg NH3",
+        "amount": 0.085
+      },
+      {
+        "type": "biosphere",
+        "name": "CH4, to air, excreta",
+        "term_type": "emission",
+        "term_id": "ch4ToAirExcreta",
+        "unit": "kg CH4",
+        "amount": 0.013366500000000002
+      },
+      {
+        "type": "biosphere",
+        "name": "N2O, to air, excreta, direct",
+        "term_type": "emission",
+        "term_id": "n2OToAirExcretaDirect",
+        "unit": "kg N2O",
+        "amount": 0.005184654101520669
+      },
+      {
+        "type": "biosphere",
+        "name": "NOx, to air, excreta",
+        "term_type": "emission",
+        "term_id": "noxToAirExcreta",
+        "unit": "kg NOx",
+        "amount": 0.0007069308203041337
+      },
+      {
+        "type": "biosphere",
+        "name": "N2O, to air, excreta, indirect",
+        "term_type": "emission",
+        "term_id": "n2OToAirExcretaIndirect",
+        "unit": "kg N2O",
+        "amount": 0.0030124022050494925
+      }
+    ]
+  },
+  {
+    "@id": "5-qkgrlriqqm",
+    "comment": "This cycle represents the inventory for 3-8 weeks of weaner unit production in the southern supply chain.",
+    "location": "Animal housing - New South Wales, Australia",
+    "type": "process",
+    "extra_metadata": {
+      "defaultMethodClassificationDescription": "Data collected from piggery, including site visits.",
+      "endDate": "2008",
+      "createdAt": "2023-06-02",
+      "cycleDuration": 35,
+      "defaultMethodClassification": "verified survey data",
+      "updatedAt": "2023-06-27",
+      "functionalUnit": "relative"
+    },
+    "properties": [
+      {
+        "name": "Indoor animal system",
+        "term_type": "system",
+        "term_id": "indoorAnimalSystem",
+        "unit": "% area",
+        "amount": 100
+      }
+    ],
+    "animals": [
+      {
+        "term": {
+          "@type": "Term",
+          "termType": "liveAnimal",
+          "name": "Pig",
+          "units": "number",
+          "@id": "pig"
+        },
+        "referencePeriod": "average",
+        "properties": [
+          {
+            "term": {
+              "@type": "Term",
+              "name": "Mortality rate",
+              "termType": "property",
+              "@id": "mortalityRate",
+              "units": "%"
+            },
+            "value": 2.5,
+            "min": 0.8,
+            "max": 4,
+            "statsDefinition": "other observations",
+            "description": "other observations",
+            "@type": "Property"
+          }
+        ],
+        "@type": "Animal"
+      }
+    ],
+    "exchanges": [
+      {
+        "name": "Concentrate feed blend",
+        "term_type": "processedFood",
+        "term_id": "concentrateFeedBlend",
+        "unit": "kg",
+        "amount": 22.9,
+        "group": "Concentrate feed blend-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Concrete, depreciated amount per Cycle",
+        "term_type": "material",
+        "term_id": "concreteDepreciatedAmountPerCycle",
+        "unit": "kg/functional unit/Cycle",
+        "amount": 2.4,
+        "group": "Concrete, depreciated amount per Cycle-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Steel, depreciated amount per Cycle",
+        "term_type": "material",
+        "term_id": "steelDepreciatedAmountPerCycle",
+        "unit": "kg/functional unit/Cycle",
+        "amount": 0.085,
+        "group": "Steel, depreciated amount per Cycle-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Electricity, grid, market mix",
+        "term_type": "electricity",
+        "term_id": "electricityGridMarketMix",
+        "unit": "kWh",
+        "amount": 0.8,
+        "group": "Electricity, grid, market mix-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Liquefied petroleum gases (LPG)",
+        "term_type": "fuel",
+        "term_id": "liquefiedPetroleumGasesLpg",
+        "unit": "kg",
+        "amount": 0.2132,
+        "group": "Liquefied petroleum gases (LPG)-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Petrol",
+        "term_type": "fuel",
+        "term_id": "petrol",
+        "unit": "kg",
+        "amount": 0.022439999999999998,
+        "group": "Petrol-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Diesel",
+        "term_type": "fuel",
+        "term_id": "diesel",
+        "unit": "kg",
+        "amount": 0.2324,
+        "group": "Diesel-0",
+        "type": "technosphere"
+      },
+      {
+        "name": "Pig, piglet",
+        "term_type": "liveAnimal",
+        "term_id": "pigPiglet",
+        "unit": "number",
+        "amount": 1.026,
+        "group": "Pig, piglet-0",
+        "type": "technosphere"
+      },
+      {
+        "type": "production",
+        "name": "Pig",
+        "unit": "number",
+        "amount": 1,
+        "transformation_id": null
+      },
+      {
+        "type": "production",
+        "name": "Excreta, pigs (kg VS)",
+        "unit": "kg VS",
+        "amount": 4.2,
+        "transformation_id": null
+      },
+      {
+        "type": "production",
+        "name": "Excreta, pigs (kg N)",
+        "unit": "kg N",
+        "amount": 0.4000000000000001,
+        "transformation_id": null
+      },
+      {
+        "type": "production",
+        "name": "Excreta, pigs (kg mass)",
+        "unit": "kg",
+        "amount": 52.92926680031639,
+        "transformation_id": null
+      },
+      {
+        "type": "biosphere",
+        "name": "CH4, to air, enteric fermentation",
+        "term_type": "emission",
+        "term_id": "ch4ToAirEntericFermentation",
+        "unit": "kg CH4",
+        "amount": 0.044
+      },
+      {
+        "type": "biosphere",
+        "name": "NOx, to air, excreta",
+        "term_type": "emission",
+        "term_id": "noxToAirExcreta",
+        "unit": "kg NOx",
+        "amount": 0.009121145600000002
+      },
+      {
+        "type": "biosphere",
+        "name": "N2O, to air, excreta, direct",
+        "term_type": "emission",
+        "term_id": "n2OToAirExcretaDirect",
+        "unit": "kg N2O",
+        "amount": 0.025137716855857792
+      },
+      {
+        "type": "biosphere",
+        "name": "CO2, to air, fuel combustion",
+        "term_type": "emission",
+        "term_id": "co2ToAirFuelCombustion",
+        "unit": "kg CO2",
+        "amount": 0.8084486799999999
+      },
+      {
+        "type": "biosphere",
+        "name": "N2O, to air, fuel combustion, direct",
+        "term_type": "emission",
+        "term_id": "n2OToAirFuelCombustionDirect",
+        "unit": "kg N2O",
+        "amount": 3.2930359999999996e-05
+      },
+      {
+        "type": "biosphere",
+        "name": "NOx, to air, fuel combustion",
+        "term_type": "emission",
+        "term_id": "noxToAirFuelCombustion",
+        "unit": "kg NOx",
+        "amount": 0.00774268508
+      },
+      {
+        "type": "biosphere",
+        "name": "SO2, to air, fuel combustion",
+        "term_type": "emission",
+        "term_id": "so2ToAirFuelCombustion",
+        "unit": "kg SO2",
+        "amount": 0.00025484
+      },
+      {
+        "type": "biosphere",
+        "name": "N2O, to air, excreta, indirect",
+        "term_type": "emission",
+        "term_id": "n2OToAirExcretaIndirect",
+        "unit": "kg N2O",
+        "amount": 0.00534176483186978
+      },
+      {
+        "type": "biosphere",
+        "name": "NH3, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "nh3ToAirInputsProduction",
+        "unit": "kg NH3",
+        "amount": 0.025782216469003652
+      },
+      {
+        "type": "biosphere",
+        "name": "CO2, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "co2ToAirInputsProduction",
+        "unit": "kg CO2",
+        "amount": 4.984154532928332
+      },
+      {
+        "type": "biosphere",
+        "name": "N2O, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "n2OToAirInputsProduction",
+        "unit": "kg N2O",
+        "amount": 0.015654075961509247
+      },
+      {
+        "type": "biosphere",
+        "name": "CH4, to air, inputs production, fossil",
+        "term_type": "emission",
+        "term_id": "ch4ToAirInputsProductionFossil",
+        "unit": "kg CH4",
+        "amount": 0.009044456496715838
+      },
+      {
+        "type": "biosphere",
+        "name": "CH4, to air, inputs production, non-fossil",
+        "term_type": "emission",
+        "term_id": "ch4ToAirInputsProductionNonFossil",
+        "unit": "kg CH4",
+        "amount": 0.03346165235561286
+      },
+      {
+        "type": "biosphere",
+        "name": "NOx, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "noxToAirInputsProduction",
+        "unit": "kg NOx",
+        "amount": 0.043825355278126324
+      },
+      {
+        "type": "biosphere",
+        "name": "SO2, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "so2ToAirInputsProduction",
+        "unit": "kg SO2",
+        "amount": 0.013216941631369186
+      },
+      {
+        "type": "biosphere",
+        "name": "Bromochlorodifluoromethane, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "bromochlorodifluoromethaneToAirInputsProduction",
+        "unit": "kg CBrClF2",
+        "amount": 1.3800867305818095e-08
+      },
+      {
+        "type": "biosphere",
+        "name": "Chlorodifluoromethane, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "chlorodifluoromethaneToAirInputsProduction",
+        "unit": "kg CHClF2",
+        "amount": 1.017138195328898e-07
+      },
+      {
+        "type": "biosphere",
+        "name": "Dichlorodifluoromethane, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "dichlorodifluoromethaneToAirInputsProduction",
+        "unit": "kg CCl2F2",
+        "amount": 4.129172010641826e-08
+      },
+      {
+        "type": "biosphere",
+        "name": "1,1,2-Trichlorotrifluoroethane, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "112TrichlorotrifluoroethaneToAirInputsProduction",
+        "unit": "kg C2Cl3F3",
+        "amount": 3.967082870321097e-10
+      },
+      {
+        "type": "biosphere",
+        "name": "1,1-Dichlorotetrafluoroethane, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "11DichlorotetrafluoroethaneToAirInputsProduction",
+        "unit": "kg C2Cl2F4",
+        "amount": 1.9726190737164818e-08
+      },
+      {
+        "type": "biosphere",
+        "name": "NO3, to groundwater, inputs production",
+        "term_type": "emission",
+        "term_id": "no3ToGroundwaterInputsProduction",
+        "unit": "kg NO3",
+        "amount": 0.7630076585617639
+      },
+      {
+        "type": "biosphere",
+        "name": "N, erosion, inputs production",
+        "term_type": "emission",
+        "term_id": "nErosionInputsProduction",
+        "unit": "kg N",
+        "amount": 0.011838679379740397
+      },
+      {
+        "type": "biosphere",
+        "name": "P, erosion, inputs production",
+        "term_type": "emission",
+        "term_id": "pErosionInputsProduction",
+        "unit": "kg P",
+        "amount": 0.0014103489823332556
+      },
+      {
+        "type": "biosphere",
+        "name": "P, to drainage water, inputs production",
+        "term_type": "emission",
+        "term_id": "pToDrainageWaterInputsProduction",
+        "unit": "kg P",
+        "amount": 6.715235281610255e-06
+      },
+      {
+        "type": "biosphere",
+        "name": "P, to groundwater, inputs production",
+        "term_type": "emission",
+        "term_id": "pToGroundwaterInputsProduction",
+        "unit": "kg P",
+        "amount": 7.141726669153612e-06
+      },
+      {
+        "type": "biosphere",
+        "name": "P, to surface water, inputs production",
+        "term_type": "emission",
+        "term_id": "pToSurfaceWaterInputsProduction",
+        "unit": "kg P",
+        "amount": 6.905415730028077e-06
+      },
+      {
+        "type": "biosphere",
+        "name": "CH4, to air, inputs production, non-fossil",
+        "term_type": "emission",
+        "term_id": "ch4ToAirInputsProductionNonFossil",
+        "unit": "kg CH4",
+        "amount": 0.6068061038116398
+      },
+      {
+        "type": "biosphere",
+        "name": "NH3, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "nh3ToAirInputsProduction",
+        "unit": "kg NH3",
+        "amount": 0.048586611040965774
+      },
+      {
+        "type": "biosphere",
+        "name": "CO2, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "co2ToAirInputsProduction",
+        "unit": "kg CO2",
+        "amount": 3.5821751373764807
+      },
+      {
+        "type": "biosphere",
+        "name": "N2O, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "n2OToAirInputsProduction",
+        "unit": "kg N2O",
+        "amount": 0.03281942065187808
+      },
+      {
+        "type": "biosphere",
+        "name": "CH4, to air, inputs production, fossil",
+        "term_type": "emission",
+        "term_id": "ch4ToAirInputsProductionFossil",
+        "unit": "kg CH4",
+        "amount": 0.006275680503989957
+      },
+      {
+        "type": "biosphere",
+        "name": "NOx, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "noxToAirInputsProduction",
+        "unit": "kg NOx",
+        "amount": 0.02854178054310844
+      },
+      {
+        "type": "biosphere",
+        "name": "SO2, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "so2ToAirInputsProduction",
+        "unit": "kg SO2",
+        "amount": 0.012288663125141947
+      },
+      {
+        "type": "biosphere",
+        "name": "Bromochlorodifluoromethane, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "bromochlorodifluoromethaneToAirInputsProduction",
+        "unit": "kg CBrClF2",
+        "amount": 7.3666726885853035e-09
+      },
+      {
+        "type": "biosphere",
+        "name": "Chlorodifluoromethane, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "chlorodifluoromethaneToAirInputsProduction",
+        "unit": "kg CHClF2",
+        "amount": 8.312947579718833e-08
+      },
+      {
+        "type": "biosphere",
+        "name": "Dichlorodifluoromethane, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "dichlorodifluoromethaneToAirInputsProduction",
+        "unit": "kg CCl2F2",
+        "amount": 1.3844352070286428e-08
+      },
+      {
+        "type": "biosphere",
+        "name": "1,1,2-Trichlorotrifluoroethane, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "112TrichlorotrifluoroethaneToAirInputsProduction",
+        "unit": "kg C2Cl3F3",
+        "amount": 1.6563214530511585e-10
+      },
+      {
+        "type": "biosphere",
+        "name": "1,1-Dichlorotetrafluoroethane, to air, inputs production",
+        "term_type": "emission",
+        "term_id": "11DichlorotetrafluoroethaneToAirInputsProduction",
+        "unit": "kg C2Cl2F4",
+        "amount": 3.865776060633319e-08
+      },
+      {
+        "type": "biosphere",
+        "name": "NO3, to groundwater, inputs production",
+        "term_type": "emission",
+        "term_id": "no3ToGroundwaterInputsProduction",
+        "unit": "kg NO3",
+        "amount": 0.32083516322474315
+      },
+      {
+        "type": "biosphere",
+        "name": "N, erosion, inputs production",
+        "term_type": "emission",
+        "term_id": "nErosionInputsProduction",
+        "unit": "kg N",
+        "amount": 0.0017439625310309039
+      },
+      {
+        "type": "biosphere",
+        "name": "P, erosion, inputs production",
+        "term_type": "emission",
+        "term_id": "pErosionInputsProduction",
+        "unit": "kg P",
+        "amount": 0.000206978174779892
+      },
+      {
+        "type": "biosphere",
+        "name": "P, to drainage water, inputs production",
+        "term_type": "emission",
+        "term_id": "pToDrainageWaterInputsProduction",
+        "unit": "kg P",
+        "amount": 8.771276974652993e-07
+      },
+      {
+        "type": "biosphere",
+        "name": "P, to groundwater, inputs production",
+        "term_type": "emission",
+        "term_id": "pToGroundwaterInputsProduction",
+        "unit": "kg P",
+        "amount": 1.942481233744199e-06
+      },
+      {
+        "type": "biosphere",
+        "name": "P, to surface water, inputs production",
+        "term_type": "emission",
+        "term_id": "pToSurfaceWaterInputsProduction",
+        "unit": "kg P",
+        "amount": 9.00949129595113e-07
+      },
+      {
+        "type": "biosphere",
+        "name": "NH3, to air, excreta",
+        "term_type": "emission",
+        "term_id": "nh3ToAirExcreta",
+        "unit": "kg NH3",
+        "amount": 0.085
+      },
+      {
+        "type": "biosphere",
+        "name": "N2O, to air, excreta, direct",
+        "term_type": "emission",
+        "term_id": "n2OToAirExcretaDirect",
+        "unit": "kg N2O",
+        "amount": 0.025137716855857792
+      },
+      {
+        "type": "biosphere",
+        "name": "CH4, to air, excreta",
+        "term_type": "emission",
+        "term_id": "ch4ToAirExcreta",
+        "unit": "kg CH4",
+        "amount": 0.9370620000000001
+      },
+      {
+        "type": "biosphere",
+        "name": "NOx, to air, excreta",
+        "term_type": "emission",
+        "term_id": "noxToAirExcreta",
+        "unit": "kg NOx",
+        "amount": 0.003427543371171558
+      },
+      {
+        "type": "biosphere",
+        "name": "N2O, to air, excreta, indirect",
+        "term_type": "emission",
+        "term_id": "n2OToAirExcretaIndirect",
+        "unit": "kg N2O",
+        "amount": 0.0051180002131882806
+      },
+      {
+        "type": "biosphere",
+        "name": "NH3, to air, excreta",
+        "term_type": "emission",
+        "term_id": "nh3ToAirExcreta",
+        "unit": "kg NH3",
+        "amount": 0.085
+      },
+      {
+        "type": "biosphere",
+        "name": "CH4, to air, excreta",
+        "term_type": "emission",
+        "term_id": "ch4ToAirExcreta",
+        "unit": "kg CH4",
+        "amount": 0.013366500000000002
+      },
+      {
+        "type": "biosphere",
+        "name": "N2O, to air, excreta, direct",
+        "term_type": "emission",
+        "term_id": "n2OToAirExcretaDirect",
+        "unit": "kg N2O",
+        "amount": 0.005184654101520669
+      },
+      {
+        "type": "biosphere",
+        "name": "NOx, to air, excreta",
+        "term_type": "emission",
+        "term_id": "noxToAirExcreta",
+        "unit": "kg NOx",
+        "amount": 0.0007069308203041337
+      },
+      {
+        "type": "biosphere",
+        "name": "N2O, to air, excreta, indirect",
+        "term_type": "emission",
+        "term_id": "n2OToAirExcretaIndirect",
+        "unit": "kg N2O",
+        "amount": 0.0030124022050494925
+      }
+    ]
+  }
+]

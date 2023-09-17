@@ -34,6 +34,24 @@ You can install ``bw_hestia_bridge`` via [pip] from [PyPI]:
 $ pip install bw_hestia_bridge
 ```
 
+[pip]: https://pypi.org/project/pip
+[PyPi]: https://pypi.org/project/bw-hestia-bridge
+
+
+## Mapping `Hestia` cycles to the Brightway mental model
+
+Hestia is not a linked network of unit processes, but detailed data on specific production systems. As they are agricultural, almost all of these systems have multiple outputs, and many of these outputs require further treatment. For example, in the [pig system](https://www-staging.hestia.earth/cycle/5-qkgrlriqqm?dataState=recalculated), there are three types of excreta produced, which go to deep bedding, which go to composting. Hestia doesn't seem to have a waste treatment for the final processed excreta.
+
+Because these follow-on activities (Hestia calls them [Transformations](https://www-staging.hestia.earth/schema/Transformation)) are multi-input *and* multi-output, and because there is no guarantee that the respective ratios of these outputs align with the next stage inputs, we will do the following:
+
+For each `transformation`, we create a new unit process. The *reference product* of this process will be the output with the highest mass.
+
+For the other outputs, we will create proxy treatment activities. These proxies will handle any potential stoichiometric disparities.
+
+If a `transformation` is a leaf node, i.e. it has inputs but no consumers for each outputs, we will create proxy consumers for each output other than the reference product.
+
+We then go back to the original unit process, and add proxy consumers for each output which is not the reference product (i.e. marked `"primary": true`) or the reference product of a waste treatment.
+
 ## Contributing
 
 Contributions are very welcome.
