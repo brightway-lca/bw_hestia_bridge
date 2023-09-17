@@ -101,7 +101,8 @@ def search_hestia(
 
 
 def get_hestia_node(
-    node: dict[str, str],
+    node_id: Union[str, dict[str, str]],
+    node_type: Optional[str] = None,
     data_state: Optional[str] = None
 ) -> dict:
     """
@@ -109,9 +110,17 @@ def get_hestia_node(
 
     Parameters
     ----------
-    node : dict[str, str]
-         Dictionary describing the node. It must contain at least an "@type"
+    node_id : str or dict[str, str]
+        Hestia ID for the node or dictionary describing the node (e.g. returned from
+        :func:`search_hestia`). If it's a dict, it must contain at least an "@type"
         and an "@id" entry.
+    node_type : str, optional (default: taken from `node_id` or "cycle")
+        A valid type among "actor", "animal", "bibliography", "completeness",
+        "cycle", "emission", "impactassessment", "indicator",
+        "infrastructure", "input", "management", "measurement",
+        "organisation", "practice", "product", "property", "site", "source",
+        "term", "transformation", or "transport". If not provided, will either
+        be taken from `node_id` if it is a dict, or default to "cycle".
     data_state : str, optional (default: "recalculated")
         Version of the data, by default, use "recalculated" to download the
         more detailed version of the data. Use "original" to get the raw data.
@@ -121,17 +130,20 @@ def get_hestia_node(
     The dict associated to the JSON-LD entry describing `node` in the
     Hestia database.
     """
-    assert "@type" in node, "`node` must contain an '@type' entry."
-    assert "@id" in node, "`node` must contain an '@id' entry."
+    if isinstance(node_id, dict):
+        assert "@type" in node_id, "`node` must contain an '@type' entry."
+        assert "@id" in node_id, "`node` must contain an '@id' entry."
+
+        node_type = node_id["@type"].lower()
+        node_id = node_id["@id"]
+    else:
+        node_type = node_type or "cycle"
 
     url, token, proxies, headers = base_api_data()
 
-    ntype = node["@type"].lower()
-    nid = node["@id"]
-
     data_state = data_state or "recalculated"
 
-    req_url = f"{url}/{ntype}s/{nid}?dataState={data_state}"
+    req_url = f"{url}/{node_type}s/{node_id}?dataState={data_state}"
 
     return requests.get(req_url, headers=headers, proxies=proxies).json()
 
