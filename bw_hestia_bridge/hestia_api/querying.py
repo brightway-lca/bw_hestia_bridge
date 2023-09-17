@@ -3,7 +3,7 @@ from typing import Any, Optional, Union
 
 import requests
 
-from .base_data import base_api_data
+from .base_api import base_api_data, nested_elements, valid_types
 
 
 def search_hestia(
@@ -43,7 +43,7 @@ def search_hestia(
     -------
     A list of dicts containing the `fields` entries.
     """
-    url, token, proxies, headers = base_api_data()
+    url, proxies, headers = base_api_data()
 
     fields = fields or ["@type", "name", "@id"]
 
@@ -139,55 +139,10 @@ def get_hestia_node(
     else:
         node_type = node_type or "cycle"
 
-    url, token, proxies, headers = base_api_data()
+    url, proxies, headers = base_api_data()
 
     data_state = data_state or "recalculated"
 
     req_url = f"{url}/{node_type}s/{node_id}?dataState={data_state}"
 
     return requests.get(req_url, headers=headers, proxies=proxies).json()
-
-
-# Hestia database information
-
-valid_types = {
-    "actor",
-    "animal",
-    "bibliography",
-    "completeness",
-    "cycle",
-    "emission",
-    "impactassessment",
-    "indicator",
-    "infrastructure",
-    "input",
-    "management",
-    "measurement",
-    "organisation",
-    "practice",
-    "product",
-    "property",
-    "site",
-    "source",
-    "term",
-    "transformation",
-    "transport",
-}
-
-nested_elements = {
-    'inputs',
-    'practices',
-    'otherSites',
-    'animals',
-    'products',
-    'transformations',
-    'emissions',
-    'emissionsResourceUse',
-    'impacts',
-    'endpoints',
-    'measurements',
-    'management',
-    'metaAnalyses',
-    'subClassOf',
-    'defaultProperties'
-}

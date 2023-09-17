@@ -7,7 +7,7 @@ def test_search():
     assert not search_hestia("nonexistant")
 
     # test limits and nested search
-    set_config("hestia_api", "https://api-staging.hestia.earth")
+    set_config("use_staging", True)
 
     assert len(search_hestia({"products.term.name": "Saplings"})) == 10
     assert len(search_hestia({"products.term.name": "Saplings"}, limit=12)) == 12
@@ -29,7 +29,7 @@ def test_search():
 
 def test_download():
     ''' Download complete node information from Hestia '''
-    set_config("hestia_api", "https://api-staging.hestia.earth")
+    set_config("use_staging", True)
 
     # test with search results
     res = search_hestia({"name": "ouidah", "products.term.name": "Saplings"})
