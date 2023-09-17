@@ -1,5 +1,5 @@
 import re
-from typing import Any, Optional, Union
+from typing import Any, Literal, Optional, Union
 
 import requests
 
@@ -11,7 +11,7 @@ def search_hestia(
     node_type: Optional[str] = None,
     fields: Optional[list[str]] = None,
     limit: Optional[int] = 10,
-    match_all_words: bool = False,
+    how: Literal["or", "and", "exact"] = "or"
 ) -> list[dict[str, str]]:
     """
     Search the Hestia database.
@@ -21,9 +21,8 @@ def search_hestia(
     query : str or dict
         A string to match to names in the Hestia database, or a dict of the
         form ``{"field_name": value}`` to match `field_name` instead of
-        "name". One can also refine this by searching for nodes that have a
-        product with a name matching "Saplings" by using
-        ``{"products.term.name": "Saplings"}``.
+        "name". See the examples below to see how to make more complex
+        quieries.
     node_type : str, optional (default: any type)
         A valid type among "actor", "animal", "bibliography", "completeness",
         "cycle", "emission", "impactassessment", "indicator",
@@ -35,44 +34,66 @@ def search_hestia(
     limit : int, optional (default: 10)
         The maximum number of results that will be returned (best match come
         first).
-    match_all_words : bool, optional (default: False)
-        Whether the search tries to match all words in the `query` string.
-        Set to True for more precise results.
+    how : {"or", "and", "exact"}, optional (default: "or")
+        Whether the search tries to match any word in `query` ("or"), all
+        words in `query` ("and") or to match the whole query exactly
+        ("exact").
 
     Returns
     -------
     A list of dicts containing the `fields` entries.
+
+    Examples
+    --------
+    One can refine the query by searching for nodes that have a product with a
+    name matching "Saplings" by using ::
+
+        search_hestia({"products.term.name": "Saplings"})
+
+    It is also possible to do multi-criteria searches as follow ::
+
+        search_hestia({"name": "Ouidah", "products.term.name": "Saplings"})
     """
     url, proxies, headers = base_api_data()
 
     fields = fields or ["@type", "name", "@id"]
 
+    how = how or "or"
+
     matches: list[dict] = []
 
     if not isinstance(query, dict):
-        if match_all_words:
-            matches.append({"match": {"name": {"query": query, "operator": "and"}}})
+        query = {"name": query}
+
+    # check the query
+    r = r"^(?P<path>\w+)\..+"
+
+    for k, v in query.items():
+        re_match = re.search(r, k)
+
+        qk = {}
+
+        if how in ("and", "or"):
+            qk[k] = {"query": v, "operator": how}
+        elif how == "exact":
+            qk[f"{k}.keyword"] = v
         else:
-            matches.append({"match": {"name": query}})
-    else:
-        r = r"^(?P<path>\w+)\..+"
+            raise ValueError(f"Invalid `how` argument: '{how}'.")
 
-        for k, v in query.items():
-            re_match = re.search(r, k)
+        if re_match:
+            path = re_match.groupdict()["path"]
 
-            if re_match:
-                path = re_match.groupdict()["path"]
+            if path in nested_elements:
+                is_nested = True
 
-                if path in nested_elements:
-                    matches.append(
-                        {"nested": {"path": path, "query": {"match": {k: v}}}}
-                    )
-                else:
-                    matches.append({"match": {k: v}})
-            elif match_all_words:
-                matches.append({"match": {k: {"query": v, "operator": "and"}}})
+                matches.append({
+                    "nested": {
+                        "path": path, "query": {"match": qk}}
+                })
             else:
-                matches.append({"match": {k: v}})
+                matches.append({'match': qk})
+        else:
+            matches.append({'match': qk})
 
     if node_type:
         assert (
@@ -84,7 +105,7 @@ def search_hestia(
     q: dict[str, Any] = {
         "fields": fields,
         "limit": limit,
-        "query": {"bool": {"must": matches}},
+        "query": {"bool": {"must": matches}}
     }
 
     res = requests.post(
@@ -97,7 +118,7 @@ def search_hestia(
 def get_hestia_node(
     node_id: Union[str, dict[str, str]],
     node_type: Optional[str] = None,
-    data_state: Optional[str] = None,
+    data_state: Optional[str] = None
 ) -> dict:
     """
     Download the Hestia node associated to `node`.
@@ -128,10 +149,12 @@ def get_hestia_node(
         assert "@type" in node_id, "`node` must contain an '@type' entry."
         assert "@id" in node_id, "`node` must contain an '@id' entry."
 
-        node_type = node_id["@type"].lower()
+        node_type = node_id["@type"]
         node_id = node_id["@id"]
     else:
         node_type = node_type or "cycle"
+
+    node_type = node_type.lower()
 
     url, proxies, headers = base_api_data()
 

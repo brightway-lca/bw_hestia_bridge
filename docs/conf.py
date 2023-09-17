@@ -20,6 +20,7 @@ needs_sphinx = '7.0.0'
 
 extensions = [
     # core extensions
+    'sphinx.ext.autosummary',
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
     'sphinx.ext.intersphinx',
