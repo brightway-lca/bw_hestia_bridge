@@ -7,8 +7,7 @@ from platformdirs import user_config_dir
 _config: dict = {
     "http_proxy": "",
     "https_proxy": "",
-    "hestia_token": None,
-    "hestia_api": "https://api.hestia.earth",
+    "use_staging": False,
 }
 
 
@@ -22,13 +21,21 @@ def _init_config():
     """Create or set the config from the file and the environment"""
     config = _config.copy()
 
+    overwrite = True
+
     if os.path.isfile(conf_file):
         with open(conf_file, "r") as f:
             new_config = json.load(f)
 
-            for k, v in new_config.items():
-                config[k] = v
-    else:
+            if set(new_config) == set(config):
+                overwrite = False
+
+                for k, v in new_config.items():
+                    config[k] = v
+
+    if overwrite:
+        # config file does not exist or config structure was changed
+        # and should be overwritten
         save_config(config)
 
     # auto-set proxies if environment variables are set
@@ -39,9 +46,9 @@ def _init_config():
             if not config[p]:
                 config[p] = os.environ.get(p, os.environ[p.upper()])
 
-    # get API url and token from the environment if present
-    for key in ("hestia_token", "hestia_api"):
-        config[key] = os.environ.get(key, config[key])
+    # get use_staging from environment if present
+    if "use_staging" in os.environ:
+        config["use_staging"] = os.environ["use_staging"]
 
     set_config(config)
 
