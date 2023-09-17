@@ -46,6 +46,7 @@ dev = [
 ]
 
 docs = [
+  "ipython",
   "pydata-sphinx-theme",
   "myst-parser",
   "sphinx-click",
