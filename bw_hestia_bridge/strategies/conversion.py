@@ -5,34 +5,15 @@ from typing import Optional, Tuple
 from ..hestia_api import get_hestia_node
 
 
-MAPPED_OPTIONAL_FIELDS = {
-    "description": "comment",
-    "sd": "standard deviation",
-    "min": "minimum",
-    "max": "maximum",
-    "statsDescription": "statistics",
-}
-
-OPTIONAL_FIELDS = {
-    "startDate",
-    "endDate",
-    "methodClassification",
-    "observations",
-    "methodClassificationDescription",
-    "model",
-    "modelDescription",
-    "revenue",
-    "economicValueShare",
-}
-
-SUFFIXES = {"", "Sd", "Min", "Max", "StatsDefinition"}
-PRICE = {"price" + suffix for suffix in SUFFIXES}
-COST = {"cost" + suffix for suffix in SUFFIXES}
-DISTANCE = {"distance" + suffix for suffix in SUFFIXES}
-BACKGROUND_DATABASES = {"ecoinvent",}
+def convert(data: dict) -> list:
+    ''' '''
+    return Converter().convert(data)
 
 
 class Converter:
+
+    ''' Convert Hestia data into a BW-compatible form '''
+
     def convert(self, source: dict) -> list:
         return_data = []
 
@@ -58,6 +39,10 @@ class Converter:
         return return_data
 
     def get_basic_metadata(self, obj: dict) -> dict:
+        '''
+        Return a minimum subset of the object data, partly
+        renamed to fit the BW format.
+        '''
         EXTRAS = {
             "createdAt",
             "updatedAt",
@@ -172,8 +157,10 @@ class Converter:
             "unit": obj["term"].get("units"),
             "amount": obj["value"][0],
         }
+
         if "model" in obj:
             data["model"] = obj["model"]
+
         return data
 
     def get_products(
@@ -184,8 +171,10 @@ class Converter:
         for node in obj.get("products", []):
             if node["value"][0] == 0:
                 continue
+
             if node.get("primary"):
                 obj["reference product"] = node["term"]["name"]
+
             exchange = {
                 "type": "production",
                 "name": node["term"]["name"],
@@ -193,6 +182,7 @@ class Converter:
                 "amount": node["value"][0],
                 "transformation_id": transformation_id,
             }
+
             product = {
                 "name": node["term"]["name"],
                 "term_type": node["term"]["termType"],
@@ -201,6 +191,7 @@ class Converter:
                 "transformation_id": transformation_id,
                 "type": "product",
             }
+
             self.add_price(node, product)
             self.add_optional_fields(node, product)
 
@@ -210,13 +201,20 @@ class Converter:
         return new_exchanges, new_datasets
 
     def is_aggregated_emission(self, obj: dict) -> bool:
+        '''
+        Mark emission as aggregated to avoid double counting.
+        This is denoted by (e.g. an "ecoinvent" mention in the
+        name within the Hestia database).
+        '''
         if "methodModel" not in obj:
             return False
+
         if any(
             term in obj["methodModel"].get("name", "").lower()
             for term in BACKGROUND_DATABASES
         ):
             return True
+
         return False
 
     def get_emissions(self, obj: dict) -> list:
@@ -268,5 +266,30 @@ class Converter:
         return new_datasets
 
 
-def convert(data):
-    return Converter().convert(data)
+# utilities
+
+MAPPED_OPTIONAL_FIELDS = {
+    "description": "comment",
+    "sd": "standard deviation",
+    "min": "minimum",
+    "max": "maximum",
+    "statsDescription": "statistics",
+}
+
+OPTIONAL_FIELDS = {
+    "startDate",
+    "endDate",
+    "methodClassification",
+    "observations",
+    "methodClassificationDescription",
+    "model",
+    "modelDescription",
+    "revenue",
+    "economicValueShare",
+}
+
+SUFFIXES = {"", "Sd", "Min", "Max", "StatsDefinition"}
+PRICE = {"price" + suffix for suffix in SUFFIXES}
+COST = {"cost" + suffix for suffix in SUFFIXES}
+DISTANCE = {"distance" + suffix for suffix in SUFFIXES}
+BACKGROUND_DATABASES = {"ecoinvent",}
