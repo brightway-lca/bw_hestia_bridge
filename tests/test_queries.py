@@ -2,12 +2,18 @@ from bw_hestia_bridge import get_hestia_node, search_hestia, set_config
 
 
 def test_search():
-    ''' Test the search function '''
+    '''
+    Test the search function
+
+    These tests are dependent on the Staging API of Hestia, if some things
+    change on the Staging Server, they could fail. In such a case it could
+    be convenient to disable these tests if reality demands a rapid merge.
+    '''
     # test empty results
     assert not search_hestia("nonexistant")
 
     # test limits and nested search
-    set_config("hestia_api", "https://api-staging.hestia.earth")
+    set_config("use_staging", True)
 
     assert len(search_hestia({"products.term.name": "Saplings"})) == 10
     assert len(search_hestia({"products.term.name": "Saplings"}, limit=12)) == 12
@@ -28,8 +34,14 @@ def test_search():
 
 
 def test_download():
-    ''' Download complete node information from Hestia '''
-    set_config("hestia_api", "https://api-staging.hestia.earth")
+    '''
+    Download complete node information from Hestia
+
+    These tests are dependent on the Staging API of Hestia, if some things
+    change on the Staging Server, they could fail. In such a case it could
+    be convenient to disable these tests if reality demands a rapid merge.
+    '''
+    set_config("use_staging", True)
 
     # test with search results
     res = search_hestia({"name": "ouidah", "products.term.name": "Saplings"})
