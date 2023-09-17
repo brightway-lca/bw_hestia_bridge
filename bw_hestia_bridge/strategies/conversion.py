@@ -26,6 +26,9 @@ SUFFIXES = {"", "Sd", "Min", "Max", "StatsDefinition"}
 PRICE = {"price" + suffix for suffix in SUFFIXES}
 COST = {"cost" + suffix for suffix in SUFFIXES}
 DISTANCE = {"distance" + suffix for suffix in SUFFIXES}
+BACKGROUND_DATABASES = {
+    "ecoinvent",
+}
 
 
 class Converter:
@@ -44,6 +47,9 @@ class Converter:
         new_exchanges, new_datasets = self.get_products(source)
         target["exchanges"].extend(new_exchanges)
         return_data.extend(new_datasets)
+
+        new_exchanges = self.get_emissions(source)
+        target["exchanges"].extend(new_exchanges)
 
         return_data.append(target)
 
@@ -190,6 +196,7 @@ class Converter:
                 "term_type": node["term"]["termType"],
                 "term_id": node["term"]["@id"],
                 "unit": node["term"].get("units"),
+                "type": "product",
             }
             self.add_price(node, product)
             self.add_optional_fields(node, product)
@@ -198,3 +205,33 @@ class Converter:
             new_datasets.append(product)
 
         return new_exchanges, new_datasets
+
+    def is_aggregated_emission(self, obj: dict) -> bool:
+        if "methodModel" not in obj:
+            return False
+        if any(
+            term in obj["methodModel"].get("name", "").lower()
+            for term in BACKGROUND_DATABASES
+        ):
+            return True
+        return False
+
+    def get_emissions(self, obj: dict) -> list:
+        new_exchanges = []
+
+        for em in obj.get("emissions", []):
+            if self.is_aggregated_emission(em):
+                continue
+            elif em["value"][0] == 0:
+                continue
+            exchange = {
+                "type": "biosphere",
+                "name": em["term"]["name"],
+                "term_type": em["term"]["termType"],
+                "term_id": em["term"]["@id"],
+                "unit": em["term"].get("units"),
+                "amount": em["value"][0],
+            }
+            new_exchanges.append(exchange)
+
+        return new_exchanges
