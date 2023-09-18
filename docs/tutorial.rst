@@ -68,3 +68,28 @@ Otherwise, you can get a node from its ID and type ::
 .. _ipython: https://ipython.readthedocs.io
 .. _jupyter: https://jupyter.org
 .. _Hestia: https://hestia.earth
+
+
+Configuring ``bw_hestia_bridge``
+================================
+
+The package uses a config file that can be updated and saved so that you don't
+need to change the settings everytime.
+You can check the config via ::
+
+    bhb.get_config()
+
+Main settings are for proxies and "use_staging", which will switch between the
+stable and the staging API of Hestia.
+To switch to staging, just use ::
+
+    bhb.set_config("use_staging", True)
+
+Note that if you prefer, it will autodect the "use_staging" environment
+variable.
+
+If you want this change to be persistent, just call ::
+
+    bhb.save_config()
+
+And you're done.

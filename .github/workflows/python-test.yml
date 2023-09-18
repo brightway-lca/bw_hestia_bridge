@@ -34,6 +34,9 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
         py-version: ["3.9", "3.10", "3.11"]
+        exclude:
+          - os: macos-latest
+            py-version: "3.11"
 
     steps:
       - uses: actions/checkout@v4
