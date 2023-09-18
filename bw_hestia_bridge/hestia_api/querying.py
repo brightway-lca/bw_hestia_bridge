@@ -41,9 +41,9 @@ def search_hestia(
 
     Returns
     -------
-    A list of dicts containing the `fields` entries. Additionally, a _score 
+    A list of dicts containing the `fields` entries. Additionally, a "_score"
     value is returned, indicating the accuracy of the match found in the 
-    Hestia database.
+    Hestia database (results are sorted by decreasing "_score").
 
     Examples
     --------
