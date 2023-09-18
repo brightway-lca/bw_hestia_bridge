@@ -11,7 +11,7 @@ def search_hestia(
     node_type: Optional[str] = None,
     fields: Optional[list[str]] = None,
     limit: Optional[int] = 10,
-    how: Literal["or", "and", "exact"] = "or"
+    how: Literal["or", "and", "exact"] = "or",
 ) -> list[dict[str, str]]:
     """
     Search the Hestia database.
@@ -41,7 +41,9 @@ def search_hestia(
 
     Returns
     -------
-    A list of dicts containing the `fields` entries.
+    A list of dicts containing the `fields` entries. Additionally, a "_score"
+    value is returned, indicating the accuracy of the match found in the 
+    Hestia database (results are sorted by decreasing "_score").
 
     Examples
     --------
@@ -86,14 +88,11 @@ def search_hestia(
             if path in nested_elements:
                 is_nested = True
 
-                matches.append({
-                    "nested": {
-                        "path": path, "query": {"match": qk}}
-                })
+                matches.append({"nested": {"path": path, "query": {"match": qk}}})
             else:
-                matches.append({'match': qk})
+                matches.append({"match": qk})
         else:
-            matches.append({'match': qk})
+            matches.append({"match": qk})
 
     if node_type:
         assert (
@@ -105,7 +104,7 @@ def search_hestia(
     q: dict[str, Any] = {
         "fields": fields,
         "limit": limit,
-        "query": {"bool": {"must": matches}}
+        "query": {"bool": {"must": matches}},
     }
 
     res = requests.post(
@@ -118,7 +117,7 @@ def search_hestia(
 def get_hestia_node(
     node_id: Union[str, dict[str, str]],
     node_type: Optional[str] = None,
-    data_state: Optional[str] = None
+    data_state: Optional[str] = None,
 ) -> dict:
     """
     Download the Hestia node associated to `node`.
