@@ -1,9 +1,14 @@
 # isort: skip_file
 from .utils import get_config, save_config, set_config
+
 from .hestia_api import (
-    get_hestia_node, get_node_type, search_hestia, term_related_cycles)
+    cycle_related_cycles, get_hestia_node, get_node_type, search_hestia,
+    term_connected_cycles
+)
+
 from .importer import HestiaImporter
 from .strategies import Converter
+
 
 __all__ = (
     "__version__",
