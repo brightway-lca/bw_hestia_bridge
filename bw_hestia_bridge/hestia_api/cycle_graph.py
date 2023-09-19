@@ -7,7 +7,7 @@ from .querying import search_hestia, get_hestia_node
 
 
 def get_cycle_graph(cycle_id: str) -> list[dict]:
-    '''
+    """
     Get all the cycles that are in the connected graph of `cycle_id`.
 
     Parameters
@@ -27,7 +27,7 @@ def get_cycle_graph(cycle_id: str) -> list[dict]:
             },
             ...
         ]
-    '''
+    """
     url, proxies, headers = base_api_data()
 
     q: dict[str, Union[int, str]] = {

@@ -165,5 +165,5 @@ def get_hestia_node(
 
 
 def get_node_type(node_id: str) -> str:
-    ''' Get the node type from its Hestia ID '''
+    """ Get the node type from its Hestia ID """
     return search_hestia({"@id": node_id}, how="exact")[0]["@type"].lower()
