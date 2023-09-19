@@ -71,10 +71,14 @@ def test_download():
     ntype = res[1]["@type"]
 
     node = get_hestia_node(nid, ntype)
+    node2 = get_hestia_node(nid)  # without type
+
+    assert node == node2
 
     for k, v in res[1].items():
         if k in node:
             assert node[k] == v
+
 
 def test_get_cycle_graph():
     """
