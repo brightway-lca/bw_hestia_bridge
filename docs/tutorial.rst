@@ -64,6 +64,14 @@ Otherwise, you can get a node from its ID and type ::
     ntype = "cycle"
     bhb.get_hestia_node(nid, ntype)
 
+    # or, without the type
+    bhb.get_hestia_node(nid)
+
+Note that, though the second case may seem more convenient, it will require
+two calls to the Hestia API instead of a single one, so it might become
+significantly slower when used in loops (providing both ID and type should
+be prefered in that case).
+
 
 .. _ipython: https://ipython.readthedocs.io
 .. _jupyter: https://jupyter.org
