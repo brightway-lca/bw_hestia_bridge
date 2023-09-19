@@ -3,7 +3,7 @@ from typing import Union
 import requests
 
 from ..utils import get_config
-from .base_api import _hestia_request
+from .base_api import hestia_request
 from .querying import get_hestia_node
 
 
@@ -40,7 +40,7 @@ def get_cycle_graph(cycle_id: str) -> list[dict]:
         "includeAggregated": True,
     }
 
-    res = _hestia_request(f"cycles/{cycle_id}/deep-relations", query=q)
+    res = hestia_request(f"cycles/{cycle_id}/deep-relations", query=q)
 
     if not isinstance(res, list):
         api_type = "staging" if get_config("use_staging") else "stable"

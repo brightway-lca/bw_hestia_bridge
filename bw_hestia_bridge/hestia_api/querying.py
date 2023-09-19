@@ -2,7 +2,7 @@ import re
 from typing import Any, Literal, Optional, Union
 
 from ..utils import get_config
-from .base_api import _hestia_request, nested_elements, valid_types
+from .base_api import hestia_request, nested_elements, valid_types
 
 
 def search_hestia(
@@ -102,7 +102,7 @@ def search_hestia(
         "query": {"bool": {"must": matches}},
     }
 
-    res = _hestia_request("search", query=q, req_type="post")
+    res = hestia_request("search", query=q, req_type="post")
 
     return res.get("results", [])
 
@@ -150,7 +150,7 @@ def get_hestia_node(
 
     data_state = data_state or "recalculated"
 
-    return _hestia_request(f"{node_type}s/{node_id}?dataState={data_state}")
+    return hestia_request(f"{node_type}s/{node_id}?dataState={data_state}")
 
 
 def get_node_type(node_id: str) -> str:

@@ -32,7 +32,7 @@ hestia_session.mount('https://', adapter)
 
 # make the request
 
-def _hestia_request(
+def hestia_request(
     endpoint: str,
     query: Optional[dict] = None,
     req_type: Literal["get", "post"] = "get",
