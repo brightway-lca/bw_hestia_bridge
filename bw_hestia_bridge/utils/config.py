@@ -42,13 +42,13 @@ def _init_config():
     proxies = ["http_proxy", "https_proxy"]
 
     for p in proxies:
-        if p in os.environ or p.upper() in os.environ:
-            if not config[p]:
-                config[p] = os.environ.get(p, os.environ[p.upper()])
+        if p in os.environ or p.upper() in os.environ and not config[p]:
+            config[p] = os.environ.get(p, os.environ.get(p.upper(), ""))
 
     # get use_staging from environment if present
     if "use_staging" in os.environ:
-        config["use_staging"] = os.environ["use_staging"]
+        config["use_staging"] = \
+            os.environ["use_staging"].lower() in ("1", "true")
 
     set_config(config)
 

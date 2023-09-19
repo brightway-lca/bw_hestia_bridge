@@ -1,10 +1,23 @@
+from typing import Literal, Optional
+
+import requests
+
 import bw_hestia_bridge as bhb
+
 
 stable_url = "https://api.hestia.earth"
 staging_url = "https://api-staging.hestia.earth"
 
 
-def base_api_data() -> tuple[str, dict, dict]:
+hestia_session = requests.Session()
+hestia_session.headers.update({"Content-Type": "application/json"})
+
+
+def _hestia_request(
+    endpoint: str,
+    query: Optional[dict] = None,
+    req_type: Literal["get", "post"] = "get",
+) -> dict:
     """Return the data necessary to query the Hestia API"""
     config = bhb.get_config()
 
@@ -15,9 +28,12 @@ def base_api_data() -> tuple[str, dict, dict]:
         "https": config["https_proxy"],
     }
 
-    headers = {"Content-Type": "application/json"}
+    hestia_session.proxies.update(proxies)
 
-    return url, proxies, headers
+    if req_type == "get":
+        return hestia_session.get(f"{url}/{endpoint}", json=query).json()
+
+    return hestia_session.post(f"{url}/{endpoint}", json=query).json()
 
 
 # Hestia database information
