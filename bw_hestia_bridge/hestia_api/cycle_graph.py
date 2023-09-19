@@ -14,25 +14,25 @@ def get_cycle_graph(cycle_id: str) -> list[dict]:
     Parameters
     ----------
     cycle_id : str
-        Hestia ID of the initial cycle.
+        Hestia ID of the initial cycle
 
     Returns
     -------
-    List of cycles of the form: ::
+    List of cycles of the form : list[dict]
+        ::
 
-        [
-            {
-                "from": {@type="Cycle", @id: PARENT_CYCLE_ID},
-                "to": {@type: "Cycle", @id: CHILD_CYCLE_ID},
-                "via": {@type: "Term", @id: PRODUCT_TERM_ID}
-            },
-            ...
-        ]
+            [
+                {
+                    "from": {"@type": "Cycle", "@id": PARENT_CYCLE_ID},
+                    "to": {"@type": "Cycle", "@id": CHILD_CYCLE_ID},
+                    "via": {"@type": "Term", "@id": PRODUCT_TERM_ID}
+                }, ...
+            ]
 
     Raises
     ------
-    ``ValueError`` if `cycle_id` is not found.
-    '''
+    ValueError
+        if `cycle_id` is not found
     """
     q: dict[str, Union[int, str]] = {
         "limit": 10000,
