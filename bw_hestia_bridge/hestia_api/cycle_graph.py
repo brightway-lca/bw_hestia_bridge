@@ -1,10 +1,10 @@
-from typing import Literal, Optional, Union
+from typing import Union
 
 import requests
 
 from ..utils import get_config
 from .base_api import base_api_data
-from .querying import search_hestia, get_hestia_node
+from .querying import get_hestia_node
 
 
 def get_cycle_graph(cycle_id: str) -> list[dict]:
@@ -38,13 +38,15 @@ def get_cycle_graph(cycle_id: str) -> list[dict]:
 
     q: dict[str, Union[int, str]] = {
         "limit": 10000,
-        "connections" : "ImpactAssessmentcycle,CycleinputsimpactAssessment",
-        "includeAggregated": True
+        "connections": "ImpactAssessmentcycle,CycleinputsimpactAssessment",
+        "includeAggregated": True,
     }
 
     res = requests.get(
-        f"{url}/cycles/{cycle_id}/deep-relations", params=q, headers=headers,
-        proxies=proxies
+        f"{url}/cycles/{cycle_id}/deep-relations",
+        params=q,
+        headers=headers,
+        proxies=proxies,
     ).json()
 
     if not isinstance(res, list):
@@ -67,10 +69,12 @@ def get_cycle_graph(cycle_id: str) -> list[dict]:
                 # the "cycle" entry in impact assessment is its parent
                 grandparent = parent["cycle"]
 
-                cycle_list.append({
-                    "from": {"@id": grandparent, "@type": "Cycle"},
-                    "to": {"@id": eid, "@type": "Cycle"},
-                    "via": product
-                })
+                cycle_list.append(
+                    {
+                        "from": {"@id": grandparent, "@type": "Cycle"},
+                        "to": {"@id": eid, "@type": "Cycle"},
+                        "via": product,
+                    }
+                )
 
     return cycle_list

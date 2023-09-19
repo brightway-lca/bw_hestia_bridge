@@ -43,7 +43,7 @@ def search_hestia(
     Returns
     -------
     A list of dicts containing the `fields` entries. Additionally, a "_score"
-    value is returned, indicating the accuracy of the match found in the 
+    value is returned, indicating the accuracy of the match found in the
     Hestia database (results are sorted by decreasing "_score").
 
     Examples
@@ -87,8 +87,7 @@ def search_hestia(
             path = re_match.groupdict()["path"]
 
             if path in nested_elements:
-                is_nested = True
-
+                # is_nested = True
                 matches.append({"nested": {"path": path, "query": {"match": qk}}})
             else:
                 matches.append({"match": qk})
