@@ -1,3 +1,4 @@
-bw2io
+bw2data">=4.0.dev29"
+bw2io">=0.9.DEV23"
 platformdirs
 requests

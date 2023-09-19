@@ -130,3 +130,5 @@ dmypy.json
 
 docs/_html
 docs/api
+
+pyrightconfig.json
