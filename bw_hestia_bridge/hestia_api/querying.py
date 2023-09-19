@@ -3,6 +3,7 @@ from typing import Any, Literal, Optional, Union
 
 import requests
 
+from ..utils import get_config
 from .base_api import base_api_data, nested_elements, valid_types
 
 
@@ -165,5 +166,23 @@ def get_hestia_node(
 
 
 def get_node_type(node_id: str) -> str:
-    """ Get the node type from its Hestia ID """
-    return search_hestia({"@id": node_id}, how="exact")[0]["@type"].lower()
+    """
+    Get the node type from its Hestia ID
+
+    Parameters
+    ----------
+    node_id : str
+        Hestia ID for the node.
+
+    Raises
+    ------
+    ``ValueError`` if `node_id` is not found.
+    """
+    res = search_hestia({"@id": node_id}, how="exact")
+
+    if res:
+        return res[0]["@type"].lower()
+
+    api_type = "staging" if get_config("use_staging") else "stable"
+
+    raise ValueError(f"The {api_type} API found no node with ID {node_id}.")
