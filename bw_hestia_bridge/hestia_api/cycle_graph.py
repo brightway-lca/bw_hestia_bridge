@@ -2,6 +2,7 @@ from typing import Literal, Optional, Union
 
 import requests
 
+from ..utils import get_config
 from .base_api import base_api_data
 from .querying import search_hestia, get_hestia_node
 
@@ -27,6 +28,10 @@ def get_cycle_graph(cycle_id: str) -> list[dict]:
             },
             ...
         ]
+
+    Raises
+    ------
+    ``ValueError`` if `cycle_id` is not found.
     '''
     url, proxies, headers = base_api_data()
 
@@ -40,6 +45,10 @@ def get_cycle_graph(cycle_id: str) -> list[dict]:
         f"{url}/cycles/{cycle_id}/deep-relations", params=q, headers=headers,
         proxies=proxies
     ).json()
+
+    if not isinstance(res, list):
+        api_type = "staging" if get_config("use_staging") else "stable"
+        raise ValueError(f"{cycle_id} not found using the {api_type} API.")
 
     # make the list of cycles
     cycle_list: list[dict] = []
