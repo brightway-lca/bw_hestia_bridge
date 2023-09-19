@@ -1,5 +1,2 @@
 from .conversion import Converter, convert  # NOQA: F401
-from .linking import (  # NOQA: F401
-    add_code_from_hestia_attributes,
-    link_ecoinvent_technosphere,
-)
+from .linking import add_code_from_hestia_attributes  # NOQA: F401

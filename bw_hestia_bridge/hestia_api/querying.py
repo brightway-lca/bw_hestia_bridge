@@ -1,10 +1,8 @@
 import re
 from typing import Any, Literal, Optional, Union
 
-import requests
-
 from ..utils import get_config
-from .base_api import base_api_data, nested_elements, valid_types
+from .base_api import hestia_request, nested_elements, valid_types
 
 
 def search_hestia(
@@ -57,8 +55,6 @@ def search_hestia(
 
         search_hestia({"name": "Ouidah", "products.term.name": "Saplings"})
     """
-    url, proxies, headers = base_api_data()
-
     fields = fields or ["@type", "name", "@id"]
 
     how = how or "or"
@@ -87,7 +83,6 @@ def search_hestia(
             path = re_match.groupdict()["path"]
 
             if path in nested_elements:
-                # is_nested = True
                 matches.append({"nested": {"path": path, "query": {"match": qk}}})
             else:
                 matches.append({"match": qk})
@@ -107,9 +102,7 @@ def search_hestia(
         "query": {"bool": {"must": matches}},
     }
 
-    res = requests.post(
-        f"{url}/search", json=q, headers=headers, proxies=proxies
-    ).json()
+    res = hestia_request("search", query=q, req_type="post")
 
     return res.get("results", [])
 
@@ -155,13 +148,9 @@ def get_hestia_node(
 
     node_type = node_type.lower()
 
-    url, proxies, headers = base_api_data()
-
     data_state = data_state or "recalculated"
 
-    req_url = f"{url}/{node_type}s/{node_id}?dataState={data_state}"
-
-    return requests.get(req_url, headers=headers, proxies=proxies).json()
+    return hestia_request(f"{node_type}s/{node_id}?dataState={data_state}")
 
 
 def get_node_type(node_id: str) -> str:

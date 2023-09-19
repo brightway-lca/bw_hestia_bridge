@@ -1,3 +1,6 @@
+import pytest
+
+from bw_hestia_bridge import get_hestia_node, search_hestia, set_config
 from bw_hestia_bridge import get_hestia_node, search_hestia, set_config, get_cycle_graph
 
 
@@ -28,6 +31,9 @@ def test_search():
     res_and = search_hestia(
         {"name": "conventional denmark", "product.term.name": "Maize"}, how="and")
 
+    with pytest.raises(ValueError):
+        search_hestia("Maize", how=42)
+
     assert len(res_and) < len(res_or)
 
     # test exact match
@@ -38,6 +44,14 @@ def test_search():
         "Maize, grain, Denmark, 2009, Conventional-Non Irrigated", how="exact")
 
     assert len(res_or) > 1 and len(res_exact) == 1
+
+    # check node_type argument
+    ntype = res_or[0]["@type"]
+    res_typed = search_hestia(
+        "Maize, grain, Denmark, 2009, Conventional-Non Irrigated",
+        node_type=ntype)
+
+    assert len(res_typed) >= 1
 
     # check exact with complex match
     assert len(search_hestia(
