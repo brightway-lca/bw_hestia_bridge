@@ -63,9 +63,7 @@ def get_config(param: Optional[str] = None) -> Any:
     return config
 
 
-def set_config(
-    config: Union[str, dict], value: Union[str, bool, None] = None
-) -> None:
+def set_config(config: Union[str, dict], value: Union[str, bool, None] = None) -> None:
     """
     Set configuration.
 

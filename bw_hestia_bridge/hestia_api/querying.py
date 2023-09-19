@@ -1,6 +1,7 @@
 import re
 from typing import Any, Literal, Optional, Union
 
+from ..utils import get_config
 from .base_api import _hestia_request, nested_elements, valid_types
 
 
@@ -40,7 +41,7 @@ def search_hestia(
     Returns
     -------
     A list of dicts containing the `fields` entries. Additionally, a "_score"
-    value is returned, indicating the accuracy of the match found in the 
+    value is returned, indicating the accuracy of the match found in the
     Hestia database (results are sorted by decreasing "_score").
 
     Examples
@@ -82,8 +83,6 @@ def search_hestia(
             path = re_match.groupdict()["path"]
 
             if path in nested_elements:
-                is_nested = True
-
                 matches.append({"nested": {"path": path, "query": {"match": qk}}})
             else:
                 matches.append({"match": qk})
@@ -122,7 +121,7 @@ def get_hestia_node(
         Hestia ID for the node or dictionary describing the node (e.g. returned from
         :func:`search_hestia`). If it's a dict, it must contain at least an "@type"
         and an "@id" entry.
-    node_type : str, optional (default: taken from `node_id` or "cycle")
+    node_type : str, optional (default: try to autodetect)
         A valid type among "actor", "animal", "bibliography", "completeness",
         "cycle", "emission", "impactassessment", "indicator",
         "infrastructure", "input", "management", "measurement",
@@ -145,10 +144,33 @@ def get_hestia_node(
         node_type = node_id["@type"]
         node_id = node_id["@id"]
     else:
-        node_type = node_type or "cycle"
+        node_type = node_type or get_node_type(node_id)
 
     node_type = node_type.lower()
 
     data_state = data_state or "recalculated"
 
     return _hestia_request(f"{node_type}s/{node_id}?dataState={data_state}")
+
+
+def get_node_type(node_id: str) -> str:
+    """
+    Get the node type from its Hestia ID
+
+    Parameters
+    ----------
+    node_id : str
+        Hestia ID for the node.
+
+    Raises
+    ------
+    ``ValueError`` if `node_id` is not found.
+    """
+    res = search_hestia({"@id": node_id}, how="exact")
+
+    if res:
+        return res[0]["@type"].lower()
+
+    api_type = "staging" if get_config("use_staging") else "stable"
+
+    raise ValueError(f"The {api_type} API found no node with ID {node_id}.")

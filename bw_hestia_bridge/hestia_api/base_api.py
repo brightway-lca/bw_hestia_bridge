@@ -61,7 +61,7 @@ def _hestia_request(
     hestia_session.proxies.update(proxies)
 
     if req_type == "get":
-        return hestia_session.get(f"{url}/{endpoint}", json=query).json()
+        return hestia_session.get(f"{url}/{endpoint}", params=query).json()
 
     return hestia_session.post(f"{url}/{endpoint}", json=query).json()
 

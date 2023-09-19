@@ -16,7 +16,7 @@ class HestiaImporter(LCIImporter):
         data_state: Literal["original", "recalculated"] = "recalculated",
         staging: Optional[bool] = False,
     ) -> None:
-        '''
+        """
         Import a Hestia cycle as a Brightway database.
 
         Parameters
@@ -28,7 +28,7 @@ class HestiaImporter(LCIImporter):
             or the raw "original" data.
         staging : bool, optional (default: False)
             Whether to fetch the cycle from the staging Hestia API.
-        '''
+        """
         # move to staging if necessary
         old_staging = get_config("use_staging")
         set_config("use_staging", staging)

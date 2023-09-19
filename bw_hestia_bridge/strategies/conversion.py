@@ -6,13 +6,13 @@ from ..hestia_api import get_hestia_node
 
 
 def convert(data: dict) -> list:
-    ''' Convert Hestia data into a BW-compatible form '''
+    """Convert Hestia data into a BW-compatible form"""
     return Converter().convert(data)
 
 
 class Converter:
 
-    ''' Convert Hestia data into a BW-compatible form '''
+    """Convert Hestia data into a BW-compatible form"""
 
     def convert(self, source: dict) -> list:
         return_data = []
@@ -39,10 +39,10 @@ class Converter:
         return return_data
 
     def get_basic_metadata(self, obj: dict) -> dict:
-        '''
+        """
         Return a minimum subset of the object data, partly
         renamed to fit the BW format.
-        '''
+        """
         EXTRAS = {
             "createdAt",
             "updatedAt",
@@ -201,11 +201,11 @@ class Converter:
         return new_exchanges, new_datasets
 
     def is_aggregated_emission(self, obj: dict) -> bool:
-        '''
+        """
         Mark emission as aggregated to avoid double counting.
         This is denoted by (e.g. an "ecoinvent" mention in the
         name within the Hestia database).
-        '''
+        """
         if "methodModel" not in obj:
             return False
 
@@ -292,4 +292,6 @@ SUFFIXES = {"", "Sd", "Min", "Max", "StatsDefinition"}
 PRICE = {"price" + suffix for suffix in SUFFIXES}
 COST = {"cost" + suffix for suffix in SUFFIXES}
 DISTANCE = {"distance" + suffix for suffix in SUFFIXES}
-BACKGROUND_DATABASES = {"ecoinvent",}
+BACKGROUND_DATABASES = {
+    "ecoinvent",
+}
