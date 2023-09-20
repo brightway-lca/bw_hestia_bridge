@@ -41,6 +41,9 @@ transformations that are connected via their inputs and outputs, which are
 [``Term``](https://www.hestia.earth/schema/Term) objects in Hestia, that
 will become reference products in Brightway.
 
+![Content of cycle with transformations and connections to other cycles via products](connections_cycle.png)
+
+
 ### Pitfalls and limitations
 
 Unfortunately, not all inputs or outputs are associated to a generating or
