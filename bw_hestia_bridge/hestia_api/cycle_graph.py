@@ -1,7 +1,5 @@
 from typing import Union
 
-import requests
-
 from ..utils import get_config
 from .base_api import hestia_request
 from .querying import get_hestia_node

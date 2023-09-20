@@ -5,7 +5,7 @@ from bw2io.importers.base_lci import LCIImporter
 from bw2io.strategies import add_database_name, normalize_units
 
 from . import set_config
-from .hestia_api import get_hestia_node
+from .hestia_api import get_cycle_graph, get_hestia_node
 from .strategies import (
     add_code_from_hestia_attributes,
     convert,
@@ -20,6 +20,7 @@ class HestiaImporter(LCIImporter):
         self,
         cycle_id: str,
         ecoinvent_label: str,
+        expand_graph: Optional[bool] = True,
         data_state: Literal["original", "recalculated"] = "recalculated",
         staging: Optional[bool] = False,
         biosphere_label: Optional[str] = "biosphere3",
@@ -45,12 +46,13 @@ class HestiaImporter(LCIImporter):
 
         self.cycle_id = cycle_id
 
-        self.data = get_hestia_node(
-            node_id=cycle_id, node_type="cycle", data_state=data_state
+        self.data = convert(
+            get_hestia_node(node_id=cycle_id, node_type="cycle", data_state=data_state)
         )
+        if expand_graph:
+            self.get_suppliers(cycle_id=cycle_id, data_state=data_state)
 
         self.strategies = [
-            convert,
             normalize_units,
             drop_zeros,
             add_code_from_hestia_attributes,
@@ -60,3 +62,19 @@ class HestiaImporter(LCIImporter):
                 link_ecoinvent_technosphere, ecoinvent_database_label=ecoinvent_label
             ),
         ]
+
+    def get_suppliers(self, cycle_id: str, data_state: str) -> None:
+        graph = get_cycle_graph(cycle_id)
+        for element in graph:
+            if "from" not in element or element["from"].get("@type") != "Cycle":
+                continue
+            nodes = convert(
+                get_hestia_node(
+                    node_id=element["from"]["@id"],
+                    node_type="cycle",
+                    data_state=data_state,
+                )
+            )
+            for new_ds in nodes:
+                new_ds["graph_element"] = element
+            self.data.extend(nodes)
