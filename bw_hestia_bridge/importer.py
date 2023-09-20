@@ -7,8 +7,8 @@ from bw2io.strategies import add_database_name, normalize_units
 from . import set_config
 from .hestia_api import get_cycle_graph, get_hestia_node
 from .strategies import (
+    Converter,
     add_code_from_hestia_attributes,
-    convert,
     drop_zeros,
     link_ecoinvent_biosphere,
     link_ecoinvent_technosphere,
@@ -22,8 +22,8 @@ class HestiaImporter(LCIImporter):
         ecoinvent_label: str,
         expand_graph: Optional[bool] = True,
         data_state: Literal["original", "recalculated"] = "recalculated",
-        staging: Optional[bool] = False,
         biosphere_label: Optional[str] = "biosphere3",
+        staging: Optional[bool] = None,
     ) -> None:
         """
         Import a Hestia cycle as a Brightway database.
@@ -35,11 +35,12 @@ class HestiaImporter(LCIImporter):
         data_state : str, optional (default: recalculated)
             Whether to use recalculated data information from Hestia
             or the raw "original" data.
-        staging : bool, optional (default: False)
+        staging : bool, optional (default: from configuration)
             Whether to fetch the cycle from the staging Hestia API.
         """
         # move to staging if necessary
-        set_config("use_staging", staging)
+        self._staging = staging
+        self._convertor = Converter(staging)
 
         # initialize variables
         extended = " expanded" if expand_graph else ""
@@ -47,9 +48,11 @@ class HestiaImporter(LCIImporter):
 
         self.cycle_id = cycle_id
 
-        self.data = convert(
-            get_hestia_node(node_id=cycle_id, node_type="cycle", data_state=data_state)
+        self.data = self._convertor.convert(
+            get_hestia_node(node_id=cycle_id, node_type="cycle", data_state=data_state,
+                            staging=staging)
         )
+
         if expand_graph:
             self.get_suppliers(cycle_id=cycle_id, data_state=data_state)
 
@@ -65,15 +68,16 @@ class HestiaImporter(LCIImporter):
         ]
 
     def get_suppliers(self, cycle_id: str, data_state: str) -> None:
-        graph = get_cycle_graph(cycle_id)
+        graph = get_cycle_graph(cycle_id, staging=self._staging)
         for element in graph:
             if "from" not in element or element["from"].get("@type") != "Cycle":
                 continue
-            nodes = convert(
+            nodes = self._convertor.convert(
                 get_hestia_node(
                     node_id=element["from"]["@id"],
                     node_type="cycle",
                     data_state=data_state,
+                    staging=self._staging,
                 )
             )
             for new_ds in nodes:
