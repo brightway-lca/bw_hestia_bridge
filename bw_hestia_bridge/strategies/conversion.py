@@ -6,14 +6,12 @@ from typing import Optional, Tuple
 from ..hestia_api import get_hestia_node
 
 
-def convert(data: dict) -> list:
-    """Convert Hestia data into a BW-compatible form"""
-    return Converter().convert(data)
-
-
 class Converter:
 
     """Convert Hestia data into a BW-compatible form"""
+
+    def __init__(self, staging: Optional[bool] = None):
+        self._staging = staging or get_config("use_staging")
 
     def convert(self, source: dict) -> list:
         return_data = []
@@ -69,10 +67,14 @@ class Converter:
 
     @lru_cache
     def get_site(self, node_id: str) -> str:
-        location = get_hestia_node(node_type="site", node_id=node_id)
+        location = get_hestia_node(
+            node_type="site", node_id=node_id, staging=self._staging
+        )
+
         if "name" not in location:
             warnings.warn(f"Can't find location {node_id}; using `GLO` instead")
             return "GLO"
+
         return location
 
     def _add_suffixed(

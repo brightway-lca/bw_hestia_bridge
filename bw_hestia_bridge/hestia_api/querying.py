@@ -11,6 +11,7 @@ def search_hestia(
     fields: Optional[list[str]] = None,
     limit: Optional[int] = 10,
     how: Literal["or", "and", "exact"] = "or",
+    staging: Optional[bool] = None,
 ) -> list[dict[str, str]]:
     """
     Search the Hestia database.
@@ -37,6 +38,8 @@ def search_hestia(
         Whether the search tries to match any word in `query` ("or"), all
         words in `query` ("and") or to match the whole query exactly
         ("exact").
+    staging : bool, optional (default: from configuration)
+        Whether to use the staging API.
 
     Returns
     -------
@@ -59,6 +62,8 @@ def search_hestia(
     fields = fields or ["@type", "name", "@id"]
 
     how = how or "or"
+
+    staging = staging or get_config("use_staging")
 
     matches: list[dict] = []
 
@@ -103,7 +108,7 @@ def search_hestia(
         "query": {"bool": {"must": matches}},
     }
 
-    res = hestia_request("search", query=q, req_type="post")
+    res = hestia_request("search", staging, query=q, req_type="post")
 
     return res.get("results", [])
 
@@ -112,6 +117,7 @@ def get_hestia_node(
     node_id: Union[str, dict[str, str]],
     node_type: Optional[str] = None,
     data_state: Optional[str] = None,
+    staging: Optional[bool] = None,
 ) -> dict:
     """
     Download the Hestia node associated to `node`.
@@ -132,6 +138,8 @@ def get_hestia_node(
     data_state : str, optional (default: "recalculated")
         Version of the data, by default, use "recalculated" to download the
         more detailed version of the data. Use "original" to get the raw data.
+    staging : bool, optional (default: from configuration)
+        Whether to use the staging API.
 
     Returns
     -------
@@ -139,6 +147,8 @@ def get_hestia_node(
         The dict associated to the JSON-LD entry describing `node` in the
         Hestia database.
     """
+    staging = staging or get_config("use_staging")
+
     if isinstance(node_id, dict):
         assert "@type" in node_id, "`node` must contain an '@type' entry."
         assert "@id" in node_id, "`node` must contain an '@id' entry."
@@ -153,12 +163,13 @@ def get_hestia_node(
     data_state = data_state or "recalculated"
 
     if node_type == "cycle":
-        return hestia_request(f"{node_type}s/{node_id}?dataState={data_state}")
+        return hestia_request(
+            f"{node_type}s/{node_id}?dataState={data_state}", staging)
     else:
-        return hestia_request(f"{node_type}s/{node_id}")
+        return hestia_request(f"{node_type}s/{node_id}", staging)
 
 
-def get_node_type(node_id: str) -> str:
+def get_node_type(node_id: str, staging: Optional[bool] = None) -> str:
     """
     Get the node type from its Hestia ID
 
@@ -171,16 +182,20 @@ def get_node_type(node_id: str) -> str:
     -------
     node_type : str
         The type of the node.
+    staging : bool, optional (default: from configuration)
+        Whether to use the staging API.
 
     Raises
     ------
     ValueError : if `node_id` is not found.
     """
-    res = search_hestia({"@id": node_id}, how="exact")
+    staging = staging or get_config("use_staging")
+
+    res = search_hestia({"@id": node_id}, how="exact", staging=staging)
 
     if res:
         return res[0]["@type"].lower()
 
-    api_type = "staging" if get_config("use_staging") else "stable"
+    api_type = "staging" if staging else "stable"
 
     raise ValueError(f"The {api_type} API found no node with ID {node_id}.")

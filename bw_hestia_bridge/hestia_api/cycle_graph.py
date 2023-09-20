@@ -1,18 +1,23 @@
-from typing import Union
+from typing import Optional, Union
 
 from ..utils import get_config
 from .base_api import hestia_request
 from .querying import get_hestia_node
 
 
-def get_cycle_graph(cycle_id: str) -> list[dict]:
+def get_cycle_graph(
+    cycle_id: str,
+    staging: Optional[bool] = None,
+) -> list[dict]:
     """
     Get all the cycles that are in the connected graph of `cycle_id`.
 
     Parameters
     ----------
     cycle_id : str
-        Hestia ID of the initial cycle
+        Hestia ID of the initial cycle.
+    staging : bool, optional (default: from configuration)
+        Whether to use the staging API.
 
     Returns
     -------
@@ -38,7 +43,9 @@ def get_cycle_graph(cycle_id: str) -> list[dict]:
         "includeAggregated": True,
     }
 
-    res = hestia_request(f"cycles/{cycle_id}/deep-relations", query=q)
+    staging = staging or get_config("use_staging")
+
+    res = hestia_request(f"cycles/{cycle_id}/deep-relations", staging, query=q)
 
     if not isinstance(res, list):
         api_type = "staging" if get_config("use_staging") else "stable"
