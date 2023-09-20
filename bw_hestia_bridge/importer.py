@@ -42,7 +42,8 @@ class HestiaImporter(LCIImporter):
         set_config("use_staging", staging)
 
         # initialize variables
-        self.db_name = f"Hestia cycle {cycle_id}"
+        extended = " expanded" if expand_graph else ""
+        self.db_name = f"Hestia cycle {cycle_id}{extended}"
 
         self.cycle_id = cycle_id
 
