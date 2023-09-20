@@ -150,7 +150,10 @@ def get_hestia_node(
 
     data_state = data_state or "recalculated"
 
-    return hestia_request(f"{node_type}s/{node_id}?dataState={data_state}")
+    if node_type == "cycle":
+        return hestia_request(f"{node_type}s/{node_id}?dataState={data_state}")
+    else:
+        return hestia_request(f"{node_type}s/{node_id}")
 
 
 def get_node_type(node_id: str) -> str:
