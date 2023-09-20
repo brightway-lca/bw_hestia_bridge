@@ -50,6 +50,34 @@ For more complex queries, check the examples given in the docstring of
 :func:`~bw_hestia_bridge.search_hestia`.
 
 
+Converting Hestia data to Brightway
+===================================
+
+We provide the :class:`~bw_hestia_bridge.HestiaImporter` class to convert
+Hestia data into a Brightway-usable database.
+From a Hestia Cycle_ (the equivalent of a Brightway process), you can
+generate a new database that should contain the supply-chain necessary to
+run an LCA.
+
+.. warning::
+
+    At the moment, this is a work in progress and the results will probably
+    not deliver a working database.
+
+::
+
+    eidb_name = "ei39"  # the name of your EcoInvent database
+    cycle_id = "ztqcopzc7qpl"  # a cycle you found via ``search_hestia``
+    imp = bhb.HestiaImporter(cycle_id=cycle_id, ecoinvent_label=eidb_name)
+    imp.apply_strategies()
+    print(imp.statistics())
+
+If the number of "unlinked exchanges" is zero, you can then save the database
+via ::
+
+    imp.write_database(db_name="your-db-name")
+
+
 Download the whole node data from Hestia
 ========================================
 
@@ -67,10 +95,12 @@ Otherwise, you can get a node from its ID and type ::
     # or, without the type
     bhb.get_hestia_node(nid)
 
-Note that, though the second case may seem more convenient, it will require
-two calls to the Hestia API instead of a single one, so it might become
-significantly slower when used in loops (providing both ID and type should
-be prefered in that case).
+.. note::
+
+    Though the second case may seem more convenient, it will require two calls
+    to the Hestia API instead of a single one, so it might become
+    significantly slower when used in loops (providing both ID and type should
+    be prefered in that case).
 
 
 .. _ipython: https://ipython.readthedocs.io
@@ -101,3 +131,5 @@ If you want this change to be persistent, just call ::
     bhb.save_config()
 
 And you're done.
+
+.. _Cycle: https://www.hestia.earth/schema/Cycle
