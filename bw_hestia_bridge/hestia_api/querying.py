@@ -40,9 +40,10 @@ def search_hestia(
 
     Returns
     -------
-    A list of dicts containing the `fields` entries. Additionally, a "_score"
-    value is returned, indicating the accuracy of the match found in the
-    Hestia database (results are sorted by decreasing "_score").
+    res : list[dict]
+        A list of dicts containing the `fields` entries. Additionally, a
+        "_score" value is returned, indicating the accuracy of the match found
+        in the Hestia database (results are sorted by decreasing "_score").
 
     Examples
     --------
@@ -134,8 +135,9 @@ def get_hestia_node(
 
     Returns
     -------
-    The dict associated to the JSON-LD entry describing `node` in the
-    Hestia database.
+    node : dict
+        The dict associated to the JSON-LD entry describing `node` in the
+        Hestia database.
     """
     if isinstance(node_id, dict):
         assert "@type" in node_id, "`node` must contain an '@type' entry."
@@ -165,9 +167,14 @@ def get_node_type(node_id: str) -> str:
     node_id : str
         Hestia ID for the node.
 
+    Returns
+    -------
+    node_type : str
+        The type of the node.
+
     Raises
     ------
-    ``ValueError`` if `node_id` is not found.
+    ValueError : if `node_id` is not found.
     """
     res = search_hestia({"@id": node_id}, how="exact")
 
