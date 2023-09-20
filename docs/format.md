@@ -1,5 +1,61 @@
 # Mapping the data format
 
+
+## Cycles and Transformations
+
+The [``Cycle``](https://www.hestia.earth/schema/Cycle) object in
+[Hestia](https://www.hestia.earth) is the equivalent of a Brightway activity,
+taking "inputs" and outputting "products".
+The [``Transformation``](https://www.hestia.earth/schema/Transformation)
+object is also equivalent to a Brightway activity.
+However, countrary to cycles, transformations in Hestia do not live on their
+own but are contained within a cycle in its "transformations" entry.
+
+```python
+import bw_hestia_bridge as bhb
+
+cycle = bhb.get_hestia_node("znex7uqxsfqn")
+
+# get the cycle inputs and outputs
+print(cycle["inputs"])
+print(cycle["outputs"])
+
+# get a transformation associated to the cycle
+transform = node["transformations"][0]
+print(transform["term"])  # this is the Hestia Node associated to the transformation
+```
+
+The inputs and products of the transformation can only be accessed from within
+the cycle, not from the transformation alone:
+
+```python
+tnode = bhb.get_hestia_node(transform["@id"])
+print(tnode)  # no inputs or products
+
+# get the inputs and products from the `transform` entry in the cycle
+print(transform["inputs"])
+print(transform["products"])
+```
+
+The supply chain of a cycle is therefore composed of other cycles and
+transformations that are connected via their inputs and outputs, which are
+[``Term``](https://www.hestia.earth/schema/Term) objects in Hestia, that
+will become XXX in Brightway.
+
+### Pitfalls and limitations
+
+Unfortunately, not all inputs or outputs are associated to a generating or
+managing process (there are "orphan" inputs and outputs).
+To deal with this, we create a "mock" process associated to each of these
+to convert the data into a Brightway database.
+
+Also note that, contrary to Brightway, Hestia cycles have multiple products.
+Furthermore, several products from a single cycles can enter as inputs into
+another transformation or cycle, together with a same input from another
+process, which means that their is currently no garantee regarding how to
+get the input/output ratios right.
+
+
 ## Basic process data
 
 Brightway will pull the follow attributes verbatim:
@@ -205,3 +261,4 @@ We will construct a supply chain of `process` nodes, which will produce `product
 
 ```python
 ```
+
