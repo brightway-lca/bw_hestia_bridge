@@ -59,6 +59,7 @@ class Converter:
         return {
             "@id": obj["@id"],
             "comment": obj.get("description"),
+            "name": obj["name"],
             "location": site["name"],
             "hestia_site_id": obj["site"]["@id"],
             "hestia_site": site,
