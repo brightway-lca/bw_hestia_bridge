@@ -50,7 +50,6 @@ def create_ecoinvent_mappings():
         "nitrogen fertiliser, as N, diammonium phosphate production": "diammonium phosphate production",
         "phosphate fertiliser, as P2O5, single superphosphate production": "single superphosphate production",
         "market for potassium chloride, as K2O": "market for potassium chloride",
-        "market for transport, freight, light commercial vehicle": "market for transport, freight, lorry >32 metric ton, EURO5",
         "market for ammonium sulfate, as N": "market for ammonium sulfate",
         "nitrogen fertiliser, as N, monoammonium phosphate production": "monoammonium phosphate production",
         "market for urea, as N": "market for urea",
@@ -69,6 +68,17 @@ def create_ecoinvent_mappings():
         "market for ammonium nitrate, as N": "market for ammonium nitrate",
     }
     ecoinvent_mappings = ecoinvent_mappings.replace(renaming_dict)
+
+    # Replacing some Hestia mappings to more suitable ecoincent processes
+    process_changes_dict = {
+        "electricityGridMarketMix": "market group for electricity, high voltage",
+        "electricityGridRenewableMix": "electricity, high voltage, renewable energy products, production mix",
+        "electricityGridWaste": "electricity, from municipal waste incineration to generic market for electricity, medium voltage",
+        "electricityProducedOnSiteWaste": "electricity, from municipal waste incineration to generic market for electricity, medium voltage",
+    }
+
+    for k, v in process_changes_dict.items():
+        ecoinvent_mappings[k] = v
 
     return ecoinvent_mappings
 
