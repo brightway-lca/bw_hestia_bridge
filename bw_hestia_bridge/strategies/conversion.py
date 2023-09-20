@@ -18,20 +18,22 @@ class Converter:
     def convert(self, source: dict) -> list:
         return_data = []
 
-        target = self.get_basic_metadata(source)
+        cycle_id = source["@id"]
+
+        target = self.get_basic_metadata(source, cycle_id)
         self.add_practices(source=source, target=target)
         if "animals" in source:
             target["animals"] = source["animals"]
 
-        target["exchanges"] = self.get_inputs(source)
-        new_exchanges, new_datasets = self.get_products(source)
+        target["exchanges"] = self.get_inputs(source, cycle_id)
+        new_exchanges, new_datasets = self.get_products(source, cycle_id)
         target["exchanges"].extend(new_exchanges)
         return_data.extend(new_datasets)
 
         new_exchanges = self.get_emissions(source)
         target["exchanges"].extend(new_exchanges)
 
-        new_datasets = self.get_transformations(source)
+        new_datasets = self.get_transformations(source, cycle_id)
         return_data.extend(new_datasets)
 
         return_data.append(target)
@@ -39,7 +41,7 @@ class Converter:
         # TBD: Make sure we aren't adding duplicate product nodes
         return return_data
 
-    def get_basic_metadata(self, obj: dict) -> dict:
+    def get_basic_metadata(self, obj: dict, cycle_id: str) -> dict:
         """
         Return a minimum subset of the object data, partly
         renamed to fit the BW format.
@@ -57,7 +59,7 @@ class Converter:
         site = self.get_site(obj["site"]["@id"])
 
         return {
-            "@id": obj["@id"],
+            "@id": cycle_id,
             "comment": obj.get("description"),
             "name": obj["name"],
             "location": site["name"],
@@ -100,7 +102,7 @@ class Converter:
             if orig in source:
                 target[new] = source[orig]
 
-    def get_inputs(self, obj: dict) -> list:
+    def get_inputs(self, obj: dict, cycle_id: str) -> list:
         counter = defaultdict(int)
 
         exchange_list = []
@@ -114,6 +116,7 @@ class Converter:
 
             exchange = {
                 "name": inpt["term"]["name"],
+                "cycle_id": cycle_id,
                 "term_type": inpt["term"]["termType"],
                 "term_id": inpt["term"]["@id"],
                 "unit": inpt["term"].get("units"),
@@ -137,6 +140,7 @@ class Converter:
                     "amount": transport["value"],
                     "returnLegIncluded": transport["returnLegIncluded"],
                     "group": group,
+                    "cycle_id": cycle_id,
                     "type": "technosphere",
                 }
                 for field in OPTIONAL_FIELDS:
@@ -175,7 +179,7 @@ class Converter:
         return data
 
     def get_products(
-        self, obj: dict, transformation_id: Optional[str] = None
+        self, obj: dict, cycle_id: str, transformation_id: Optional[str] = None
     ) -> Tuple[list, list]:
         new_exchanges, new_datasets = [], []
 
@@ -189,6 +193,8 @@ class Converter:
             exchange = {
                 "type": "production",
                 "name": node["term"]["name"],
+                "term_type": node["term"]["termType"],
+                "term_id": node["term"]["@id"],
                 "unit": node["term"].get("units"),
                 "amount": node["value"][0],
                 "transformation_id": transformation_id,
@@ -201,6 +207,7 @@ class Converter:
                 "unit": node["term"].get("units"),
                 "transformation_id": transformation_id,
                 "type": "product",
+                "cycle_id": cycle_id,
             }
 
             self.add_price(node, product)
@@ -248,7 +255,7 @@ class Converter:
 
         return new_exchanges
 
-    def get_transformations(self, obj: dict) -> list:
+    def get_transformations(self, obj: dict, cycle_id: str) -> list:
         new_datasets = []
 
         for source in obj.get("transformations", []):
@@ -259,13 +266,13 @@ class Converter:
                 "unit": source["term"].get("units"),
                 "type": "process",
                 "transformationId": source["transformationId"],
-                "parent_cycle_id": obj["@id"],
+                "cycle_id": cycle_id,
             }
             if "previousTransformationId" in source:
                 target["previousTransformationId"] = source["previousTransformationId"]
 
-            target["exchanges"] = self.get_inputs(source)
-            ne, nd = self.get_products(source, source["transformationId"])
+            target["exchanges"] = self.get_inputs(source, cycle_id)
+            ne, nd = self.get_products(source, cycle_id, source["transformationId"])
             target["exchanges"].extend(ne)
             new_datasets.extend(nd)
 

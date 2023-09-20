@@ -6,7 +6,6 @@ from requests.packages.urllib3.util.retry import Retry
 
 import bw_hestia_bridge as bhb
 
-
 stable_url = "https://api.hestia.earth"
 staging_url = "https://api-staging.hestia.earth"
 
@@ -26,11 +25,12 @@ retry = Retry(
 )
 
 adapter = HTTPAdapter(max_retries=retry)
-hestia_session.mount('http://', adapter)
-hestia_session.mount('https://', adapter)
+hestia_session.mount("http://", adapter)
+hestia_session.mount("https://", adapter)
 
 
 # make the request
+
 
 def hestia_request(
     endpoint: str,

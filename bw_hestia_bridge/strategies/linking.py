@@ -124,3 +124,92 @@ def link_ecoinvent_biosphere(
                     pass
 
     return data
+
+
+def link_across_cycles(data: list) -> list:
+    """Link across two cycles using the `graph_element` attribute.
+
+    In this product:
+
+    ```python
+    {
+        'name': 'Pig, piglet',
+        'term_type': 'liveAnimal',
+        'term_id': 'pigPiglet',
+        'type': 'product',
+        'cycle_id': 'baca63dqlc6n',
+        'graph_element': {
+            'from': {
+                '@id': {'@id': 'baca63dqlc6n', '@type': 'Cycle'},
+                '@type': 'Cycle'
+            },
+            'to': {
+                '@id': '5-qkgrlriqqm',
+                '@type': 'Cycle'
+            },
+            'via': {
+                'term': {
+                    '@type': 'Term',
+                    'termType': 'liveAnimal',
+                    'name': 'Pig, piglet',
+                    '@id': 'pigPiglet'
+                },
+            '@type': 'Product'}
+        }
+    }
+    ```
+
+    We have a product (Pig, piglet) being produced by cycle `baca63dqlc6n` and used
+    by cycle `5-qkgrlriqqm`.
+
+    Here is the corresponding production exchanges in `baca63dqlc6n`:
+
+    ```python
+    {
+        "type": "production",
+        "name": "Pig, piglet",
+        "term_type": "liveAnimal",
+        "term_id": "pigPiglet",
+        "unit": "number",
+        "amount": 1,
+        "transformation_id": null
+    }
+    ```
+
+    And the consuming exchange in `5-qkgrlriqqm`:
+
+    ```python
+    {
+        "name": "Pig, piglet",
+        "cycle_id": "5-qkgrlriqqm",
+        "term_type": "liveAnimal",
+        "term_id": "pigPiglet",
+        "unit": "number",
+        "amount": 1.026,
+        "group": "Pig, piglet-0",
+        "type": "technosphere"
+    }
+    ```
+
+    We normally only allow linking within one cycle, but in this case we need to
+    link across cycles.
+    """
+    cross_cycle_products = {
+        (
+            ds["graph_element"]["via"]["term"]["@id"],
+            ds["graph_element"]["to"]["@id"],
+        ): (ds["database"], ds["code"])
+        for ds in data
+        if ds.get("type") == "product" and "graph_element" in ds
+    }
+
+    for ds in data:
+        for exc in ds.get("exchanges", []):
+            if exc.get("input") or exc.get("type") != "technosphere":
+                continue
+            try:
+                exc["input"] = cross_cycle_products[(exc["term_id"], exc["cycle_id"])]
+            except KeyError:
+                continue
+
+    return data

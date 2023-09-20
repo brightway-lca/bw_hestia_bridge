@@ -10,6 +10,7 @@ from .strategies import (
     add_code_from_hestia_attributes,
     convert,
     drop_zeros,
+    link_across_cycles,
     link_ecoinvent_biosphere,
     link_ecoinvent_technosphere,
 )
@@ -62,6 +63,7 @@ class HestiaImporter(LCIImporter):
             partial(
                 link_ecoinvent_technosphere, ecoinvent_database_label=ecoinvent_label
             ),
+            link_across_cycles,
         ]
 
     def get_suppliers(self, cycle_id: str, data_state: str) -> None:
@@ -77,5 +79,6 @@ class HestiaImporter(LCIImporter):
                 )
             )
             for new_ds in nodes:
-                new_ds["graph_element"] = element
+                if new_ds.get("name") == element["via"]["term"]["name"]:
+                    new_ds["graph_element"] = element
             self.data.extend(nodes)

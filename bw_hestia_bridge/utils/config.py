@@ -47,8 +47,7 @@ def _init_config():
 
     # get use_staging from environment if present
     if "use_staging" in os.environ:
-        config["use_staging"] = \
-            os.environ["use_staging"].lower() in ("1", "true")
+        config["use_staging"] = os.environ["use_staging"].lower() in ("1", "true")
 
     set_config(config)
 
