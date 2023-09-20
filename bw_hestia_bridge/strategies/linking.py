@@ -7,6 +7,7 @@ import bw2data as bd
 from bw2io import activity_hash
 from constructive_geometries import Geomatcher
 
+
 DATA_DIR = Path(__file__).parent.parent.resolve() / "data"
 
 

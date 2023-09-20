@@ -34,6 +34,7 @@ hestia_session.mount("https://", adapter)
 
 def hestia_request(
     endpoint: str,
+    staging: bool,
     query: Optional[dict] = None,
     req_type: Literal["get", "post"] = "get",
 ) -> dict:
@@ -44,6 +45,8 @@ def hestia_request(
     ----------
     endpoint : str
         The API endpoint (e.g. "search").
+    staging : bool
+        Whether to use the staging API.
     query : dict, optional (default: None)
         Additional queries (passed via something like "?q1=v1&q2=v2").
     req_type : str, "get" or "post"
@@ -51,7 +54,7 @@ def hestia_request(
     """
     config = bhb.get_config()
 
-    url = staging_url if config["use_staging"] else stable_url
+    url = staging_url if staging else stable_url
 
     proxies = {
         "http": config["http_proxy"],
