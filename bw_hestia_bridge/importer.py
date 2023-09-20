@@ -2,17 +2,18 @@ from functools import partial
 from typing import Literal, Optional
 
 from bw2io.importers.base_lci import LCIImporter
-from bw2io.strategies import add_database_name, normalize_units
+from bw2io.strategies import add_database_name, link_iterable_by_fields, normalize_units
 
-from . import set_config
 from .hestia_api import get_cycle_graph, get_hestia_node
 from .strategies import (
     Converter,
     add_code_from_hestia_attributes,
+    create_mocks,
     drop_zeros,
     link_across_cycles,
     link_ecoinvent_biosphere,
     link_ecoinvent_technosphere,
+    link_to_previous_transformation,
 )
 
 
@@ -50,8 +51,12 @@ class HestiaImporter(LCIImporter):
         self.cycle_id = cycle_id
 
         self.data = self._convertor.convert(
-            get_hestia_node(node_id=cycle_id, node_type="cycle", data_state=data_state,
-                            staging=staging)
+            get_hestia_node(
+                node_id=cycle_id,
+                node_type="cycle",
+                data_state=data_state,
+                staging=staging,
+            )
         )
 
         if expand_graph:
@@ -67,6 +72,13 @@ class HestiaImporter(LCIImporter):
                 link_ecoinvent_technosphere, ecoinvent_database_label=ecoinvent_label
             ),
             link_across_cycles,
+            partial(
+                link_iterable_by_fields,
+                fields=["term_id", "cycle_id", "transformation_id"],
+                internal=True,
+            ),
+            link_to_previous_transformation,
+            create_mocks,
         ]
 
     def get_suppliers(self, cycle_id: str, data_state: str) -> None:

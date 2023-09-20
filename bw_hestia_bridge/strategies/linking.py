@@ -2,11 +2,11 @@ import csv
 from collections import defaultdict
 from pathlib import Path
 from typing import Optional
+from uuid import uuid4
 
 import bw2data as bd
 from bw2io import activity_hash
 from constructive_geometries import Geomatcher
-
 
 DATA_DIR = Path(__file__).parent.parent.resolve() / "data"
 
@@ -206,11 +206,80 @@ def link_across_cycles(data: list) -> list:
 
     for ds in data:
         for exc in ds.get("exchanges", []):
-            if exc.get("input") or exc.get("type") != "technosphere":
+            if exc.get("input") or not exc.get("type") == "technosphere":
                 continue
             try:
                 exc["input"] = cross_cycle_products[(exc["term_id"], exc["cycle_id"])]
             except KeyError:
                 continue
 
+    return data
+
+
+def previous_transformation(val: str) -> str:
+    # Definitely going to be punished in the afterlife for this...
+    if val == "0":
+        return "0"
+    else:
+        return str(int(val) - 1)
+
+
+def link_to_previous_transformation(data):
+    possibles = {
+        (ds["term_id"], ds["cycle_id"], ds["transformation_id"]): (
+            ds["database"],
+            ds["code"],
+        )
+        for ds in data
+        if ds.get("type") == "product"
+    }
+
+    for ds in data:
+        for exc in ds.get("exchanges", []):
+            if not exc.get("type") == "technosphere" or exc.get("input"):
+                continue
+            try:
+                exc["input"] = possibles[
+                    (
+                        exc["term_id"],
+                        exc["cycle_id"],
+                        previous_transformation(exc["transformation_id"]),
+                    )
+                ]
+            except KeyError:
+                continue
+
+    return data
+
+
+def create_mocks(data):
+    new_data = []
+
+    for ds in data:
+        for exc in ds.get("exchanges", []):
+            if not exc.get("input") and exc.get("type") == "technosphere":
+                code = uuid4().hex
+                # TBD: We should check and not create multiple products for same flow
+                part_one = {
+                    "database": ds["database"],
+                    "code": code,
+                    "type": "product",
+                    "name": "Mock " + exc["name"],
+                    "mock": True,
+                    "cycle_id": exc["cycle_id"],
+                    "term_id": exc["term_id"],
+                }
+                part_two = {
+                    key: exc.get(key)
+                    for key in (
+                        "cycle_id",
+                        "transformation_id",
+                        "term_id",
+                        "unit",
+                        "group",
+                    )
+                }
+                new_data.append(part_one | part_two)
+                exc["input"] = (ds["database"], code)
+    data.extend(new_data)
     return data

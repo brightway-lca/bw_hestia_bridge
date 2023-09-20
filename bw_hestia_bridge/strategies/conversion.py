@@ -1,9 +1,17 @@
 import warnings
 from collections import defaultdict
 from functools import lru_cache
-from typing import Optional, Tuple
+from typing import Optional, Tuple, Union
 
+from .. import get_config
 from ..hestia_api import get_hestia_node
+
+
+def transformation_to_str(val: Union[str, None]) -> int:
+    if not val:
+        return "0"
+    else:
+        return val
 
 
 class Converter:
@@ -23,7 +31,7 @@ class Converter:
         if "animals" in source:
             target["animals"] = source["animals"]
 
-        target["exchanges"] = self.get_inputs(source, cycle_id)
+        target["exchanges"] = self.get_inputs(source, cycle_id, None)
         new_exchanges, new_datasets = self.get_products(source, cycle_id)
         target["exchanges"].extend(new_exchanges)
         return_data.extend(new_datasets)
@@ -104,7 +112,9 @@ class Converter:
             if orig in source:
                 target[new] = source[orig]
 
-    def get_inputs(self, obj: dict, cycle_id: str) -> list:
+    def get_inputs(
+        self, obj: dict, cycle_id: str, transformation_id: Optional[str]
+    ) -> list:
         counter = defaultdict(int)
 
         exchange_list = []
@@ -124,6 +134,7 @@ class Converter:
                 "unit": inpt["term"].get("units"),
                 "amount": inpt["value"][0],
                 "group": group,
+                "transformation_id": transformation_to_str(transformation_id),
                 "type": "technosphere",
             }
             self.add_optional_fields(inpt, exchange)
@@ -199,7 +210,8 @@ class Converter:
                 "term_id": node["term"]["@id"],
                 "unit": node["term"].get("units"),
                 "amount": node["value"][0],
-                "transformation_id": transformation_id,
+                "transformation_id": transformation_to_str(transformation_id),
+                "cycle_id": cycle_id,
             }
 
             product = {
@@ -207,7 +219,7 @@ class Converter:
                 "term_type": node["term"]["termType"],
                 "term_id": node["term"]["@id"],
                 "unit": node["term"].get("units"),
-                "transformation_id": transformation_id,
+                "transformation_id": transformation_to_str(transformation_id),
                 "type": "product",
                 "cycle_id": cycle_id,
             }
@@ -267,13 +279,17 @@ class Converter:
                 "term_id": source["term"]["@id"],
                 "unit": source["term"].get("units"),
                 "type": "process",
-                "transformationId": source["transformationId"],
+                "transformationId": transformation_to_str(source["transformationId"]),
                 "cycle_id": cycle_id,
             }
             if "previousTransformationId" in source:
-                target["previousTransformationId"] = source["previousTransformationId"]
+                target["previousTransformationId"] = transformation_to_str(
+                    source["previousTransformationId"]
+                )
 
-            target["exchanges"] = self.get_inputs(source, cycle_id)
+            target["exchanges"] = self.get_inputs(
+                source, cycle_id, source["transformationId"]
+            )
             ne, nd = self.get_products(source, cycle_id, source["transformationId"])
             target["exchanges"].extend(ne)
             new_datasets.extend(nd)
