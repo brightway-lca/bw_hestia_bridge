@@ -39,7 +39,7 @@ print(transform["products"])
 The supply chain of a cycle is therefore composed of other cycles and
 transformations that are connected via their inputs and outputs, which are
 [``Term``](https://www.hestia.earth/schema/Term) objects in Hestia, that
-will become XXX in Brightway.
+will become reference products in Brightway.
 
 ### Pitfalls and limitations
 
