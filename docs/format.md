@@ -1,6 +1,5 @@
 # Mapping the data format
 
-
 ## Cycles and Transformations
 
 The [``Cycle``](https://www.hestia.earth/schema/Cycle) object in
@@ -8,7 +7,7 @@ The [``Cycle``](https://www.hestia.earth/schema/Cycle) object in
 taking "inputs" and outputting "products".
 The [``Transformation``](https://www.hestia.earth/schema/Transformation)
 object is also equivalent to a Brightway activity.
-However, countrary to cycles, transformations in Hestia do not live on their
+However, contrary to cycles, transformations in Hestia do not live on their
 own but are contained within a cycle in its "transformations" entry.
 
 ```python
@@ -49,11 +48,94 @@ managing process (there are "orphan" inputs and outputs).
 To deal with this, we create a "mock" process associated to each of these
 to convert the data into a Brightway database.
 
-Also note that, contrary to Brightway, Hestia cycles have multiple products.
+Also note that, contrary to Brightway activities, Hestia cycles have multiple products.
 Furthermore, several products from a single cycles can enter as inputs into
 another transformation or cycle, together with a same input from another
-process, which means that their is currently no garantee regarding how to
+process, which means that there is currently no guarantee regarding how to
 get the input/output ratios right.
+
+
+## Connected cycles in the hestia database
+
+To our knowledge `cycles` in hestia are not directly linked which means
+that the API entry point at `/cycles/CYCLE_ID/cycles` always returns an empty
+result. If you know otherwise, please tell us.
+
+The following image is taken from
+https://www-staging.hestia.earth/cycle/znex7uqxsfqn
+:
+
+![An example cycle graph](example-cycle-graph.png "An example cycle graph")
+
+As can be seen, `cycles` (in red) are connected indirectly via `impactassessments` (in blue).
+A `cycle` may have multiple `products`. An `impactassessment` always has one `product`.
+
+Therefore two `cycles` can be connected via multiple `impactassessments` (where each 
+`impactassessment` refers to exactly one output product).
+
+In the example above, the existing `cycle znex7uqxsfqn` which produces multiple input products of the
+`cycle l1nckoyzebil` can be found via the connected `impactassessments` of
+`cycle l1nckoyzebil`:
+
+```python
+import bw_hestia_bridge as bhb
+bhb.get_hestia_node("l1nckoyzebil")
+```
+
+```python
+{'@id': 'l1nckoyzebil',
+ '@type': 'Cycle',
+ 'description': 'Meat, beef (carcass-weight) - Scenario 3',
+ 'inputs':
+  [{'term': {'@type': 'Term',
+   'termType': 'liveAnimal',
+   'name': 'Beef cattle, cow',
+   'units': 'number',
+   '@id': 'beefCattleCow'},
+  'value': [0.10645683869474658],
+  'impactAssessment': {'@id': 'mfrsvgef-bdi', '@type': 'ImpactAssessment'},
+  'impactAssessmentIsProxy': False,
+  '@type': 'Input'},
+ {'term': {'@type': 'Term',
+   'termType': 'liveAnimal',
+   'name': 'Beef cattle, heifer',
+   'units': 'number',
+   '@id': 'beefCattleHeifer'},
+  'impactAssessment': {'@id': 'vq8h2xitdljq', '@type': 'ImpactAssessment'},
+  'impactAssessmentIsProxy': False,
+  '@type': 'Input'},
+ {'term': {'@type': 'Term',
+   'termType': 'liveAnimal',
+   'name': 'Beef cattle, steer',
+   'units': 'number',
+   '@id': 'beefCattleSteer'},
+  'impactAssessment': {'@id': 'gra4wmeanysi', '@type': 'ImpactAssessment'},
+  'impactAssessmentIsProxy': False,
+  '@type': 'Input'}
+ ], ...
+}
+
+```
+
+```python
+bhb.get_hestia_node("mfrsvgef-bdi")
+```
+
+```python
+{'@id': 'mfrsvgef-bdi',
+ '@type': 'ImpactAssessment',
+ 'cycle': {'@id': 'znex7uqxsfqn', '@type': 'Cycle'},
+ 'product': {'term': {'@type': 'Term',
+   'termType': 'liveAnimal',
+   'name': 'Beef cattle, cow',
+   'units': 'number',
+   '@id': 'beefCattleCow'},
+  '@type': 'Product'}, ...
+}
+```
+
+Note that this accounts as well for `impactassessments` `vq8h2xitdljq` and `gra4wmeanysi`.
+
 
 
 ## Basic process data
