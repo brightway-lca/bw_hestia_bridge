@@ -5,7 +5,7 @@
 [![Python Version](https://img.shields.io/pypi/pyversions/bw_hestia_bridge)][pypi status]
 [![License](https://img.shields.io/pypi/l/bw_hestia_bridge)][license]
 
-[![Read the documentation at https://docs.brightway.dev/projects/hestiabridge](https://readthedocs.org/projects/bw-hestia-bridge/badge/?version=main)][read the docs]
+[![Documentation Status](https://readthedocs.org/projects/bw-hestia-bridge/badge/?version=latest)][read the docs]
 [![Tests](https://github.com/brightway-lca/bw_hestia_bridge/workflows/Tests/badge.svg)][tests]
 [![Codecov](https://codecov.io/gh/brightway-lca/bw_hestia_bridge/branch/main/graph/badge.svg)][codecov]
 
