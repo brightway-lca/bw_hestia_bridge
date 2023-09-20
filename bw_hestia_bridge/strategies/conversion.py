@@ -1,3 +1,4 @@
+import warnings
 from collections import defaultdict
 from functools import lru_cache
 from typing import Optional, Tuple
@@ -52,17 +53,26 @@ class Converter:
             "defaultMethodClassification",
             "defaultMethodClassificationDescription",
         }
+
+        site = self.get_site(obj["site"]["@id"])
+
         return {
             "@id": obj["@id"],
             "comment": obj.get("description"),
-            "location": self.get_location(obj["site"]["@id"]),
+            "location": site["name"],
+            "hestia_site_id": obj["site"]["@id"],
+            "hestia_site": site,
             "type": "process",
             "extra_metadata": {key: obj[key] for key in EXTRAS if key in obj},
         }
 
     @lru_cache
-    def get_location(self, node_id: str) -> str:
-        return get_hestia_node(node_type="site", node_id=node_id)["name"]
+    def get_site(self, node_id: str) -> str:
+        location = get_hestia_node(node_type="site", node_id=node_id)
+        if "name" not in location:
+            warnings.warn(f"Can't find location {node_id}; using `GLO` instead")
+            return "GLO"
+        return location
 
     def _add_suffixed(
         self, source: dict, target: dict, label: str, fields: set, currency: bool

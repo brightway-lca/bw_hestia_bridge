@@ -4,17 +4,25 @@ from typing import Literal, Optional
 from bw2io.importers.base_lci import LCIImporter
 from bw2io.strategies import add_database_name, normalize_units
 
-from . import get_config, set_config
+from . import set_config
 from .hestia_api import get_hestia_node
-from .strategies import add_code_from_hestia_attributes, convert
+from .strategies import (
+    add_code_from_hestia_attributes,
+    convert,
+    drop_zeros,
+    link_ecoinvent_biosphere,
+    link_ecoinvent_technosphere,
+)
 
 
 class HestiaImporter(LCIImporter):
     def __init__(
         self,
         cycle_id: str,
+        ecoinvent_label: str,
         data_state: Literal["original", "recalculated"] = "recalculated",
         staging: Optional[bool] = False,
+        biosphere_label: Optional[str] = "biosphere3",
     ) -> None:
         """
         Import a Hestia cycle as a Brightway database.
@@ -30,7 +38,6 @@ class HestiaImporter(LCIImporter):
             Whether to fetch the cycle from the staging Hestia API.
         """
         # move to staging if necessary
-        old_staging = get_config("use_staging")
         set_config("use_staging", staging)
 
         # initialize variables
@@ -45,9 +52,11 @@ class HestiaImporter(LCIImporter):
         self.strategies = [
             convert,
             normalize_units,
+            drop_zeros,
             add_code_from_hestia_attributes,
             partial(add_database_name, name=self.db_name),
+            partial(link_ecoinvent_biosphere, biosphere_label=biosphere_label),
+            partial(
+                link_ecoinvent_technosphere, ecoinvent_database_label=ecoinvent_label
+            ),
         ]
-
-        # revert config to initial value
-        set_config("use_staging", old_staging)
