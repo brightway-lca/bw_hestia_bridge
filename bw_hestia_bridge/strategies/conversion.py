@@ -5,6 +5,7 @@ from typing import Optional, Tuple, Union
 
 from .. import get_config
 from ..hestia_api import get_hestia_node
+from ..utils import get_config
 
 
 def transformation_to_str(val: Union[str, None]) -> int:
