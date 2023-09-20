@@ -4,6 +4,7 @@ from functools import lru_cache
 from typing import Optional, Tuple
 
 from ..hestia_api import get_hestia_node
+from ..utils import get_config
 
 
 class Converter:
