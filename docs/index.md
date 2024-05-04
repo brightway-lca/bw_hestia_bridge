@@ -1,7 +1,9 @@
-```{include} ../README.md
----
-end-before: <!-- github-only -->
----
+# Brightway Hestia Bridge
+
+```{button-link} https://docs.brightway.dev
+:color: info
+:expand:
+{octicon}`light-bulb;1em` Brightway Hestia Bridge is a specialized package of the Brightway Software Framework
 ```
 
 ```{toctree}
@@ -9,12 +11,12 @@ end-before: <!-- github-only -->
 hidden:
 maxdepth: 1
 ---
-
-tutorial
-api
-Mapping the data format <format>
-contributing
-Code of Conduct <codeofconduct>
-License <license>
-Changelog <changelog>
+self
+content/tutorial
+content/format
+content/api/index
+content/changelog
+content/contributing
+content/codeofconduct
+content/license
 ```

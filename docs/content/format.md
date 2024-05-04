@@ -1,4 +1,4 @@
-# Mapping the data format
+# Mapping the Data Format
 
 ## Cycles and Transformations
 
@@ -41,7 +41,7 @@ transformations that are connected via their inputs and outputs, which are
 [``Term``](https://www.hestia.earth/schema/Term) objects in Hestia, that
 will become reference products in Brightway.
 
-![Content of cycle with transformations and connections to other cycles via products](connections_cycle.png)
+![Content of cycle with transformations and connections to other cycles via products](images/connections_cycle.png)
 
 
 ### Pitfalls and limitations
@@ -68,7 +68,7 @@ The following image is taken from
 https://www-staging.hestia.earth/cycle/znex7uqxsfqn
 :
 
-![An example cycle graph](example-cycle-graph.png "An example cycle graph")
+![An example cycle graph](images/example-cycle-graph.png "An example cycle graph")
 
 As can be seen, `cycles` (in red) are connected indirectly via `impactassessments` (in blue).
 A `cycle` may have multiple `products`. An `impactassessment` always has one `product`.
@@ -343,7 +343,4 @@ We also take the `practices` as properties, as above.
 ## `products`
 
 We will construct a supply chain of `process` nodes, which will produce `products`, and consume `products` (if coming from other Hestia cycles) or `processes` (if coming from a background database). For each `product`, we therefore need to create a new inventory dataset with the type `product`. But we also need to add a production exchange to the cycle unit process.
-
-```python
-```
 

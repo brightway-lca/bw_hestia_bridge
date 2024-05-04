@@ -73,3 +73,12 @@ please [file an issue] along with a detailed description.
 
 [command-line reference]: https://bw_hestia_bridge.readthedocs.io/en/latest/usage.html
 [contributor guide]: https://github.com/brightway-lca/bw_hestia_bridge/blob/main/CONTRIBUTING.md
+
+## Documentation
+
+1. Install the conda environment from the file `.docs/environment.yml`
+2. Build the documentation locally by running:
+
+```bash
+sphinx-autobuild docs _build/html -a -j auto --open-browser
+```
